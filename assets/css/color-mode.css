@@ -1,0 +1,67 @@
+:root {
+	/* --c-1c1c1c-to-fff: #1c1c1c;
+	--c-1c1c1c-to-fee02e: #1c1c1c;
+	--c-1c1c1c-60-to-fee02e-90: rgba(28 28 28 / 0.6);
+	--c-2b2a29-to-fff: #2b2a29;
+	--c-313131-to-fff: #313131;
+	--c-f5f7fa-50-to-f5f7fa-15: rgba(245 247 250 / 0.5);
+	--c-f5f7fa-40-to-f5f7fa-07: rgba(245 247 250 / 0.4);
+	--c-fee02e-to-313131: #fee02e;
+	--c-fff-to-1c1c1c: #fff; */
+	/* global */
+	--body-bg: #fff;
+	--font-basic: #1c1c1c;
+	/* header */
+	--header-logo-svg-letter: #2b2a29;
+	--header-contacts-mail: rgba(28 28 28 / 0.6);
+	--header-button-1-border: #1c1c1c;
+	--header-button-1-font: #1c1c1c;
+	/* hero section */
+	--hero-inner-shadow-1: rgba(245 247 250 / 0.5);
+	--hero-inner-shadow-2: rgba(245 247 250 / 0.4);
+	/* info-section */
+	--info-mail: rgba(28 28 28 / 0.6);
+	/* solution-section */
+	--solution-inner-bg: #fee02e;
+	--solution-title: #313131;
+	--solution-tel: rgba(49 49 49 / 0.9);
+	--solution-mail: rgba(49 49 49 / 0.8);
+	--solution-info: #1c1c1c;
+	/* steps-section */
+	--steps-item-marker: #fff;
+	--steps-item-desc: rgba(28 28 28 / 0.6);
+}
+
+:root[data-color-mode="dark"] {
+	/* --c-1c1c1c-to-fff: #fff;
+	--c-1c1c1c-to-fee02e: #fee02e;
+	--c-1c1c1c-60-to-fee02e-90: rgba(254 224 46 / 0.9);
+	--c-2b2a29-to-fff: #fff;
+	--c-313131-to-fff: #fff;
+	--c-f5f7fa-50-to-f5f7fa-15: rgba(245 247 250 / 0.15);
+	--c-f5f7fa-40-to-f5f7fa-07: rgba(245 247 250 / 0.07);
+	--c-fee02e-to-313131: #313131;
+	--c-fff-to-1c1c1c: #fff; */
+	/* global */
+	--body-bg: #1c1c1c;
+	--font-basic: #fff;
+	/* header */
+	--header-logo-svg-letter: #fff;
+	--header-contacts-mail: rgba(254 224 46 / 0.9);
+	--header-button-1-border: #fee02e;
+	--header-button-1-font: #fee02e;
+	/* hero section */
+	--hero-inner-shadow-1: rgba(245 247 250/ 0.15);
+	--hero-inner-shadow-2: rgba(245 247 250 / 0.07);
+	/* info-section */
+	--info-mail: rgba(254 224 46 / 0.9);
+	/* solution-section */
+	--solution-inner-bg: #313131;
+	--solution-title: #fff;
+	--solution-tel: rgba(255 255 255 / 0.9);
+	--solution-mail: rgba(254 224 46 / 0.9);
+	--solution-info: #fff;
+	/* steps-section */
+	--steps-item-marker: #6e6e6e;
+	--steps-item-desc: rgba(255 255 255 / 0.6);
+}

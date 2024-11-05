@@ -1,0 +1,136 @@
+*,
+::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+dl,
+dd,
+blockquote,
+hr {
+	margin: 0;
+}
+
+ul,
+ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+button,
+input {
+	font-family: inherit;
+}
+
+img,
+picture {
+	display: block;
+}
+
+:root {
+	--global-padding-inline: 15px;
+	--secondary-font-family: "Museo Cyrl";
+}
+
+@media (min-width: 1400px) {
+	:root {
+		--global-padding-inline: 50px;
+	}
+}
+
+.container {
+	width: 100%;
+	margin-inline: auto;
+	padding-inline: var(--global-padding-inline);
+}
+
+@media (min-width: 1400px) {
+	.container {
+		/* max-width: 1320px; */
+		max-width: 1815px;
+	}
+
+	.container--full-width {
+		max-width: 1920px;
+	}
+}
+
+@media (max-width: 1399.98px) {
+	.container {
+		max-width: 1140px;
+	}
+}
+
+@media (max-width: 1199.98px) {
+	.container {
+		max-width: 960px;
+	}
+}
+
+@media (max-width: 991.98px) {
+	.container {
+		max-width: 720px;
+	}
+}
+
+@media (max-width: 767.98px) {
+	.container {
+		max-width: 540px;
+	}
+}
+
+@media (max-width: 575.98px) {
+	.container {
+		max-width: 480px;
+	}
+}
+
+@media (max-width: 320px) {
+	.container {
+		max-width: 100%;
+	}
+}
+
+body {
+	width: 100%;
+	min-width: 320px;
+	font-family: "Inter", sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	font-style: normal;
+	background-color: var(--body-bg);
+	transition: background-color 250ms;
+}
+
+.section-island {
+	max-width: 1920px;
+	width: 100%;
+	margin-inline: auto;
+	padding-inline: var(--global-padding-inline);
+}
+
+.button-basic {
+	background-color: #fee02e;
+	border: none;
+	transition: background-color 250ms ease-in-out;
+	cursor: pointer;
+}
+
+.button-basic:hover {
+	background-color: #f3d520;
+}
