@@ -19,17 +19,36 @@
 	/* hero section */
 	--hero-inner-shadow-1: rgba(245 247 250 / 0.5);
 	--hero-inner-shadow-2: rgba(245 247 250 / 0.4);
-	/* info-section */
+	/* info section */
 	--info-mail: rgba(28 28 28 / 0.6);
-	/* solution-section */
+	/* solution section */
 	--solution-inner-bg: #fee02e;
 	--solution-title: #313131;
 	--solution-tel: rgba(49 49 49 / 0.9);
 	--solution-mail: rgba(49 49 49 / 0.8);
 	--solution-info: #1c1c1c;
-	/* steps-section */
+	/* steps section */
 	--steps-item-marker: #fff;
 	--steps-item-desc: rgba(28 28 28 / 0.6);
+	/* cta dark section */
+	--cta-dark-inner: #fee02e;
+	--cta-dark-contacts-tel: rgba(49 49 49 / 0.9);
+	--cta-dark-contacts-mail: rgba(49 49 49 / 0.9);
+	--cta-dark-form-label-title: #1c1c1c;
+	--cta-dark-form-input: #1c1c1c;
+	--cta-dark-form-button-bg: #fff;
+	--cta-dark-mod-checkbox-style: #1c1c1c;
+	/* footer */
+	--footer-logo-svg-letter: #2b2a29;
+	--footer-logo-desc: rgba(28 28 28 / 0.9);
+	--footer-link: rgba(28 28 28 / 0.9);
+	--footer-tag-item: #1c1c1c;
+	--footer-tag-item-border: #1c1c1c;
+	--footer-tag-item-hl: #1c1c1c;
+	--footer-tag-item-hl-border: #fee02e;
+	--footer-tag-item-hl-bg: #fee02e;
+	--footer-contacts-tel: #1c1c1c;
+	--footer-contacts-mail: rgba(28 28 28 / 0.9);
 }
 
 :root[data-color-mode="dark"] {
@@ -64,4 +83,23 @@
 	/* steps-section */
 	--steps-item-marker: #6e6e6e;
 	--steps-item-desc: rgba(255 255 255 / 0.6);
+	/* cta dark section */
+	--cta-dark-inner: #313131;
+	--cta-dark-contacts-tel: rgba(255 255 255 / 0.9);
+	--cta-dark-contacts-mail: rgba(254 224 46 / 0.9);
+	--cta-dark-form-label-title: #fff;
+	--cta-dark-form-input: #fff;
+	--cta-dark-form-button-bg: #fde241;
+	--cta-dark-mod-checkbox-style: #fff;
+	/* footer */
+	--footer-logo-svg-letter: #fff;
+	--footer-logo-desc: rgba(245 247 250 /0.9);
+	--footer-link: rgba(245 247 250 /0.9);
+	--footer-tag-item: #f2f2f2;
+	--footer-tag-item-border: #f2f2f2;
+	--footer-tag-item-hl: #fee333;
+	--footer-tag-item-hl-border: #fee333;
+	--footer-tag-item-hl-bg: transparent;
+	--footer-contacts-tel: #fff;
+	--footer-contacts-mail: rgba(254 224 46 / 0.9);
 }

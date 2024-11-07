@@ -42,3 +42,35 @@ if (document.querySelector('#carousel-fleet')) {
 	});
 	carouselFleet.mount();
 }
+
+// CAROUSEL-PROJECTS
+if (document.querySelector('#carousel-projects')) {
+	const carouselProjects = new Splide('#carousel-projects', {
+		type: 'loop',
+		perPage: 3,
+		perMove: 1,
+		gap: 40,
+		arrows: true,
+		pagination: false,
+		autoplay: false,
+		interval: 4500,
+		speed: 1500,
+
+		breakpoints: {
+			1199.98: {
+
+			},
+		},
+	});
+	carouselProjects.mount();
+}
+
+// FAQ
+const faqItems = document.querySelectorAll('.faq__item');
+const faqQuestions = document.querySelectorAll('.faq__item-question');
+faqQuestions.forEach(faqQuestion => {
+	faqQuestion.addEventListener('click', () => {
+		const targetFaqItem = faqQuestion.closest('.faq__item');
+		targetFaqItem.classList.toggle('is-active');
+	});
+});
