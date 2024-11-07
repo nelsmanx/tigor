@@ -444,7 +444,7 @@ html[data-color-mode="dark"] .mode-toggler::before {
 	align-items: end;
 	--border-radius: 50px;
 	border-radius: var(--border-radius);
-	background: url("/assets/images/hero/1.jpg") 0 0/cover no-repeat;
+	background: url("../../assets/images/hero/1.jpg") 0 0/cover no-repeat;
 	overflow: hidden;
 }
 
@@ -717,19 +717,19 @@ html[data-color-mode="dark"] .info__link {
 }
 
 .outsource__item-header--1 {
-	background-image: url("/assets/images/outsource/1.jpg");
+	background-image: url("../../assets/images/outsource/1.jpg");
 }
 
 .outsource__item-header--2 {
-	background-image: url("/assets/images/outsource/2.jpg");
+	background-image: url("../../assets/images/outsource/2.jpg");
 }
 
 .outsource__item-header--3 {
-	background-image: url("/assets/images/outsource/3.jpg");
+	background-image: url("../../assets/images/outsource/3.jpg");
 }
 
 .outsource__item-header--4 {
-	background-image: url("/assets/images/outsource/4.jpg");
+	background-image: url("../../assets/images/outsource/4.jpg");
 }
 
 .outsource__item-badges {
@@ -1214,27 +1214,27 @@ html[data-color-mode="dark"] .info__link {
 }
 
 .companies__item-logo--1 {
-	background-image: url("/assets/images/companies/1.png");
+	background-image: url("../../assets/images/companies/1.png");
 }
 
 .companies__item-logo--2 {
-	background-image: url("/assets/images/companies/2.png");
+	background-image: url("../../assets/images/companies/2.png");
 }
 
 .companies__item-logo--3 {
-	background-image: url("/assets/images/companies/3.png");
+	background-image: url("../../assets/images/companies/3.png");
 }
 
 .companies__item-logo--4 {
-	background-image: url("/assets/images/companies/4.png");
+	background-image: url("../../assets/images/companies/4.png");
 }
 
 .companies__item-logo--5 {
-	background-image: url("/assets/images/companies/5.png");
+	background-image: url("../../assets/images/companies/5.png");
 }
 
 .companies__item-logo--6 {
-	background-image: url("/assets/images/companies/6.png");
+	background-image: url("../../assets/images/companies/6.png");
 }
 
 .companies__item-title {
@@ -1982,7 +1982,7 @@ html[data-color-mode="dark"] .mod-checkbox__default-input:checked + .mod-checkbo
 
 .contacts__map {
 	border-radius: 16px;
-	background: url("/assets/images/map.jpg") center/cover no-repeat;
+	background: url("../../assets/images/map.jpg") center/cover no-repeat;
 }
 
 /* ===== FOOTER SECTION ===== */
@@ -2096,11 +2096,11 @@ html[data-color-mode="dark"] .mod-checkbox__default-input:checked + .mod-checkbo
 }
 
 .footer__social-item-link--wa {
-	background-image: url("/assets/images/footer/social-icon-1.svg");
+	background-image: url("../../assets/images/footer/social-icon-1.svg");
 }
 
 .footer__social-item-link--tg {
-	background-image: url("/assets/images/footer/social-icon-2.svg");
+	background-image: url("../../assets/images/footer/social-icon-2.svg");
 }
 
 .footer__top-links {
