@@ -43,15 +43,8 @@ picture {
 }
 
 :root {
-	--body-bg: #fff;
-	--font-basic: #1c1c1c;
 	--global-padding-inline: 15px;
 	--secondary-font-family: "Museo Cyrl";
-}
-
-:root[data-color-mode="dark"] {
-	--body-bg: #1c1c1c;
-	--font-basic: #fff;
 }
 
 @media (min-width: 1400px) {
