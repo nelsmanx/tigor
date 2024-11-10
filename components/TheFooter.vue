@@ -147,7 +147,7 @@ const tags = [
 .footer__logo-group {
 	display: flex;
 	align-items: center;
-	margin-bottom: 38px;
+	margin-bottom: 42px;
 }
 
 .footer__logo {

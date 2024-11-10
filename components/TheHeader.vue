@@ -20,7 +20,7 @@
 					<a class="header__contacts-mail" href="mailto:info@tigor.pro">info@tigor.pro</a>
 				</div>
 				<button class="header__button header__button--1">Для заказчиков</button>
-				<button class="header__button header__button--2 button-basic">Ищу работу</button>
+				<button class="header__button header__button--2 button-basic" data-bs-toggle="modal" data-bs-target="#modal-callback">Ищу работу</button>
 				<div class="header__color-scheme">
 					<p class="header__color-scheme-title"></p>
 					<BasicColorSchemeToggler class="header__color-scheme-toggler" />
@@ -32,12 +32,14 @@
 
 <style>
 :root {
+	--header-company-desc: rgba(28 28 28 / 0.9);
 	--header-contacts-mail: rgba(28 28 28 / 0.6);
 	--header-button-1-border: #1c1c1c;
 	--header-button-1-font: #1c1c1c;
 }
 
 :root[data-color-mode="dark"] {
+	--header-company-desc: rgba(255 255 255 / 0.9);
 	--header-contacts-mail: rgba(254 224 46 / 0.9);
 	--header-button-1-border: #fee02e;
 	--header-button-1-font: #fee02e;
@@ -70,18 +72,12 @@
 	transform: translateY(calc(-50% - var(--vertical-offset)));
 }
 
-/* .header__logo-svg-letter {
-	fill: var(--header-logo-svg-letter);
-	transition: fill 250ms;
-} */
 .header__company-desc {
 	max-width: 140px;
-	margin-right: 10px;
 	font-size: 13px;
 	font-weight: 400;
 	text-align: center;
-	color: var(--font-basic);
-	opacity: 0.9;
+	color: var(--header-company-desc);
 }
 
 .header__nav {

@@ -70,7 +70,7 @@ const id = useId();
 	transform: translateY(1px);
 }
 
-.faq__item-question-content p {
+.faq__item-question-content:deep(p) {
 	font-size: 26px;
 	font-weight: 600;
 	line-height: 1.19;
@@ -83,19 +83,19 @@ const id = useId();
 	padding: 0 var(--padding-right) 50px var(--padding-left);
 }
 
-.faq__item-answer-content p,
-.faq__item-answer-content li {
+.faq__item-answer-content:deep(p),
+.faq__item-answer-content:deep(li) {
 	font-size: 18px;
 	font-weight: 400;
 	line-height: 1.55;
 	color: #0c352c;
 }
 
-.faq__item-answer-content p b {
+.faq__item-answer-content:deep(p b) {
 	font-weight: 700;
 }
 
-.faq__item-answer-content li:not(:last-child) {
+.faq__item-answer-content:deep(li:not(:last-child)) {
 	margin-bottom: 13px;
 }
 </style>

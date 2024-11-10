@@ -1,6 +1,4 @@
-<script setup>
-// const { $bootstrap } = useNuxtApp();
-</script>
+<script setup></script>
 
 <template>
 	<section class="faq">
@@ -64,7 +62,7 @@
 				</ul>
 				<ul class="faq__list">
 					<AppFaqItem>
-						<template #question>Насколько гибкими являются ваши аутсорсинговые и аутстаффинговые решения?</template>
+						<template #question>Можете ли вы настроить услуги в соответствии с нашими потребностями?</template>
 						<template #answer>
 							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia impedit, magnam minima distinctio magni quo alias modi earum tenetur vitae iure voluptates, suscipit blanditiis corrupti reprehenderit illum, aliquid beatae possimus.</p>
 						</template>
