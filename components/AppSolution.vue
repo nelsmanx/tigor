@@ -25,8 +25,8 @@
 	</section>
 </template>
 
-<style>
-:root {
+<style scoped>
+:global(:root) {
 	--solution-inner-bg: #fee02e;
 	--solution-title: #313131;
 	--solution-tel: rgba(49 49 49 / 0.9);
@@ -34,15 +34,14 @@
 	--solution-info: #1c1c1c;
 }
 
-:root[data-color-mode="dark"] {
+:global(:root[data-color-mode="dark"]) {
 	--solution-inner-bg: #313131;
 	--solution-title: #fff;
 	--solution-tel: rgba(255 255 255 / 0.9);
 	--solution-mail: rgba(254 224 46 / 0.9);
 	--solution-info: #fff;
 }
-</style>
-<style scoped>
+
 .solution {
 	margin-bottom: 78px;
 }

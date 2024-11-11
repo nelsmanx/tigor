@@ -3,7 +3,7 @@
 <template>
 	<label class="checkbox__label">
 		<span class="checkbox__style-wrap">
-			<input class="checkbox__default-input" type="checkbox" required>
+			<input class="checkbox__default-input" type="checkbox" checked required>
 			<span class="checkbox__style"></span>
 		</span>
 		<span class="checkbox__label-title">

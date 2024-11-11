@@ -25,12 +25,12 @@
 	</svg>
 </template>
 
-<style>
-:root {
+<style scoped>
+:global(:root) {
 	--logo-svg-letter: #2b2a29;
 }
 
-:root[data-color-mode="dark"] {
+:global(:root[data-color-mode="dark"]) {
 	--logo-svg-letter: #fff;
 }
 

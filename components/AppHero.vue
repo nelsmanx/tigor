@@ -22,13 +22,11 @@ import '@splidejs/vue-splide/css';
 						<SplideSlide>
 							<div class="splide__slide-inner">
 								<div class="splide__slide-block-1">
-
 									<BasicTags :tags="['Аутсорсинг курьеров', 'Поиск работы']" class="splide__slide-tags" />
-
 									<h1 class="splide__slide-title">ТВОЯ КАРЬЕРА НАЧИНАЕТСЯ ЗДЕСЬ!</h1>
 									<p class="splide__slide-desc">Компания оказывает услуги по аутсорсингу курьеров в Москве и Московской области. Наши курьеры оперативно доставят негабаритные грузы, продукцию или документы.</p>
 									<div class="splide__slide-block-1-group">
-										<button class="splide__slide-button button-basic">Оставить заявку</button>
+										<button class="splide__slide-button button-basic" data-bs-toggle="modal" data-bs-target="#modal-callback-vacancy">Оставить заявку</button>
 										<p class="splide__slide-block-1-group-desc">Все виды услуг по аутсорсу в&nbsp;любом регионе России</p>
 									</div>
 								</div>
@@ -200,19 +198,17 @@ import '@splidejs/vue-splide/css';
 	</section>
 </template>
 
-<style>
-:root {
+<style scoped>
+:global(:root) {
 	--hero-inner-shadow-1: rgba(245 247 250 / 0.5);
 	--hero-inner-shadow-2: rgba(245 247 250 / 0.4);
 }
 
-:root[data-color-mode="dark"] {
+:global(:root[data-color-mode="dark"]) {
 	--hero-inner-shadow-1: rgba(245 247 250/ 0.15);
 	--hero-inner-shadow-2: rgba(245 247 250 / 0.07);
 }
-</style>
 
-<style scoped>
 .hero {}
 
 .hero__inner {

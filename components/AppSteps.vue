@@ -46,19 +46,18 @@
 	</section>
 </template>
 
-<style>
-:root {
+
+<style scoped>
+:global(:root) {
 	--steps-item-marker: #fff;
 	--steps-item-desc: rgba(28 28 28 / 0.6);
 }
 
-:root[data-color-mode="dark"] {
+:global(:root[data-color-mode="dark"]) {
 	--steps-item-marker: #6e6e6e;
 	--steps-item-desc: rgba(255 255 255 / 0.6);
 }
-</style>
 
-<style scoped>
 .steps {
 	padding: 93px 0 158px;
 }

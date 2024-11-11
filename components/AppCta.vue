@@ -41,7 +41,7 @@ defineProps({
 							</label>
 							<label class="form__label form__label--tel">
 								<span class="form__label-title">Номер телефона</span>
-								<input class="form__input" type="tel" name="tel">
+								<input v-inputmask-tel class="form__input" type="tel" name="tel">
 							</label>
 							<label class="form__label form__label--mail">
 								<span class="form__label-title">Ваш E-mail:</span>
@@ -61,8 +61,8 @@ defineProps({
 	</section>
 </template>
 
-<style>
-:root {
+<style scoped>
+:global(:root) {
 	--cta-dark-inner: #fee02e;
 	--cta-dark-contacts-tel: rgba(49 49 49 / 0.9);
 	--cta-dark-contacts-mail: rgba(49 49 49 / 0.9);
@@ -72,7 +72,7 @@ defineProps({
 	--cta-dark-checkbox-style: #1c1c1c;
 }
 
-:root[data-color-mode="dark"] {
+:global(:root[data-color-mode="dark"]) {
 	--cta-dark-inner: #313131;
 	--cta-dark-contacts-tel: rgba(255 255 255 / 0.9);
 	--cta-dark-contacts-mail: rgba(254 224 46 / 0.9);
@@ -81,9 +81,7 @@ defineProps({
 	--cta-dark-form-button-bg: #fde241;
 	--cta-dark-checkbox-style: #fff;
 }
-</style>
 
-<style scoped>
 .cta--dark {
 	margin-bottom: 80px;
 }

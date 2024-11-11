@@ -98,13 +98,13 @@ const tags = [
 
 </template>
 
-<style>
-:root {
+<style scoped>
+:global(:root) {
 	--footer-logo-svg-letter: #2b2a29;
 	--footer-logo-desc: rgba(28 28 28 / 0.9);
 	--footer-link: rgba(28 28 28 / 0.9);
 	--footer-tag-item: #1c1c1c;
-	--footer-tag-item-border: #1c1c1c;
+	--foote: global(r-tag-item-border: #1c1c1c);
 	--footer-tag-item-hl: #1c1c1c;
 	--footer-tag-item-hl-border: #fee02e;
 	--footer-tag-item-hl-bg: #fee02e;
@@ -112,7 +112,7 @@ const tags = [
 	--footer-contacts-mail: rgba(28 28 28 / 0.9);
 }
 
-:root[data-color-mode="dark"] {
+:global(:root[data-color-mode="dark"]) {
 	--footer-logo-svg-letter: #fff;
 	--footer-logo-desc: rgba(245 247 250 /0.9);
 	--footer-link: rgba(245 247 250 /0.9);
@@ -124,9 +124,7 @@ const tags = [
 	--footer-contacts-tel: #fff;
 	--footer-contacts-mail: rgba(254 224 46 / 0.9);
 }
-</style>
 
-<style scoped>
 .footer {
 	padding: 114px 0 45px;
 }

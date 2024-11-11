@@ -8,25 +8,52 @@ const isDark = useDark({
 });
 
 const toggleDark = useToggle(isDark);
+
+const colorSchemeTitle = computed(() => isDark.value ? 'Темная тема' : 'Светлая тема');
 </script>
 
 <template>
-	<div class="color-scheme-toggler" @click="toggleDark()"></div>
+	<div class="color-scheme">
+		<ClientOnly>
+			<p class="color-scheme__title">{{ colorSchemeTitle }}</p>
+		</ClientOnly>
+		<div class="color-scheme__toggler" @click="toggleDark()"></div>
+	</div>
+
 </template>
 
 <style scoped>
-.color-scheme-toggler {
+:global(:root) {
+	--color-scheme-toggler-bg: #ddd;
+}
+
+:global(:root[data-color-mode="dark"]) {
+	--color-scheme-toggler-bg: #fee02e;
+}
+
+.color-scheme {}
+
+.color-scheme__title {
+	margin-bottom: 12px;
+	font-weight: 400;
+	font-size: 13px;
+	text-align: center;
+	color: var(--font-basic);
+}
+
+.color-scheme__toggler {
 	position: relative;
 	--toggler-body-width: 34px;
 	width: var(--toggler-body-width);
 	height: 22px;
+	margin-inline: auto;
 	border-radius: 34px;
 	box-shadow: inset 0 3px 3px 0 rgba(0, 0, 0, 0.1);
-	background-color: #ddd;
+	background-color: var(--color-scheme-toggler-bg);
 	cursor: pointer;
 }
 
-.color-scheme-toggler::before {
+.color-scheme__toggler::before {
 	content: "";
 	position: absolute;
 	top: 50%;
@@ -42,11 +69,7 @@ const toggleDark = useToggle(isDark);
 	transform: translateX(calc(-1 * var(--toggler-button-offset))) translateY(-50%);
 }
 
-html[data-color-mode="dark"] .color-scheme-toggler {
-	background-color: #fee02e;
-}
-
-html[data-color-mode="dark"] .color-scheme-toggler::before {
+html[data-color-mode="dark"] .color-scheme__toggler::before {
 	transform: translateX(calc(var(--toggler-body-width) - var(--toggler-button-width) + var(--toggler-button-offset))) translateY(-50%);
 }
 </style>

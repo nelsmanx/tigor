@@ -19,17 +19,15 @@
 	</section>
 </template>
 
-<style>
-:root {
+<style scoped>
+:global(:root) {
 	--info-mail: rgba(28 28 28 / 0.6);
 }
 
-:root[data-color-mode="dark"] {
+:global(:root[data-color-mode="dark"]) {
 	--info-mail: rgba(254 224 46 / 0.9);
 }
-</style>
 
-<style scoped>
 .info {
 	padding: 80px 0;
 }

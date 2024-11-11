@@ -1,10 +1,19 @@
-<script setup></script>
+<script setup>
+const props = defineProps({
+	altColorScheme: {
+		type: Boolean,
+	}
+});
+
+const modalId = props.altColorScheme ? 'modal-callback-alt' : 'modal-callback';
+</script>
 
 <template>
-	<BasicModal id="modal-callback">
+	<BasicModal :id="modalId">
 		<div class="modal__header">
 			<div class="modal__logo">
-				<BasicLogoSvg class="modal__logo-svg" />
+				<BasicLogoSvg v-if="!altColorScheme" class="modal__logo-svg" />
+				<img v-else class="modal__logo-svg" src="/images/logo-alt.svg" alt="Логотип компании">
 			</div>
 			<p class="modal__company-desc">Аутсорс и&nbsp;аутстафф линейного персонала</p>
 			<button class="modal__button-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -20,7 +29,7 @@
 					</label>
 					<label class="form__label">
 						<span class="form__label-title">Номер телефона</span>
-						<input class="form__input" type="tel" name="tel" placeholder="+7 (917) --- -- -- ">
+						<input v-inputmask-tel class="form__input" type="tel" name="tel" placeholder="+7 (917) --- -- -- ">
 					</label>
 				</div>
 				<div class="form__personal-data">
@@ -34,8 +43,8 @@
 	</BasicModal>
 </template>
 
-<style>
-:root {
+<style scoped>
+:global(:root) {
 	--modal-content-bg: #fff;
 	--modal-company-desc: rgba(28 28 28 / 0.9);
 	--modal-desc: #080a05;
@@ -44,7 +53,7 @@
 	--checkbox-label-title: #282828;
 }
 
-:root[data-color-mode="dark"] {
+:global(:root[data-color-mode="dark"]) {
 	--modal-content-bg: #313131;
 	--modal-company-desc: rgba(255 255 255 / 0.9);
 	--modal-desc: #fff;
@@ -53,23 +62,34 @@
 	--checkbox-label-title: #fff;
 }
 
-#modal-callback .modal-dialog {
+:global(#modal-callback .modal-dialog),
+:global(#modal-callback-alt .modal-dialog) {
 	max-width: 683px;
 }
 
-#modal-callback .modal-content {
+:global(#modal-callback .modal-content),
+:global(#modal-callback-alt .modal-content) {
 	padding: 60px 70px 65px 60px;
-	background-color: var(--modal-content-bg);
 	border-radius: 30px;
 }
-</style>
 
-<style scoped>
+:global(#modal-callback .modal-content) {
+	background-color: var(--modal-content-bg);
+}
+
+:global(#modal-callback-alt .modal-content) {
+	background-color: #fee02e;
+}
+
 .modal__header {
 	display: flex;
 	align-items: center;
 	padding-bottom: 45px;
 	border-bottom: 1px solid #dcdcdc;
+}
+
+#modal-callback-alt .modal__header {
+	border-color: #1c1c1c;
 }
 
 .modal__logo {
@@ -96,6 +116,10 @@
 	color: var(--modal-company-desc);
 }
 
+#modal-callback-alt .modal__company-desc {
+	color: rgba(28 28 28 /0.9);
+}
+
 .modal__button-close {
 	width: 32px;
 	height: 32px;
@@ -106,6 +130,10 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.4416 8.85107L17.3929 1.89981C17.8052 1.48745 17.8052 0.780544 17.3929 0.309272C16.9805 -0.103091 16.2736 -0.103091 15.8023 0.309272L8.85107 7.26053L1.89981 0.309272C1.48745 -0.103091 0.780544 -0.103091 0.309272 0.309272C-0.103091 0.721635 -0.103091 1.42854 0.309272 1.89981L7.26053 8.85107L0.309272 15.8023C-0.103091 16.2147 -0.103091 16.9216 0.309272 17.3929C0.544908 17.6285 0.780544 17.6874 1.07509 17.6874C1.36963 17.6874 1.66418 17.5696 1.84091 17.3929L8.79216 10.4416L15.7434 17.3929C15.9791 17.6285 16.2147 17.6874 16.5092 17.6874C16.8038 17.6874 17.0983 17.5696 17.2751 17.3929C17.6874 16.9805 17.6874 16.2736 17.2751 15.8023L10.3238 8.85107H10.4416Z' fill='%23C2CCCA' /%3E%3C/svg%3E");
+}
+
+#modal-callback-alt .modal__button-close {
+	background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.4416 8.85107L17.3929 1.89981C17.8052 1.48745 17.8052 0.780544 17.3929 0.309272C16.9805 -0.103091 16.2736 -0.103091 15.8023 0.309272L8.85107 7.26053L1.89981 0.309272C1.48745 -0.103091 0.780544 -0.103091 0.309272 0.309272C-0.103091 0.721635 -0.103091 1.42854 0.309272 1.89981L7.26053 8.85107L0.309272 15.8023C-0.103091 16.2147 -0.103091 16.9216 0.309272 17.3929C0.544908 17.6285 0.780544 17.6874 1.07509 17.6874C1.36963 17.6874 1.66418 17.5696 1.84091 17.3929L8.79216 10.4416L15.7434 17.3929C15.9791 17.6285 16.2147 17.6874 16.5092 17.6874C16.8038 17.6874 17.0983 17.5696 17.2751 17.3929C17.6874 16.9805 17.6874 16.2736 17.2751 15.8023L10.3238 8.85107H10.4416Z' fill='%231C1C1C' /%3E%3C/svg%3E");
 }
 
 .modal__body {
@@ -121,12 +149,20 @@
 	color: var(--font-basic);
 }
 
+#modal-callback-alt .modal__title {
+	color: #1c1c1c
+}
+
 .modal__desc {
 	margin-bottom: 42px;
 	font-size: 22px;
 	font-weight: 400;
 	line-height: 1.36;
 	color: var(--modal-desc);
+}
+
+#modal-callback-alt .modal__desc {
+	color: #1c1c1c
 }
 
 .modal__form {}
@@ -150,6 +186,10 @@
 	color: #d8a534;
 }
 
+#modal-callback-alt .form__label-title {
+	color: #1c1c1c
+}
+
 .form__input {
 	width: 100%;
 	padding: 4px 0;
@@ -161,8 +201,17 @@
 	border-bottom: 1px solid #dcdcdc;
 }
 
+#modal-callback-alt .form__input {
+	color: #1c1c1c;
+	border-color: #1c1c1c;
+}
+
 .form__input::placeholder {
 	color: var(--form-input-placeholder)
+}
+
+#modal-callback-alt .form__input::placeholder {
+	color: rgba(28 28 28 /0.5);
 }
 
 .form__input:-webkit-autofill,
@@ -183,17 +232,29 @@
 	margin-bottom: 62px;
 }
 
-:deep(.checkbox__label-title) {
+:global(#modal-callback .checkbox__label-title) {
 	font-size: 14px;
 	color: var(--checkbox-label-title);
 }
 
-:deep(.checkbox__style) {
+:global(#modal-callback-alt .checkbox__label-title) {
+	color: #1c1c1c
+}
+
+:global(#modal-callback .checkbox__style) {
 	border-color: #d8a534;
 }
 
-:deep(.checkbox__default-input:checked + .checkbox__style::before) {
+:global(#modal-callback-alt .checkbox__style) {
+	border-color: #1c1c1c
+}
+
+:global(#modal-callback .checkbox__default-input:checked + .checkbox__style::before) {
 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11.01 8.22'%3E%3Cpath fill='%23d8a534' d='M3.86,8.22A1,1,0,0,1,3.12,8L.3,5.13a1,1,0,0,1,0-1.41,1,1,0,0,1,1.41,0L3.79,5.81,9.3.3a1,1,0,0,1,1.4,0,1,1,0,0,1,0,1.41L4.46,8a1,1,0,0,1-.74.27Z' /%3E%3C/svg%3E");
+}
+
+:global(#modal-callback-alt .checkbox__default-input:checked + .checkbox__style::before) {
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11.01 8.22'%3E%3Cpath fill='%231c1c1c' d='M3.86,8.22A1,1,0,0,1,3.12,8L.3,5.13a1,1,0,0,1,0-1.41,1,1,0,0,1,1.41,0L3.79,5.81,9.3.3a1,1,0,0,1,1.4,0,1,1,0,0,1,0,1.41L4.46,8a1,1,0,0,1-.74.27Z' /%3E%3C/svg%3E");
 }
 
 .form__button {
@@ -211,5 +272,9 @@
 	border-radius: 40px;
 	box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
 	cursor: pointer;
+}
+
+#modal-callback-alt .form__button {
+	background-color: #fff;
 }
 </style>
