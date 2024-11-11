@@ -4,10 +4,10 @@
 	<section class="companies section-island">
 		<div class="companies__inner">
 
-			<BaseSectionHeader>
+			<BasicSectionHeader>
 				<template #title>Нам доверяют</template>
 				<template #desc>C нами работают более 50 крупных компаний по всей России</template>
-			</BaseSectionHeader>
+			</BasicSectionHeader>
 
 			<div class="companies__body">
 				<div class="container">

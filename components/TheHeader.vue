@@ -25,6 +25,10 @@
 			</div>
 		</div>
 	</header>
+	<button
+		class="header__hamb"
+		data-bs-toggle="offcanvas"
+		data-bs-target="#mobile-menu"></button>
 </template>
 
 <style scoped>

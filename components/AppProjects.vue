@@ -56,16 +56,9 @@ import '@splidejs/vue-splide/css';
 						<div class="splide__slide-desc splide__slide-desc--cta">
 							<p class="splide__slide-desc-p">Разработаем индивидуальное решение под ваш бизнес</p>
 						</div>
-						<div class="splide__slide-tags tags">
-							<ul class="tags__list">
-								<li class="tags__item">Найдем сотрудников</li>
-								<li class="tags__item">Подготовим кадров</li>
-								<li class="tags__item">Минимизаируем риски</li>
-								<li class="tags__item">Проведем обучение</li>
-								<li class="tags__item">Найдем персонал за сутки</li>
-								<li class="tags__item">Что-то еще</li>
-							</ul>
-						</div>
+
+						<BasicTags class="splide__slide-tags"
+							:tags="['Найдем сотрудников', 'Подготовим кадров', 'Минимизаируем риски', 'Проведем обучение', 'Найдем персонал за сутки', 'Что-то еще']" />
 						<button class="splide__slide-button">Оставить заявку</button>
 					</SplideSlide>
 				</SplideTrack>

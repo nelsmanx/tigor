@@ -1,21 +1,28 @@
-<script setup></script>
+<script setup>
+const cityTabs = ["Москва", "Волгоград", "Еще город"];
+const mapTabs = [{ coordinates: [55.776406, 37.690884] }, { coordinates: [48.714417, 44.524459] }, { coordinates: [59.939864, 30.314566] }];
+const activeTab = ref(1);
+</script>
 
 <template>
-	<section class="contacts section-island">
+	<section id="contacts" class="contacts section-island">
 		<div class="contacts__inner">
 			<div class="container">
 				<div class="contacts__layout">
 					<div class="contacts__info">
 						<h2 class="contacts__title">Адрес центрального офиса&nbsp;компании:</h2>
 
-
-						<div class="contacts__tags tags">
-							<ul class="tags__list">
-								<li class="tags__item tags__item--contacts is-active">Москва</li>
-								<li class="tags__item tags__item--contacts">Волгоград</li>
-								<li class="tags__item tags__item--contacts">Еще город</li>
+						<div class="contacts__city-tabs">
+							<ul class="contacts__city-tabs-list">
+								<li v-for="(tab, index) in cityTabs" :key="tab"
+									@click="activeTab = index + 1"
+									:class="{ 'is-active': index + 1 === activeTab }"
+									class="contacts__city-tabs-item">
+									{{ tab }}
+								</li>
 							</ul>
 						</div>
+
 						<p class="contacts__address">г. Москва, Фридриха Энгельса 46с7 подъезд 1, этаж 3</p>
 						<ul class="contacts__list">
 							<li class="contacts__item">
@@ -29,9 +36,36 @@
 							</li>
 						</ul>
 
-						<button class="contacts__button button-basic">Позвонить в компанию</button>
+						<a class="contacts__button button-basic" href="tel:+79000000000">Позвонить в компанию</a>
 					</div>
-					<div class="contacts__map"></div>
+					<div class="contacts__map">
+						<div class="contacts__map-tabs">
+							<ul class="contacts__map-tabs-list">
+								<li v-for="(tab, index) in mapTabs" :key="tab.coordinates"
+									:class="{ 'is-active': index + 1 === activeTab }"
+									class="contacts__map-tabs-item">
+									<ClientOnly>
+										<YandexMap :coordinates="tab.coordinates" :zoom="14" :controls="[]" :behaviors="['drag', 'dblClickZoom', 'multiTouch']" />
+									</ClientOnly>
+								</li>
+							</ul>
+						</div>
+
+						<!-- <ClientOnly>
+							<Transition name="map-tab">
+								<YandexMap v-show="activeTab === 1"
+									:coordinates="[55.776406, 37.690884]" :zoom="14" :controls="[]" :behaviors="['drag', 'dblClickZoom', 'multiTouch']" />
+							</Transition>
+							<Transition name="map-tab">
+								<YandexMap v-show="activeTab === 2"
+									:coordinates="[48.714417, 44.524459]" :zoom="14" :controls="[]" :behaviors="['drag', 'dblClickZoom', 'multiTouch']" />
+							</Transition>
+							<Transition name="map-tab">
+								<YandexMap v-show="activeTab === 3"
+									:coordinates="[59.939864, 30.314566]" :zoom="14" :controls="[]" :behaviors="['drag', 'dblClickZoom', 'multiTouch']" />
+							</Transition>
+						</ClientOnly> -->
+					</div>
 				</div>
 			</div>
 		</div>
@@ -64,20 +98,18 @@
 	color: #090c05;
 }
 
-.contacts__tags {
+.contacts__city-tabs {
 	margin-bottom: 38px;
 }
 
-.tags {}
-
-.tags__list {
+.contacts__city-tabs-list {
 	--gap: 10px;
 	display: flex;
 	flex-wrap: wrap;
 	margin: calc(-1 * var(--gap)) 0 0 calc(-1 * var(--gap));
 }
 
-.tags__item {
+.contacts__city-tabs-item {
 	margin: var(--gap) 0 0 var(--gap);
 	display: flex;
 	justify-content: center;
@@ -88,14 +120,11 @@
 	color: #0c1832;
 	border: 0.75px solid #0c1832;
 	border-radius: 36px;
-}
-
-.tags__item--contacts {
 	opacity: 0.6;
 	cursor: pointer;
 }
 
-.tags__item--contacts.is-active {
+.contacts__city-tabs-item.is-active {
 	opacity: 1;
 }
 
@@ -151,7 +180,43 @@
 }
 
 .contacts__map {
+	width: 100%;
+	height: 100%;
 	border-radius: 16px;
-	background: url("/images/map.jpg") center/cover no-repeat;
+	overflow: hidden;
+}
+
+.contacts__map-tabs,
+.contacts__map-tabs-list,
+.contacts__map-tabs-item {
+	width: 100%;
+	height: 100%;
+}
+
+.contacts__map-tabs-item {
+	display: none;
+}
+
+.contacts__map-tabs-item.is-active {
+	display: block;
+}
+
+.yandex-container {
+	height: 100%;
+}
+
+.yandex-container :deep([class$="map-copyrights-promo"]),
+.yandex-container :deep([class$="copyright__wrap"]) {
+	display: none;
+}
+
+.map-tab-enter-from,
+.map-tab-leave-to {
+	opacity: 0;
+}
+
+.map-tab-enter-active,
+.map-tab-leave-active {
+	transition: opacity 300ms ease;
 }
 </style>

@@ -13,9 +13,9 @@
 	<AppFaq />
 	<AppCta :has-dark-color-scheme="true" />
 	<AppContacts />
+	<TheMobileMenu />
 
 	<AppModalCallback />
 	<AppModalCallback :alt-color-scheme="true" />
 	<AppModalCallbackVacancy />
-
 </template>

@@ -4,10 +4,10 @@
 	<section class="benefits section-island">
 		<div class="benefits__inner">
 
-			<BaseSectionHeader>
+			<BasicSectionHeader>
 				<template #title>Наши преимущества</template>
 				<template #desc>Работаем в 150+ городах России.<br /> Быстрые сроки открытия нового города.</template>
-			</BaseSectionHeader>
+			</BasicSectionHeader>
 
 			<div class="benefits__body">
 				<div class="container">

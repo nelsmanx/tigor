@@ -7,10 +7,10 @@ import '@splidejs/vue-splide/css';
 	<section class="fleet section-island">
 		<div class="fleet__inner">
 
-			<BaseSectionHeader>
+			<BasicSectionHeader>
 				<template #title>Есть свой автопарк:</template>
 				<template #desc>Более 1000 автомобилей по Москве и МО.<br /> Предоставление техники и еще что-то.</template>
-			</BaseSectionHeader>
+			</BasicSectionHeader>
 
 			<div class="fleet__body">
 				<div class="container">

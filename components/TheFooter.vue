@@ -30,14 +30,7 @@ const tags = [
 						<div class="footer__contacts">
 							<a class="footer__contacts-tel" href="tel:+79000000000">+7 (900) 000 00 00</a>
 							<a class="footer__contacts-mail" href="mailto:info@tigor.pro">info@tigor.pro</a>
-							<ul class="footer__social-list">
-								<li class="footer__social-item">
-									<a class="footer__social-item-link footer__social-item-link--wa" href=""></a>
-								</li>
-								<li class="footer__social-item">
-									<a class="footer__social-item-link footer__social-item-link--tg" href=""></a>
-								</li>
-							</ul>
+							<BasicSocials class="footer__socials" />
 						</div>
 					</div>
 					<div class="footer__top-links">
@@ -212,31 +205,7 @@ const tags = [
 	color: var(--footer-contacts-mail);
 }
 
-.footer__social-list {
-	display: grid;
-	grid-auto-flow: column;
-	gap: 4px;
-}
-
-.footer__social-item {}
-
-.footer__social-item-link {
-	display: block;
-	width: 39px;
-	height: 39px;
-	background-size: contain;
-	background-position: center;
-	background-repeat: no-repeat;
-	border-radius: 50%;
-}
-
-.footer__social-item-link--wa {
-	background-image: url("/images/footer/social-icon-1.svg");
-}
-
-.footer__social-item-link--tg {
-	background-image: url("/images/footer/social-icon-2.svg");
-}
+.footer__socials {}
 
 .footer__top-links {
 	padding-top: 4px;
