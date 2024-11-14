@@ -69,7 +69,7 @@
 	.section-header__inner {
 		grid-template-areas:
 			"title  logo"
-			"desc desc";
+			"desc logo";
 		grid-template-columns: 1fr auto;
 		align-items: start;
 		row-gap: 10px;

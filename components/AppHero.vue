@@ -437,14 +437,6 @@ import '@splidejs/vue-splide/css';
 	.splide__slide-info-title {
 		font-size: 34px;
 	}
-
-	/* .splide__slide :deep(.badges__item) {
-		min-height: 95px;
-	}
-
-	.splide__slide :deep(.badges__item-title) {
-		font-size: 26px;
-	} */
 }
 
 @media (max-width: 1699.98px) {
@@ -615,6 +607,7 @@ import '@splidejs/vue-splide/css';
 	}
 
 	.splide__slide {
+		border-radius: var(--section-border-radius);
 		overflow: hidden;
 	}
 
@@ -709,10 +702,6 @@ import '@splidejs/vue-splide/css';
 }
 
 @media (max-width: 479.98px) {
-	.splide__slide {
-		border-radius: var(--section-border-radius);
-	}
-
 	.splide__slide-desc {
 		font-size: 12px;
 		line-height: 1.5;

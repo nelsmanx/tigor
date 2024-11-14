@@ -17,16 +17,27 @@ import '@splidejs/vue-splide/css';
 					arrows: true,
 					pagination: false,
 					speed: 1500,
+					breakpoints: {
+						1699.98: {
+							perPage: 2,
+						},
+						1399.98: {
+							gap: 30,
+						},
+						991.98: {
+							perPage: 1,
+							gap: 20,
+						},
+						767.98: {
+							arrows: false,
+							pagination: true
+						},
+					}
 				}">
 				<SplideTrack>
 					<SplideSlide>
 						<p class="splide__slide-title">Более 10-ти лет плодотворного сотрудничества с Delivery club</p>
-						<div class="splide__slide-tags tags">
-							<ul class="tags__list">
-								<li class="tags__item">Аутсорсинг курьеров</li>
-								<li class="tags__item">Что-то еще</li>
-							</ul>
-						</div>
+						<BasicTags class="splide__slide-tags" :tags="['Аутсорсинг курьеров', 'Что-то еще']" />
 						<div class="splide__slide-desc">
 							<p class="splide__slide-desc-p">Более 10-ти лет плодотворного сотрудничества.</p>
 							<p class="splide__slide-desc-p">В 2012 году запустили службу доставки для компании.</p>
@@ -37,12 +48,7 @@ import '@splidejs/vue-splide/css';
 
 					<SplideSlide>
 						<p class="splide__slide-title">Более 10-ти лет плодотворного сотрудничества с Delivery club</p>
-						<div class="splide__slide-tags tags">
-							<ul class="tags__list">
-								<li class="tags__item">Аутсорсинг курьеров</li>
-								<li class="tags__item">Что-то еще</li>
-							</ul>
-						</div>
+						<BasicTags class="splide__slide-tags" :tags="['Аутсорсинг курьеров', 'Что-то еще']" />
 						<div class="splide__slide-desc">
 							<p class="splide__slide-desc-p">Более 10-ти лет плодотворного сотрудничества.</p>
 							<p class="splide__slide-desc-p">В 2012 году запустили службу доставки для компании.</p>
@@ -87,7 +93,7 @@ import '@splidejs/vue-splide/css';
 
 .projects__title {
 	font-family: var(--secondary-font-family);
-	font-size: 52px;
+	font-size: var(--section-title-fz);
 	font-weight: 400;
 	color: var(--font-basic);
 }
@@ -217,9 +223,8 @@ import '@splidejs/vue-splide/css';
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 271px;
-	height: 64px;
-	padding: 8px;
+	width: fit-content;
+	padding: 0.85em 2.2em;
 	font-family: var(--secondary-font-family);
 	font-size: 22px;
 	font-weight: 400;
@@ -229,5 +234,176 @@ import '@splidejs/vue-splide/css';
 	border-radius: 16px;
 	box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
 	cursor: pointer;
+}
+
+@media (max-width: 1699.98px) {
+	.splide__slide-title {
+		font-size: 24px;
+	}
+
+	.splide__slide-title--cta {
+		font-size: 42px;
+	}
+}
+
+@media (max-width: 991.98px) {
+	.splide__slide {
+		min-height: 500px;
+	}
+
+	.splide__slide-title--cta {
+		font-size: 38px;
+	}
+
+	.splide__slide-button {
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 767.98px) {
+	.projects__title {
+		margin-bottom: 30px;
+	}
+
+	.projects__splide {
+		margin-top: 0;
+		padding-top: 0;
+	}
+
+	.splide {
+		padding-bottom: 25px;
+	}
+
+	.splide__slide {
+		border-radius: var(--section-border-radius);
+		overflow: hidden;
+	}
+
+	.splide :deep(.splide__pagination) {
+		bottom: 0;
+	}
+
+	.splide :deep(.splide__pagination__page) {
+		width: 5px;
+		height: 5px;
+		margin: 0;
+		border-radius: 50%;
+		background: #a5a5a5;
+		opacity: 0.2;
+	}
+
+	.splide :deep(.splide__pagination__page.is-active) {
+		background: #a5a5a5;
+		transform: scale(1.5);
+		opacity: 1;
+	}
+
+	.splide :deep(.splide__pagination li[role=presentation]:not(:last-child)) {
+		margin-right: 8px;
+	}
+}
+
+@media (max-width: 575.98px) {
+	.splide__slide {
+		min-height: auto;
+		padding: 30px;
+	}
+
+	.splide__slide-title {
+		margin-bottom: 20px;
+		font-size: 22px;
+	}
+
+	.splide__slide-title--cta {
+		font-size: 32px;
+	}
+
+	.splide__slide-tags {
+		margin-bottom: 25px;
+	}
+
+	.splide__slide :deep(.tags__list) {
+		--gap: 8px;
+	}
+
+	.splide__slide :deep(.tags__item) {
+		font-size: 10px;
+	}
+
+	.splide__slide-desc {
+		height: 200px;
+		padding-right: 16px;
+		overflow-y: auto;
+		margin-bottom: 40px;
+	}
+
+	.splide__slide-desc--cta {
+		height: auto;
+		margin-bottom: 20px;
+		padding: 0;
+	}
+
+	.splide__slide-desc-p {
+		font-size: 16px;
+	}
+
+	.splide__slide-desc-p:not(:last-child) {
+		margin-bottom: 10px;
+	}
+
+	.splide__slide-button {
+		font-size: 18px;
+	}
+}
+
+@media (max-width: 479.98px) {
+	.splide__slide-title {
+		margin-bottom: 20px;
+		font-size: 20px;
+	}
+
+	.splide__slide-title--cta {
+		font-size: 28px;
+	}
+
+	.splide__slide-desc {
+		height: 180px;
+		margin-bottom: 30px;
+	}
+
+	.splide__slide-desc--cta {
+		height: auto;
+		margin-bottom: 20px;
+	}
+
+	.splide__slide-desc-p {
+		font-size: 14px;
+	}
+
+	.splide__slide-image {
+		width: 100px;
+	}
+
+	.splide__slide-button {
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 379.98px) {
+	.splide__slide {
+		padding: 25px;
+	}
+
+	.splide__slide-title {
+		font-size: 18px;
+	}
+
+	.splide__slide-title--cta {
+		font-size: 24px;
+	}
+
+	.splide__slide-image {
+		width: 80px;
+	}
 }
 </style>

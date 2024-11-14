@@ -6,7 +6,7 @@
 
 			<BasicSectionHeader>
 				<template #title>Нам доверяют</template>
-				<template #desc>C нами работают более 50 крупных компаний по всей России</template>
+				<template #desc>C нами работают более 50 крупных компаний по&nbsp;всей&nbsp;России</template>
 			</BasicSectionHeader>
 
 			<div class="companies__body">
@@ -48,7 +48,7 @@
 
 .companies__inner {
 	background-color: #f5f7fa;
-	border-radius: 50px;
+	border-radius: var(--section-border-radius);
 }
 
 .companies :deep(.section-header__desc) {
@@ -107,5 +107,94 @@
 	font-weight: 400;
 	text-align: center;
 	color: #080a05;
+}
+
+@media (max-width: 1399.98px) {
+	.companies__body {
+		padding: 40px 0 60px;
+	}
+
+	.companies__item-title {
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 1499.98px) {
+	.companies :deep(.section-header__desc) {
+		max-width: none;
+	}
+}
+
+@media (max-width: 1199.98px) {
+	.companies__list {
+		gap: 20px;
+	}
+
+	.companies__item-title {
+		font-size: 18px;
+	}
+}
+
+@media (max-width: 991.98px) {
+	.companies__body {
+		padding: 30px 0 40px;
+	}
+
+	.companies__item-logo {
+		margin-bottom: 15px;
+		border-radius: 20px;
+	}
+
+	.companies__item-title {
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 767.98px) {
+	.companies__list {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 30px;
+	}
+
+	.companies__item-logo {
+		margin-bottom: 10px;
+	}
+}
+
+@media (max-width: 575.98px) {
+	.companies__body {
+		padding: 30px 0;
+	}
+
+	.companies__list {
+		row-gap: 30px;
+		column-gap: 20px;
+	}
+}
+
+@media (max-width: 479.98px) {
+	.companies__list {
+		row-gap: 20px;
+		column-gap: 15px;
+	}
+
+	.companies__item-logo {
+		margin-bottom: 5px;
+	}
+
+	.companies__item-title {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 379.98px) {
+	.companies__list {
+		row-gap: 15px;
+		column-gap: 10px;
+	}
+
+	.companies__item-title {
+		font-size: 12px;
+	}
 }
 </style>

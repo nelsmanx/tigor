@@ -14,7 +14,7 @@ defineProps({
 					<div class="cta__content">
 						<template v-if="!hasDarkColorScheme">
 							<h2 class="cta__title">Ищешь работу?<br /> Тогда тебе к нам!</h2>
-							<p class="cta__desc">Заполняй анкету и жми «Отправить».<br /> Наши заботливые менеджеры свяжутся с Вами в течение 15 минут</p>
+							<p class="cta__desc">Заполняй анкету и жми «Отправить».<br /> Наши заботливые менеджеры свяжутся с&nbsp;Вами в&nbsp;течение&nbsp;15&nbsp;минут</p>
 						</template>
 						<template v-else>
 							<h2 class="cta__title cta__title--dark">Нужны услуги&nbsp;по предоставлению персонала?</h2>
@@ -88,7 +88,7 @@ defineProps({
 
 .cta__inner {
 	padding: 63px 0;
-	border-radius: 50px;
+	border-radius: var(--section-border-radius);
 	background-color: #fee02e;
 }
 
@@ -117,7 +117,7 @@ defineProps({
 .cta__title {
 	margin-bottom: 25px;
 	font-family: var(--secondary-font-family);
-	font-size: 52px;
+	font-size: var(--section-title-fz);
 	font-weight: 400;
 	color: #1c1c1c;
 }
@@ -185,6 +185,8 @@ defineProps({
 }
 
 .cta__form {
+	display: flex;
+	flex-direction: column;
 	padding-top: 15px;
 }
 
@@ -273,6 +275,7 @@ defineProps({
 	align-items: center;
 	width: 100%;
 	height: 86px;
+	margin-top: auto;
 	padding: 8px;
 	font-family: var(--secondary-font-family);
 	font-weight: 400;
@@ -299,5 +302,235 @@ defineProps({
 
 .cta--dark:deep(.checkbox__default-input:checked + .checkbox__style::before) {
 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11.01 8.22'%3E%3Cpath fill='%23ffffff' d='M3.86,8.22A1,1,0,0,1,3.12,8L.3,5.13a1,1,0,0,1,0-1.41,1,1,0,0,1,1.41,0L3.79,5.81,9.3.3a1,1,0,0,1,1.4,0,1,1,0,0,1,0,1.41L4.46,8a1,1,0,0,1-.74.27Z' /%3E%3C/svg%3E");
+}
+
+@media (max-width: 1599.98px) {
+	.form__input-group {
+		column-gap: 70px;
+		row-gap: 50px;
+		padding-right: 0;
+	}
+}
+
+@media (max-width: 1399.98px) {
+	.cta__content {
+		margin-right: 30px;
+	}
+
+	.cta__desc {
+		font-size: 22px;
+	}
+
+	.cta__group {
+		gap: 25px;
+		margin-top: 50px;
+	}
+
+	.cta__group-image {
+		width: 200px;
+	}
+
+	.cta__group-contacts-tel {
+		font-size: 26px;
+	}
+
+	.form__input-group {
+		column-gap: 50px;
+		row-gap: 40px;
+	}
+
+	.form__button {
+		height: 80px;
+		font-size: 26px;
+	}
+}
+
+@media (max-width: 1199.98px) {
+	.cta__inner {
+		padding: 50px 0;
+	}
+
+	.cta__group-image {
+		display: none;
+	}
+
+	.form__input {
+		font-size: 22px;
+	}
+}
+
+@media (max-width: 991.98px) {
+	.cta__layout {
+		grid-template-columns: 100%;
+		gap: 45px;
+	}
+
+	.cta__form {
+		padding-top: 0;
+	}
+
+	.cta__content {
+		max-width: none;
+		margin-right: 0;
+	}
+
+	.cta__desc {
+		font-size: 20px;
+	}
+
+	.cta__group-image {
+		display: block;
+		width: 180px;
+	}
+
+	.cta__group-contacts-tel {
+		margin-bottom: 8px;
+		font-size: 22px;
+	}
+
+	.form__button {
+		font-size: 24px;
+	}
+}
+
+@media (max-width: 767.98px) {
+	.cta__inner {
+		padding: 40px 0;
+	}
+
+	.cta__title {
+		margin-bottom: 20px;
+	}
+
+	.cta__desc {
+		font-size: 18px;
+	}
+
+	.form__input {
+		font-size: 20px;
+	}
+
+	.form__button {
+		height: 70px;
+		font-size: 22px;
+	}
+}
+
+@media (max-width: 575.98px) {
+	.cta__inner {
+		padding: 30px 0;
+	}
+
+	.cta__layout {
+		gap: 35px;
+	}
+
+	.cta__title {
+		margin-bottom: 15px;
+	}
+
+	.cta__desc {
+		font-size: 16px;
+	}
+
+	.cta__group {
+		margin-top: 30px;
+	}
+
+	.cta__group-image {
+		width: 150px;
+	}
+
+	.cta__group-contacts-tel {
+		margin-bottom: 4px;
+		font-size: 20px;
+	}
+
+	.cta__group-contacts-mail {
+		font-size: 16px;
+	}
+
+	.form__input-group {
+		column-gap: 40px;
+		row-gap: 30px;
+		margin-bottom: 25px;
+	}
+
+	.form__label-title {
+		font-size: 14px;
+	}
+
+	.form__input {
+		padding: 4px 0;
+	}
+
+	.cta :deep(.checkbox__label-title) {
+		font-size: 14px;
+	}
+
+	.cta :deep(.checkbox__style-wrap) {
+		top: 1px;
+		margin-right: 1px;
+	}
+
+	.form__personal-data {
+		margin-bottom: 25px;
+	}
+
+	.form__button {
+		height: 65px;
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 479.98px) {
+	.cta__group {
+		grid-template-columns: 100%;
+		gap: 20px;
+		margin-top: 30px;
+	}
+
+	.form__input-group {
+		grid-template-columns: 100%;
+		grid-template-areas:
+			"name"
+			"tel"
+			"city"
+			"mail";
+		padding-right: 20px;
+	}
+
+	.cta__group-image {
+		order: 2;
+	}
+
+	.form__input {
+		font-size: 18px;
+	}
+
+	.form__button {
+		height: 60px;
+		font-size: 18px;
+	}
+}
+
+@media (max-width: 379.98px) {
+	.form__input-group {
+		padding-right: 10px;
+	}
+
+	.cta__group-contacts-tel {
+		margin-bottom: 4px;
+		font-size: 18px;
+	}
+
+	.cta__group-contacts-mail {
+		font-size: 14px;
+	}
+
+	.form__button {
+		height: 50px;
+		font-size: 16px;
+	}
 }
 </style>

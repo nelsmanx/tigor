@@ -9,7 +9,7 @@ import '@splidejs/vue-splide/css';
 
 			<BasicSectionHeader>
 				<template #title>Есть свой автопарк:</template>
-				<template #desc>Более 1000 автомобилей по Москве и МО.<br /> Предоставление техники и еще что-то.</template>
+				<template #desc>Более 1000 автомобилей по Москве и&nbsp;МО.<br /> Предоставление техники и еще что-то.</template>
 			</BasicSectionHeader>
 
 			<div class="fleet__body">
@@ -40,8 +40,20 @@ import '@splidejs/vue-splide/css';
 							arrows: true,
 							pagination: false,
 							speed: 1500,
+							breakpoints: {
+								575.98: {
+									arrows: false,
+									pagination: true
+								},
+							}
 						}">
 							<SplideTrack>
+								<SplideSlide>
+									<img class="splide__image" src="/images/fleet/1.jpg" alt="Легковой автомобиль">
+								</SplideSlide>
+								<SplideSlide>
+									<img class="splide__image" src="/images/fleet/1.jpg" alt="Легковой автомобиль">
+								</SplideSlide>
 								<SplideSlide>
 									<img class="splide__image" src="/images/fleet/1.jpg" alt="Легковой автомобиль">
 								</SplideSlide>
@@ -72,7 +84,7 @@ import '@splidejs/vue-splide/css';
 
 .fleet__inner {
 	background-color: #f5f7fa;
-	border-radius: 50px;
+	border-radius: var(--section-border-radius)
 }
 
 .fleet__body {
@@ -128,7 +140,7 @@ import '@splidejs/vue-splide/css';
 .fleet__body-carousel {}
 
 /* carousel */
-.fleet__splide {
+.splide {
 	height: 100%;
 	border-radius: 30px;
 	overflow: hidden;
@@ -136,6 +148,10 @@ import '@splidejs/vue-splide/css';
 
 .splide__slide {
 	cursor: grab;
+}
+
+.splide__track {
+	height: 100%;
 }
 
 .splide__arrow {
@@ -199,5 +215,167 @@ import '@splidejs/vue-splide/css';
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+}
+
+@media (max-width: 1699.98px) {
+	.fleet__body-block {
+		padding-right: 30px;
+	}
+
+	.fleet__item:not(:last-child) {
+		margin-bottom: 40px;
+	}
+
+	.fleet__item-title {
+		margin-bottom: 8px;
+		font-size: 24px;
+	}
+
+	.fleet__item-desc {
+		font-size: 18px;
+	}
+}
+
+@media (max-width: 1399.98px) {
+	.fleet__body {
+		padding: 40px 0 40px;
+	}
+}
+
+@media (max-width: 1199.98px) {
+	.fleet__body-inner {
+		grid-template-columns: 100%;
+	}
+
+	.fleet__body-block {
+		padding-right: 0;
+	}
+}
+
+@media (max-width: 991.98px) {
+	.fleet__body {
+		padding: 30px 0;
+	}
+
+	.fleet__item {
+		padding-left: 18px;
+	}
+
+	.fleet__item::before {
+		top: 10px;
+		width: 6px;
+		height: 6px;
+	}
+
+	.fleet__item:not(:last-child) {
+		margin-bottom: 30px;
+	}
+
+	.fleet__item-title {
+		margin-bottom: 6px;
+		font-size: 22px;
+	}
+
+	.fleet__item-desc {
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 767.98px) {
+	.fleet__item {
+		padding-left: 15px;
+	}
+
+	.fleet__item-title {
+		font-size: 20px;
+	}
+
+	.splide__arrows.splide__arrows--ltr {
+		bottom: 20px;
+		right: 20px;
+	}
+
+	.splide {
+		border-radius: 20px;
+	}
+}
+
+@media (max-width: 575.98px) {
+	.fleet__item:not(:last-child) {
+		margin-bottom: 20px;
+	}
+
+	.fleet__item::before {
+		top: 8px;
+	}
+
+	.fleet__item-title {
+		margin-bottom: 4px;
+		font-size: 18px;
+	}
+
+	.fleet__item-desc {
+		font-size: 14px;
+	}
+
+	.fleet__body {
+		padding: 30px 0 20px;
+	}
+
+	.splide {
+		padding-bottom: 25px;
+	}
+
+	.splide__slide {
+		border-radius: var(--section-border-radius);
+		overflow: hidden;
+	}
+
+	.splide :deep(.splide__pagination) {
+		bottom: 0;
+	}
+
+	.splide :deep(.splide__pagination__page) {
+		width: 5px;
+		height: 5px;
+		margin: 0;
+		border-radius: 50%;
+		background: #a5a5a5;
+		opacity: 0.2;
+	}
+
+	.splide :deep(.splide__pagination__page.is-active) {
+		background: #a5a5a5;
+		transform: scale(1.5);
+		opacity: 1;
+	}
+
+	.splide :deep(.splide__pagination li[role=presentation]:not(:last-child)) {
+		margin-right: 8px;
+	}
+}
+
+@media (max-width: 379.98px) {
+	.fleet__body {
+		padding: 20px 0;
+	}
+
+	.fleet__body-inner {
+		gap: 20px;
+	}
+
+	.fleet__item {
+		padding-left: 12px;
+	}
+
+	.fleet__item::before {
+		width: 4px;
+		height: 4px;
+	}
+
+	.fleet__item-title {
+		margin-bottom: 2px;
+		font-size: 16px;
+	}
 }
 </style>

@@ -7,7 +7,7 @@
 			<div class="faq__layout">
 				<ul class="faq__list">
 					<AppFaqItem>
-						<template #question>Почему с нами работают крупные<br /> федеральные клиенты?</template>
+						<template #question>Почему с нами работают крупные федеральные клиенты?</template>
 						<template #answer>
 							<ol>
 								<li>
@@ -95,7 +95,7 @@
 .faq__title {
 	margin-bottom: 38px;
 	font-family: var(--secondary-font-family);
-	font-size: 52px;
+	font-size: var(--section-title-fz);
 	font-weight: 400;
 	color: var(--font-basic);
 }
@@ -111,5 +111,35 @@
 .faq__list {
 	display: grid;
 	gap: var(--gap);
+}
+
+@media (max-width: 1399.98px) {
+	.faq__layout {
+		--gap: 20px;
+	}
+}
+
+@media (max-width: 1199.98px) {
+	.faq__layout {
+		grid-template-columns: 100%;
+	}
+}
+
+@media (max-width: 991.98px) {
+	.faq__layout {
+		--gap: 15px;
+	}
+}
+
+@media (max-width: 575.98px) {
+	.faq__title {
+		margin-bottom: 30px;
+	}
+}
+
+@media (max-width: 479.98px) {
+	.faq__layout {
+		--gap: 10px;
+	}
 }
 </style>
