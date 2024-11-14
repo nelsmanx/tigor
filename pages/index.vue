@@ -12,9 +12,8 @@
 	<AppProjects />
 	<AppFaq />
 	<AppCta :has-dark-color-scheme="true" />
-	<!-- <AppContacts /> -->
-	<!--  -->
-	<!--  -->
+	<AppContacts />
+
 	<!-- <AppModalCallback /> -->
 	<!-- <AppModalCallback :alt-color-scheme="true" /> -->
 	<!-- <AppModalCallbackVacancy /> -->

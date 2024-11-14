@@ -185,4 +185,18 @@ const openModal = (modal) => {
 	color: #1c1c1c;
 	background-color: transparent;
 }
+
+@media (max-width: 575.98px) {
+	.mobile-menu__button-close {
+		margin-bottom: 40px;
+	}
+
+	.mobile-menu__links {
+		margin-bottom: 50px;
+	}
+
+	.mobile-menu__links-list {
+		gap: 35px;
+	}
+}
 </style>

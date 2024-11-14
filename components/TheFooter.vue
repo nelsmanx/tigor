@@ -17,21 +17,19 @@ const tags = [
 		<div class="container">
 			<div class="footer__top">
 				<div class="footer__top-layout">
-					<div class="footer__top-content">
-						<div class="footer__logo-group">
-							<div class="footer__logo">
-								<BasicLogoSvg class="footer__logo-svg" />
-							</div>
-							<p class="footer__logo-desc">Аутсорс и&nbsp;аутстафф линейного персонала</p>
+					<div class="footer__logo-group">
+						<div class="footer__logo">
+							<BasicLogoSvg class="footer__logo-svg" />
 						</div>
+						<p class="footer__logo-desc">Аутсорс и аутстафф<br /> линейного персонала</p>
+					</div>
 
-						<BasicTags :tags="tags" class="footer__tags" />
+					<BasicTags :tags="tags" class="footer__tags" />
 
-						<div class="footer__contacts">
-							<a class="footer__contacts-tel" href="tel:+79000000000">+7 (900) 000 00 00</a>
-							<a class="footer__contacts-mail" href="mailto:info@tigor.pro">info@tigor.pro</a>
-							<BasicSocials class="footer__socials" />
-						</div>
+					<div class="footer__contacts">
+						<a class="footer__contacts-tel" href="tel:+79000000000">+7 (900) 000 00 00</a>
+						<a class="footer__contacts-mail" href="mailto:info@tigor.pro">info@tigor.pro</a>
+						<BasicSocials class="footer__socials" />
 					</div>
 					<div class="footer__top-links">
 						<ul class="footer__link-list">
@@ -77,13 +75,17 @@ const tags = [
 			</div>
 			<div class="footer__bottom">
 				<div class="footer__bottom-layout">
-					<div class="footer__bottom-group">
-						<p class="footer__bottom-item">© 2024, ООО ТИГОР. Все права защищены.</p>
+					<p class="footer__bottom-item">© 2024, ООО ТИГОР. Все&nbsp;права&nbsp;защищены.</p>
+					<p class="footer__bottom-item">ИНН:&nbsp;6165231522, ОГРН&nbsp;1226100001511</p>
+					<a class="footer__bottom-item" href="#">Политика конфиденциальности</a>
+
+					<!-- <div class="footer__bottom-group">
+						<p class="footer__bottom-item">© 2024, ООО ТИГОР. Все&nbsp;права&nbsp;защищены.</p>
 					</div>
 					<div class="footer__bottom-group">
-						<p class="footer__bottom-item">ИНН: 6165231522, ОГРН 1226100001511</p>
+						<p class="footer__bottom-item">ИНН:&nbsp;6165231522, ОГРН&nbsp;1226100001511</p>
 						<a class="footer__bottom-item" href="#">Политика конфиденциальности</a>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
@@ -128,15 +130,19 @@ const tags = [
 
 .footer__top-layout {
 	display: grid;
+	grid-template-areas:
+		"logo-group links"
+		"tags links"
+		"contacts links";
 	grid-template-columns: repeat(2, 1fr);
-	gap: 30px;
+	align-items: start;
+	column-gap: 30px;
 }
 
-.footer__top-content {
-	padding-right: 270px;
-}
+.footer__top-content {}
 
 .footer__logo-group {
+	grid-area: logo-group;
 	display: flex;
 	align-items: center;
 	margin-bottom: 42px;
@@ -154,7 +160,6 @@ const tags = [
 .footer__logo-desc {
 	position: relative;
 	top: 4px;
-	max-width: 140px;
 	font-size: 13px;
 	font-weight: 400;
 	text-align: center;
@@ -162,7 +167,8 @@ const tags = [
 }
 
 .footer__tags {
-	margin-bottom: 45px;
+	grid-area: tags;
+	max-width: 585px;
 }
 
 .footer__tags :deep(.tags__item) {
@@ -178,11 +184,13 @@ const tags = [
 }
 
 .footer__contacts {
+	grid-area: contacts;
 	display: grid;
 	grid-auto-flow: column;
 	justify-content: start;
 	align-items: center;
 	gap: 40px;
+	margin-top: 45px;
 }
 
 .footer__contacts-tel {
@@ -209,6 +217,7 @@ const tags = [
 .footer__socials {}
 
 .footer__top-links {
+	grid-area: links;
 	padding-top: 4px;
 }
 
@@ -233,22 +242,260 @@ const tags = [
 
 .footer__bottom-layout {
 	display: grid;
+	grid-template-columns: calc(50% + 15px) auto auto;
+	justify-content: start;
+}
+
+/*.footer__bottom-layout {
+	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: 30px;
 	align-items: center;
 }
 
-.footer__bottom-group {
+ .footer__bottom-group {
 	display: flex;
-}
-
+} */
 .footer__bottom-item {
 	font-size: 12px;
 	font-weight: 300;
 	color: #8c8c8c;
 }
 
-.footer__bottom-item:not(:last-child) {
+.footer__bottom-item:nth-child(2) {
 	margin-right: 40px;
+}
+
+@media (max-width: 1399.98px) {
+	.footer__top-layout {
+		grid-template-areas:
+			"logo-group links"
+			"tags links"
+			"contacts contacts";
+	}
+
+	.footer__tags {
+		max-width: 460px;
+	}
+
+	.footer__contacts {
+		gap: 30px;
+	}
+
+	.footer__link-list {
+		column-gap: 70px;
+		row-gap: 25px;
+	}
+}
+
+@media (max-width: 1199.98px) {
+	.footer__link-list {
+		column-gap: 30px;
+	}
+
+	.footer__link {
+		font-size: 16px;
+	}
+
+	.footer__bottom-layout {
+		grid-template-columns: none;
+		grid-auto-flow: column;
+		justify-content: center;
+		gap: 40px;
+	}
+
+	.footer__bottom-item:nth-child(2) {
+		margin-right: 0;
+	}
+}
+
+@media (max-width: 991.98px) {
+	.footer__top {
+		margin-bottom: 80px;
+	}
+
+	.footer__top-layout {
+		grid-template-areas:
+			"logo-group"
+			"tags"
+			"links"
+			"contacts";
+		grid-template-columns: 100%;
+	}
+
+	.footer__logo-group {
+		justify-content: center;
+	}
+
+	.tags.footer__tags {
+		max-width: 560px;
+		margin-inline: auto;
+		margin-bottom: 50px;
+	}
+
+	.footer__tags :deep(.tags__list) {
+		justify-content: center;
+	}
+
+	.footer__link-list {
+		column-gap: 60px;
+		width: fit-content;
+		margin-inline: auto;
+	}
+
+	.footer__contacts {
+		margin-top: 50px;
+		justify-content: center;
+	}
+
+	.footer__contacts-tel {
+		font-size: 22px;
+	}
+
+	.footer__bottom-layout {
+		gap: 10px;
+	}
+}
+
+@media (max-width: 767.98px) {
+	.footer__link-list {
+		column-gap: 40px;
+		row-gap: 20px;
+	}
+
+	.footer__contacts-tel {
+		font-size: 20px;
+	}
+
+	.footer :deep(.socials__item-link) {
+		--diameter: 32px;
+	}
+
+	.footer__bottom-layout {
+		grid-template-columns: 130px 130px 130px;
+		justify-content: center;
+		gap: 20px;
+	}
+}
+
+@media (max-width: 575.98px) {
+	.footer__logo-group {
+		margin-bottom: 35px;
+	}
+
+	.footer__logo {
+		width: 130px;
+		margin-right: 30px;
+	}
+
+	.footer__logo-desc {
+		top: 6px;
+		font-size: 12px;
+	}
+
+	.tags.footer__tags {
+		margin-bottom: 30px;
+	}
+
+	.footer :deep(.tags__list) {
+		--gap: 8px;
+	}
+
+	.footer :deep(.tags__item) {
+		font-size: 10px;
+	}
+
+	.footer__link-list {
+		column-gap: 30px;
+		row-gap: 15px;
+	}
+
+	.footer__link {
+		font-size: 14px;
+	}
+
+	.footer__contacts {
+		margin-top: 40px;
+		gap: 20px;
+	}
+
+	.footer__contacts-tel {
+		font-size: 18px;
+	}
+
+	.footer__contacts-mail {
+		font-size: 14px;
+	}
+
+	.footer :deep(.socials__item-link) {
+		--diameter: 28px;
+	}
+
+	.footer__bottom-layout {
+		grid-template-columns: 110px 105px 105px;
+		gap: 15px;
+	}
+
+	.footer__bottom-item {
+		font-size: 10px;
+	}
+}
+
+@media (max-width: 479.98px) {
+	.footer__top {
+		margin-bottom: 50px;
+	}
+
+	.footer__contacts {
+		grid-auto-flow: row;
+		justify-content: center;
+		gap: 0;
+	}
+
+	.footer__contacts-tel {
+		margin-bottom: 10px;
+	}
+
+	.footer__contacts-mail {
+		margin-bottom: 15px;
+	}
+
+	.footer__socials {
+		margin-inline: auto;
+	}
+}
+
+@media (max-width: 379.98px) {
+	.footer__top {
+		margin-bottom: 30px;
+	}
+
+	.footer__logo-group {
+		display: block;
+	}
+
+	.footer__logo {
+		width: 110px;
+		margin-inline: auto;
+	}
+
+	.footer__link-list {
+		grid-template-columns: 100%;
+		row-gap: 10px;
+	}
+
+	.footer__link-item {
+		text-align: center;
+	}
+
+	.footer__bottom-layout {
+		grid-template-columns: none;
+		grid-auto-flow: row;
+		gap: 8px;
+	}
+
+	.footer__bottom-item {
+		text-align: center;
+	}
 }
 </style>

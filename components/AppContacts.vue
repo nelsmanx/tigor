@@ -23,7 +23,7 @@ const activeTab = ref(1);
 							</ul>
 						</div>
 
-						<p class="contacts__address">г. Москва, Фридриха Энгельса 46с7 подъезд 1, этаж 3</p>
+						<p class="contacts__address">г. Москва, Фридриха Энгельса 46с7 подъезд&nbsp;1, этаж&nbsp;3</p>
 						<ul class="contacts__list">
 							<li class="contacts__item">
 								<span class="hl">Телефон:</span> +7 495 120-05-29
@@ -87,12 +87,14 @@ const activeTab = ref(1);
 	gap: 30px;
 }
 
-.contacts__info {}
+.contacts__info {
+	padding-right: 20px;
+}
 
 .contacts__title {
 	margin-bottom: 45px;
 	font-family: var(--secondary-font-family);
-	font-size: 52px;
+	font-size: var(--section-title-fz);
 	font-weight: 400;
 	line-height: 1.12;
 	color: #090c05;
@@ -163,7 +165,8 @@ const activeTab = ref(1);
 	font-size: 28px;
 	font-weight: 400;
 	color: #1c1c1c;
-	width: 519px;
+	max-width: 519px;
+	width: 100%;
 	height: 97px;
 	border: none;
 	border-radius: 16px;
@@ -218,5 +221,193 @@ const activeTab = ref(1);
 .map-tab-enter-active,
 .map-tab-leave-active {
 	transition: opacity 300ms ease;
+}
+
+@media (max-width: 1399.98px) {
+	.contacts__button {
+		font-size: 26px;
+		max-width: 500px;
+	}
+}
+
+@media (max-width: 1199.98px) {
+	.contacts__address {
+		margin-bottom: 45px;
+	}
+
+	.contacts__list {
+		gap: 18px;
+		margin-bottom: 50px;
+	}
+}
+
+@media (max-width: 991.98px) {
+	.contacts__inner {
+		padding: 40px 0;
+	}
+
+	.contacts__layout {
+		grid-template-columns: 100%;
+		gap: 40px;
+	}
+
+	.contacts__info {
+		padding-right: 0;
+	}
+
+	.contacts__title {
+		margin-bottom: 30px;
+	}
+
+	.contacts__city-tabs {
+		margin-bottom: 25px;
+	}
+
+	.contacts__city-tabs-list {
+		--gap: 8px;
+	}
+
+	.contacts__city-tabs-item {
+		font-size: 12px;
+	}
+
+	.contacts__address {
+		margin-bottom: 30px;
+		font-size: 20px;
+	}
+
+	.contacts__list {
+		gap: 12px;
+		margin-bottom: 40px;
+	}
+
+	.contacts__item {
+		font-size: 18px;
+	}
+
+	.contacts__button {
+		font-size: 22px;
+		height: 80px;
+		max-width: 410px;
+	}
+
+	.contacts__button::before {
+		width: 16px;
+		height: 16px;
+	}
+
+	.contacts__map {
+		position: relative;
+		height: 0;
+		padding: calc(100% / (16 / 9)) 0 0;
+	}
+
+	.contacts__map-tabs {
+		position: absolute;
+		inset: 0;
+	}
+}
+
+@media (max-width: 767.98px) {
+	.contacts__button {
+		font-size: 20px;
+		height: 75px;
+		max-width: 390px;
+	}
+
+	.contacts__address {
+		font-size: 18px;
+	}
+
+	.contacts__list {
+		gap: 8px;
+		margin-bottom: 30px;
+	}
+
+	.contacts__item {
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 575.98px) {
+	.contacts__inner {
+		padding: 30px 0;
+	}
+
+	.contacts__layout {
+		gap: 30px;
+	}
+
+	.contacts__address {
+		margin-bottom: 20px;
+		font-size: 16px;
+	}
+
+	.contacts__button {
+		font-size: 18px;
+		height: 65px;
+		max-width: 320px;
+	}
+}
+
+@media (max-width: 479.98px) {
+	.contacts__inner {
+		border-radius: 20px;
+	}
+
+	.contacts__address {
+		margin-bottom: 15px;
+	}
+
+	.contacts__city-tabs-list {
+		--gap: 5px;
+	}
+
+	.contacts__city-tabs-item {
+		font-size: 10px;
+	}
+
+	.contacts__list {
+		margin-bottom: 20px;
+	}
+
+	.contacts__button {
+		font-size: 16px;
+		height: 60px;
+		max-width: 290px;
+	}
+
+	.contacts__button::before {
+		width: 12px;
+		height: 12px;
+	}
+
+	.contacts__map {
+		position: static;
+		height: 250px;
+		padding: 0;
+	}
+
+	.contacts__map-tabs {
+		position: static;
+	}
+}
+
+@media (max-width: 379.98px) {
+	.contacts__city-tabs {
+		margin-bottom: 20px;
+	}
+
+	.contacts__address {
+		font-size: 14px;
+	}
+
+	.contacts__list {
+		gap: 5px;
+	}
+
+	.contacts__item {
+		font-size: 14px;
+	}
 }
 </style>

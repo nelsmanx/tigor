@@ -28,8 +28,9 @@
 
 .socials__item-link {
 	display: block;
-	width: 39px;
-	height: 39px;
+	--diameter: 39px;
+	width: var(--diameter);
+	height: var(--diameter);
 	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
