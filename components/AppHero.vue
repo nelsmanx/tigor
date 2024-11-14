@@ -17,6 +17,13 @@ import '@splidejs/vue-splide/css';
 						arrows: true,
 						pagination: false,
 						speed: 1500,
+						breakpoints: {
+							575.98: {
+								arrows: false,
+								pagination: true
+							},
+						}
+
 					}">
 					<SplideTrack>
 						<SplideSlide>
@@ -27,7 +34,7 @@ import '@splidejs/vue-splide/css';
 									<p class="splide__slide-desc">Компания оказывает услуги по аутсорсингу курьеров в Москве и Московской области. Наши курьеры оперативно доставят негабаритные грузы, продукцию или документы.</p>
 									<div class="splide__slide-block-1-group">
 										<button class="splide__slide-button button-basic" data-bs-toggle="modal" data-bs-target="#modal-callback-vacancy">Оставить заявку</button>
-										<p class="splide__slide-block-1-group-desc">Все виды услуг по аутсорсу в&nbsp;любом регионе России</p>
+										<p class="splide__slide-block-1-group-desc">Все виды услуг по&nbsp;аутсорсу в&nbsp;любом регионе&nbsp;России</p>
 									</div>
 								</div>
 								<div class="splide__slide-block-2 splide__slide-block-2--slide-1 ">
@@ -60,7 +67,7 @@ import '@splidejs/vue-splide/css';
 									<p class="splide__slide-desc">Компания оказывает услуги по аутсорсингу курьеров в Москве и Московской области. Наши курьеры оперативно доставят негабаритные грузы, продукцию или документы.</p>
 									<div class="splide__slide-block-1-group">
 										<button class="splide__slide-button button-basic">Оставить заявку</button>
-										<p class="splide__slide-block-1-group-desc">Все виды услуг по аутсорсу в&nbsp;любом регионе России</p>
+										<p class="splide__slide-block-1-group-desc">Все виды услуг по&nbsp;аутсорсу в&nbsp;любом регионе&nbsp;России</p>
 									</div>
 								</div>
 								<div class="splide__slide-block-2 splide__slide-block-2--slide-2 ">
@@ -92,7 +99,7 @@ import '@splidejs/vue-splide/css';
 									<p class="splide__slide-desc">Компания оказывает услуги по аутсорсингу курьеров в Москве и Московской области. Наши курьеры оперативно доставят негабаритные грузы, продукцию или документы.</p>
 									<div class="splide__slide-block-1-group">
 										<button class="splide__slide-button button-basic">Оставить заявку</button>
-										<p class="splide__slide-block-1-group-desc">Все виды услуг по аутсорсу в&nbsp;любом регионе России</p>
+										<p class="splide__slide-block-1-group-desc">Все виды услуг по&nbsp;аутсорсу в&nbsp;любом регионе&nbsp;России</p>
 									</div>
 								</div>
 								<div class="splide__slide-block-2 splide__slide-block-2--slide-3 ">
@@ -124,7 +131,7 @@ import '@splidejs/vue-splide/css';
 									<p class="splide__slide-desc">Компания оказывает услуги по аутсорсингу курьеров в Москве и Московской области. Наши курьеры оперативно доставят негабаритные грузы, продукцию или документы.</p>
 									<div class="splide__slide-block-1-group">
 										<button class="splide__slide-button button-basic">Оставить заявку</button>
-										<p class="splide__slide-block-1-group-desc">Все виды услуг по аутсорсу в&nbsp;любом регионе России</p>
+										<p class="splide__slide-block-1-group-desc">Все виды услуг по&nbsp;аутсорсу в&nbsp;любом регионе&nbsp;России</p>
 									</div>
 								</div>
 								<div class="splide__slide-block-2 splide__slide-block-2--slide-4 ">
@@ -156,7 +163,7 @@ import '@splidejs/vue-splide/css';
 									<p class="splide__slide-desc">Компания оказывает услуги по аутсорсингу курьеров в Москве и Московской области. Наши курьеры оперативно доставят негабаритные грузы, продукцию или документы.</p>
 									<div class="splide__slide-block-1-group">
 										<button class="splide__slide-button button-basic">Оставить заявку</button>
-										<p class="splide__slide-block-1-group-desc">Все виды услуг по аутсорсу в&nbsp;любом регионе России</p>
+										<p class="splide__slide-block-1-group-desc">Все виды услуг по&nbsp;аутсорсу в&nbsp;любом регионе&nbsp;России</p>
 									</div>
 								</div>
 								<div class="splide__slide-block-2 splide__slide-block-2--slide-5 ">
@@ -204,7 +211,7 @@ import '@splidejs/vue-splide/css';
 	--hero-inner-shadow-2: rgba(245 247 250 / 0.4);
 }
 
-:global(:root[data-color-mode="dark"]) {
+:global(:root[data-color-scheme="dark"]) {
 	--hero-inner-shadow-1: rgba(245 247 250/ 0.15);
 	--hero-inner-shadow-2: rgba(245 247 250 / 0.07);
 }
@@ -223,7 +230,7 @@ import '@splidejs/vue-splide/css';
 	z-index: -1;
 	top: 50%;
 	left: 50%;
-	border-radius: 50px;
+	border-radius: var(--section-border-radius);
 	transform: translate(-50%, -50%);
 }
 
@@ -242,7 +249,7 @@ import '@splidejs/vue-splide/css';
 /* carousel */
 .hero__splide {
 	height: 100%;
-	border-radius: 50px;
+	border-radius: var(--section-border-radius);
 	overflow: hidden;
 }
 
@@ -308,13 +315,13 @@ import '@splidejs/vue-splide/css';
 
 .splide__slide-inner {
 	display: grid;
-	grid-template-columns: 1fr 895px;
-	gap: 45px;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 30px;
 	background-color: #f5f7fa;
 }
 
 .splide__slide-block-1 {
-	padding: 50px 50px 46px 57px;
+	padding: 50px 0 46px 57px;
 }
 
 .splide__slide-tags {
@@ -351,9 +358,8 @@ import '@splidejs/vue-splide/css';
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 406px;
-	height: 100px;
-	padding: 5px;
+	width: fit-content;
+	padding: 1.2em 3.3em;
 	font-family: var(--secondary-font-family);
 	font-size: 28px;
 	font-weight: 400;
@@ -373,8 +379,7 @@ import '@splidejs/vue-splide/css';
 .splide__slide-block-2 {
 	display: flex;
 	align-items: end;
-	--border-radius: 50px;
-	border-radius: var(--border-radius);
+	border-radius: var(--section-border-radius);
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -423,4 +428,311 @@ import '@splidejs/vue-splide/css';
 }
 
 .splide__slide-info-badges {}
+
+@media (max-width: 1799.98px) {
+	.splide__slide-block-1-group {
+		gap: 45px;
+	}
+
+	.splide__slide-info-title {
+		font-size: 34px;
+	}
+
+	/* .splide__slide :deep(.badges__item) {
+		min-height: 95px;
+	}
+
+	.splide__slide :deep(.badges__item-title) {
+		font-size: 26px;
+	} */
+}
+
+@media (max-width: 1699.98px) {
+	.splide__slide-title {
+		font-size: 60px;
+	}
+
+	.splide__slide-block-1-group-desc {
+		font-size: 20px;
+	}
+
+	.splide__slide-button {
+		font-size: 24px;
+	}
+}
+
+@media (max-width: 1599.98px) {
+	.splide__slide-info {
+		grid-template-columns: 100%;
+	}
+
+	.splide__slide-info-title {
+		text-align: center;
+	}
+
+	.splide__slide :deep(.badges__item) {
+		max-width: none;
+		min-height: 80px;
+	}
+}
+
+@media (max-width: 1499.98px) {
+	.splide__slide-tags {
+		margin-bottom: 70px;
+	}
+
+	.splide__slide-title {
+		font-size: 50px;
+	}
+
+	.splide__slide-desc {
+		margin-bottom: 80px;
+	}
+
+	.splide__slide-block-1-group {
+		gap: 35px;
+	}
+
+	.splide__slide-button {
+		font-size: 22px;
+	}
+
+	.splide__slide-block-1-group-desc {
+		font-size: 18px;
+	}
+
+	.splide__slide-info-title {
+		font-size: 30px;
+	}
+}
+
+@media (max-width: 1399.98px) {
+	.splide__slide-title {
+		font-size: 40px;
+	}
+
+	.splide__slide-block-1-group {
+		grid-auto-flow: row;
+		gap: 25px;
+	}
+
+	.splide__slide-button {
+		font-size: 22px;
+		order: 2;
+	}
+}
+
+@media (max-width: 1199.98px) {
+	.splide__slide-title {
+		font-size: 34px;
+	}
+
+	.splide__slide-info {
+		gap: 25px;
+		padding: 35px 30px;
+	}
+}
+
+@media (max-width: 991.98px) {
+	.splide__slide-inner {
+		grid-template-columns: 100%;
+		gap: 50px;
+	}
+
+	.splide__slide-tags {
+		margin-bottom: 50px;
+	}
+
+	.splide__slide-desc {
+		margin-bottom: 60px;
+	}
+
+	.splide__slide-block-1 {
+		padding: 50px 40px 0 40px;
+	}
+
+	.splide__slide-block-1-group {
+		grid-auto-flow: column;
+	}
+
+	.splide__slide-button {
+		order: 0;
+	}
+
+	.splide__slide-block-2 {
+		height: 500px;
+	}
+}
+
+@media (max-width: 767.98px) {
+	.splide__slide-block-1 {
+		padding: 40px 30px 0 30px;
+	}
+
+	.splide__slide-inner {
+		gap: 40px;
+	}
+
+	.splide__slide-tags {
+		margin-bottom: 40px;
+	}
+
+	.splide__slide-desc {
+		margin-bottom: 40px;
+		font-size: 16px;
+	}
+
+	.splide__slide-block-1-group-desc {
+		display: none;
+	}
+
+	.splide__slide-button {
+		font-size: 20px;
+	}
+
+	.splide__slide-info {
+		padding: 30px;
+	}
+
+	.splide__slide-info-title {
+		font-size: 28px;
+	}
+
+	.splide__slide :deep(.badges__item-title) {
+		font-size: 24px;
+	}
+}
+
+@media (max-width: 575.98px) {
+
+	.hero__inner::before,
+	.hero__inner::after {
+		display: none;
+	}
+
+	.splide {
+		padding-bottom: 25px;
+	}
+
+	.splide__slide {
+		overflow: hidden;
+	}
+
+	.splide__slide-inner {
+		gap: 30px;
+	}
+
+	.splide__slide-block-1 {
+		padding: 30px 30px 0 30px;
+	}
+
+	.splide__slide-tags {
+		margin-bottom: 30px;
+	}
+
+	.splide__slide :deep(.tags__list) {
+		--gap: 8px;
+	}
+
+	.splide__slide :deep(.tags__item) {
+		font-size: 10px;
+	}
+
+	.splide__slide-title {
+		margin-bottom: 10px;
+		font-size: 30px;
+	}
+
+	.splide__slide-desc {
+		margin-bottom: 30px;
+		font-size: 14px;
+	}
+
+	.splide__slide-button {
+		width: 100%;
+		font-size: 18px;
+	}
+
+	.splide__slide-block-2 {
+		height: 400px;
+	}
+
+	.splide__slide-info {
+		gap: 20px;
+		padding: 25px 30px;
+	}
+
+	.splide__slide-info-title {
+		font-size: 24px;
+	}
+
+	.splide__slide :deep(.badges__list) {
+		gap: 8px;
+	}
+
+	.splide__slide :deep(.badges__item) {
+		padding: 8px 14px 10px;
+		border-radius: 10px;
+		min-height: auto;
+	}
+
+	.splide__slide :deep(.badges__item-title) {
+		font-size: 18px;
+	}
+
+	.splide__slide :deep(.badges__item-desc) {
+		font-size: 10px;
+	}
+
+	.splide :deep(.splide__pagination) {
+		bottom: 0;
+	}
+
+	.splide :deep(.splide__pagination__page) {
+		width: 5px;
+		height: 5px;
+		margin: 0;
+		border-radius: 50%;
+		background: #a5a5a5;
+		opacity: 0.2;
+	}
+
+	.splide :deep(.splide__pagination__page.is-active) {
+		background: #a5a5a5;
+		transform: scale(1.5);
+		opacity: 1;
+	}
+
+	.splide :deep(.splide__pagination li[role=presentation]:not(:last-child)) {
+		margin-right: 8px;
+	}
+}
+
+@media (max-width: 479.98px) {
+	.splide__slide {
+		border-radius: var(--section-border-radius);
+	}
+
+	.splide__slide-desc {
+		font-size: 12px;
+		line-height: 1.5;
+	}
+
+	.splide__slide-button {
+		border-radius: 16px;
+		font-size: 16px;
+	}
+
+	.splide__slide-block-2 {
+		height: 340px;
+	}
+
+	.splide__slide-block-1[data-v-370f40d5] {
+		padding: 25px 20px 0 20px;
+	}
+
+	.splide__slide-info[data-v-370f40d5] {
+		padding: 15px 20px;
+	}
+}
 </style>

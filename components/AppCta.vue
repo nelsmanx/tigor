@@ -72,7 +72,7 @@ defineProps({
 	--cta-dark-checkbox-style: #1c1c1c;
 }
 
-:global(:root[data-color-mode="dark"]) {
+:global(:root[data-color-scheme="dark"]) {
 	--cta-dark-inner: #313131;
 	--cta-dark-contacts-tel: rgba(255 255 255 / 0.9);
 	--cta-dark-contacts-mail: rgba(254 224 46 / 0.9);
@@ -99,10 +99,11 @@ defineProps({
 .cta__layout {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
+	gap: 30px;
 }
 
 .cta__content {
-	margin-right: 110px;
+	margin-right: 90px;
 }
 
 .cta__content {

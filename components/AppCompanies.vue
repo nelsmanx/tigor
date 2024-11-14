@@ -51,10 +51,6 @@
 	border-radius: 50px;
 }
 
-.companies :deep(.section-header__group) {
-	padding-left: 30px;
-}
-
 .companies :deep(.section-header__desc) {
 	max-width: 400px;
 }
@@ -66,7 +62,7 @@
 .companies__list {
 	display: grid;
 	grid-template-columns: repeat(6, 1fr);
-	gap: 27px;
+	gap: 30px;
 }
 
 .companies__item {}

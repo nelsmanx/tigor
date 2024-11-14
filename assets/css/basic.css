@@ -48,9 +48,11 @@ picture {
 	--font-basic: #1c1c1c;
 	--global-padding-inline: 15px;
 	--secondary-font-family: "Museo Cyrl";
+	--section-title-fz: 52px;
+	--section-border-radius: 50px
 }
 
-:root[data-color-mode="dark"] {
+:root[data-color-scheme="dark"] {
 	--body-bg: #1c1c1c;
 	--font-basic: #fff;
 }
@@ -58,6 +60,35 @@ picture {
 @media (min-width: 1400px) {
 	:root {
 		--global-padding-inline: 50px;
+		--section-title-fz: 52px;
+	}
+}
+
+@media (max-width: 1399.98px) {
+	:root {
+		--section-border-radius: 40px;
+		--section-title-fz: 42px;
+	}
+}
+
+@media (max-width: 767.98px) {
+	:root {
+		--section-border-radius: 30px;
+		--section-title-fz: 32px;
+	}
+}
+
+@media (max-width: 575.98px) {
+	:root {
+		--section-border-radius: 20px;
+		--section-title-fz: 28px;
+	}
+}
+
+@media (max-width: 479.98px) {
+	:root {
+		--section-border-radius: 20px;
+		--section-title-fz: 26px;
 	}
 }
 
@@ -130,6 +161,36 @@ body {
 	width: 100%;
 	margin-inline: auto;
 	padding-inline: var(--global-padding-inline);
+}
+
+@media (max-width: 1399.98px) {
+	.section-island {
+		max-width: 1240px;
+	}
+}
+
+@media (max-width: 1199.98px) {
+	.section-island {
+		max-width: 1060px;
+	}
+}
+
+@media (max-width: 991.98px) {
+	.section-island {
+		max-width: 800px;
+	}
+}
+
+@media (max-width: 767.98px) {
+	.section-island {
+		max-width: 600px;
+	}
+}
+
+@media (max-width: 575.98px) {
+	.section-island {
+		max-width: 540px;
+	}
 }
 
 .button-basic {

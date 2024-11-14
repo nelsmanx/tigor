@@ -3,5 +3,7 @@
 	<main>
 		<slot />
 	</main>
-	<TheFooter />
+	<!-- <TheFooter /> -->
+
+	<TheMobileMenu />
 </template>

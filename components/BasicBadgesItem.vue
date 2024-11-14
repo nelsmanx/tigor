@@ -35,4 +35,16 @@
 	line-height: 1.21;
 	color: #090c05;
 }
+
+@media (max-width: 1799.98px) {
+	.badges__item {
+		min-height: 95px;
+	}
+
+	.badges__item-title {
+		font-size: 26px;
+	}
+}
+
+@media (max-width: 1399.98px) {}
 </style>

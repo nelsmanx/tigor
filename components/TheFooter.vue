@@ -105,7 +105,7 @@ const tags = [
 	--footer-contacts-mail: rgba(28 28 28 / 0.9);
 }
 
-:global(:root[data-color-mode="dark"]) {
+:global(:root[data-color-scheme="dark"]) {
 	--footer-logo-svg-letter: #fff;
 	--footer-logo-desc: rgba(245 247 250 /0.9);
 	--footer-link: rgba(245 247 250 /0.9);
@@ -129,10 +129,11 @@ const tags = [
 .footer__top-layout {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
+	gap: 30px;
 }
 
 .footer__top-content {
-	padding-right: 290px;
+	padding-right: 270px;
 }
 
 .footer__logo-group {
@@ -233,6 +234,7 @@ const tags = [
 .footer__bottom-layout {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
+	gap: 30px;
 	align-items: center;
 }
 

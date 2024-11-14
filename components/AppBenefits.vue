@@ -24,7 +24,7 @@
 								<img class="benefits__icon-img benefits__icon-img--2" src="/images/benefits/2.svg" alt="" aria-hidden="true">
 							</div>
 							<p class="benefits__item-title">Минимальная<br /> текучка кадров</p>
-							<p class="benefits__item-desc">Показатель КТК ниже 3%</p>
+							<p class="benefits__item-desc">Показатель КТК ниже&nbsp;3%</p>
 						</li>
 						<li class="benefits__item">
 							<div class="benefits__icon">
@@ -52,7 +52,7 @@
 
 .benefits__inner {
 	background-color: #f5f7fa;
-	border-radius: 50px;
+	border-radius: var(--section-border-radius);
 }
 
 .benefits__body {
@@ -129,5 +129,173 @@
 	font-weight: 400;
 	line-height: 1.25;
 	color: rgba(28 28 28/0.7);
+}
+
+@media (max-width: 1899.98px) {
+	.benefits__list {
+		justify-content: space-between;
+		gap: 30px;
+	}
+}
+
+@media (max-width: 1699.98px) {
+	.benefits__item {
+		width: 290px;
+	}
+
+	.benefits__item:not(:last-child)::before {
+		right: 30px;
+	}
+
+	.benefits__item-title {
+		margin-bottom: 16px;
+		font-size: 22px;
+	}
+
+	.benefits__item-desc {
+		font-size: 18px;
+	}
+}
+
+@media (max-width: 1599.98px) {
+	.benefits__item:not(:last-child)::before {
+		right: 45px;
+	}
+
+	.benefits__icon {
+		--scale: 0.9;
+	}
+
+	.benefits__item-title {
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 1499.98px) {
+	.benefits__item {
+		width: 230px;
+	}
+
+	.benefits__item:not(:last-child)::before {
+		right: 20px;
+	}
+
+	.benefits__item:not(:last-child)::before {
+		right: 25px;
+	}
+}
+
+@media (max-width: 1199.98px) {
+	.benefits__item {
+		width: 170px;
+	}
+
+	.benefits__item:not(:last-child)::before {
+		top: 50px;
+		right: -10px;
+	}
+
+	.benefits__icon {
+		--scale: 0.8;
+		margin-bottom: 16px;
+	}
+
+	.benefits__item-title {
+		font-size: 18px;
+	}
+
+	.benefits__item-desc {
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 991.98px) {
+	.benefits__body {
+		padding: 40px 0 50px;
+	}
+
+	.benefits__item {
+		width: 150px;
+	}
+
+	.benefits__item:not(:last-child)::before {
+		top: 40px;
+		right: 10px;
+	}
+
+	.benefits__icon {
+		--scale: 0.7;
+		border-radius: 20px;
+	}
+
+	.benefits__item-title {
+		margin-bottom: 10px;
+		font-size: 16px;
+	}
+
+	.benefits__item-desc {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 767.98px) {
+	.benefits__list {
+		grid-auto-flow: row;
+		grid-template-columns: repeat(2, 1fr);
+		justify-items: center;
+		width: fit-content;
+		margin-inline: auto;
+		row-gap: 40px;
+		column-gap: 60px;
+	}
+
+	.benefits__item:not(:last-child)::before {
+		display: none;
+	}
+
+	.benefits__icon {
+		margin-inline: auto;
+	}
+
+	.benefits__item-title,
+	.benefits__item-desc {
+		text-align: center;
+	}
+}
+
+@media (max-width: 575.98px) {
+	.benefits__body {
+		padding: 30px 0;
+	}
+
+	.benefits__icon {
+		--scale: 0.6;
+		margin-bottom: 10px;
+		border-radius: 16px;
+	}
+
+	.benefits__list {
+		row-gap: 30px;
+		column-gap: 40px;
+	}
+
+	.benefits__item-title {
+		margin-bottom: 5px;
+		font-size: 14px;
+	}
+
+	.benefits__item-desc {
+		font-size: 12px;
+	}
+}
+
+@media (max-width: 479.98px) {
+	.benefits__list {
+		gap: 25px;
+	}
+
+	.benefits__item {
+		width: fit-content;
+	}
 }
 </style>

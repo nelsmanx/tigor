@@ -53,7 +53,7 @@
 	--steps-item-desc: rgba(28 28 28 / 0.6);
 }
 
-:global(:root[data-color-mode="dark"]) {
+:global(:root[data-color-scheme="dark"]) {
 	--steps-item-marker: #6e6e6e;
 	--steps-item-desc: rgba(255 255 255 / 0.6);
 }

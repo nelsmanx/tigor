@@ -82,10 +82,11 @@ import '@splidejs/vue-splide/css';
 .fleet__body-inner {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
+	gap: 30px;
 }
 
 .fleet__body-block {
-	padding-right: 124px;
+	padding-right: 94px;
 }
 
 .fleet__list {}

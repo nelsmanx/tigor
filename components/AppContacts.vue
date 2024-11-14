@@ -84,7 +84,7 @@ const activeTab = ref(1);
 .contacts__layout {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	/* gap: 20px; */
+	gap: 30px;
 }
 
 .contacts__info {}

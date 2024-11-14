@@ -53,7 +53,7 @@ const modalId = props.altColorScheme ? 'modal-callback-alt' : 'modal-callback';
 	--checkbox-label-title: #282828;
 }
 
-:global(:root[data-color-mode="dark"]) {
+:global(:root[data-color-scheme="dark"]) {
 	--modal-content-bg: #313131;
 	--modal-company-desc: rgba(255 255 255 / 0.9);
 	--modal-desc: #fff;

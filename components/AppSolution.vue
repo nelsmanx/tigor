@@ -34,7 +34,7 @@
 	--solution-info: #1c1c1c;
 }
 
-:global(:root[data-color-mode="dark"]) {
+:global(:root[data-color-scheme="dark"]) {
 	--solution-inner-bg: #313131;
 	--solution-title: #fff;
 	--solution-tel: rgba(255 255 255 / 0.9);

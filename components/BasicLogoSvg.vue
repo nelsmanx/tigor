@@ -30,7 +30,7 @@
 	--logo-svg-letter: #2b2a29;
 }
 
-:global(:root[data-color-mode="dark"]) {
+:global(:root[data-color-scheme="dark"]) {
 	--logo-svg-letter: #fff;
 }
 

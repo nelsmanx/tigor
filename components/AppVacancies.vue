@@ -74,7 +74,7 @@
 .vacancies__list {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	gap: 32px;
+	gap: 30px;
 }
 
 .vacancies__item {
