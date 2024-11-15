@@ -258,10 +258,6 @@ import '@splidejs/vue-splide/css';
 	height: 100%;
 }
 
-.splide__slide {
-	cursor: grab;
-}
-
 .splide__arrow {
 	opacity: 1
 }

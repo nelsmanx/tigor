@@ -146,10 +146,6 @@ import '@splidejs/vue-splide/css';
 	overflow: hidden;
 }
 
-.splide__slide {
-	cursor: grab;
-}
-
 .splide__track {
 	height: 100%;
 }

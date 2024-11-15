@@ -171,7 +171,6 @@ import '@splidejs/vue-splide/css';
 	padding: 45px 45px 40px;
 	background-color: #f5f7fa;
 	border-radius: var(--border-radius);
-	cursor: grab;
 }
 
 .splide__slide--cta {
