@@ -14,7 +14,7 @@
 	<AppCta :has-dark-color-scheme="true" />
 	<AppContacts />
 
-	<!-- <AppModalCallback /> -->
-	<!-- <AppModalCallback :alt-color-scheme="true" /> -->
-	<!-- <AppModalCallbackVacancy /> -->
+	<AppModalCallback />
+	<AppModalCallback :alt-color-scheme="true" />
+	<AppModalCallbackVacancy />
 </template>

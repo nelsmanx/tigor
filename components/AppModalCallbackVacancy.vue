@@ -12,16 +12,16 @@
 		<div class="modal__body">
 			<div class="modal__body-content">
 				<p class="modal__title">Ищешь работу автокурьером?</p>
-				<p class="modal__desc">Заполняй анкету и жми «Отправить» и наши менеджеры свяжутся с Вами в течение 15 минут</p>
-				<div class="form modal__form">
+				<p class="modal__desc">Заполняй анкету и жми «Отправить» и&nbsp;наши менеджеры свяжутся с&nbsp;Вами в&nbsp;течение 15&nbsp;минут</p>
+				<form class="form modal__form">
 					<div class="form__input-group">
 						<label class="form__label">
 							<span class="form__label-title">Имя и Фамилия</span>
-							<input class="form__input" type="text" name="name">
+							<input class="form__input" type="text" name="name" required>
 						</label>
 						<label class="form__label">
 							<span class="form__label-title">Номер телефона</span>
-							<input v-inputmask-tel class="form__input" type="tel" name="tel" placeholder="+7 (917) --- -- -- ">
+							<input v-inputmask-tel class="form__input" type="tel" name="tel" placeholder="+7 (917) --- -- -- " required>
 						</label>
 						<label class="form__label">
 							<span class="form__label-title">Ваш город</span>
@@ -38,7 +38,7 @@
 						</BasicCheckboxWithLabel>
 					</div>
 					<button class="form__button button-basic">Отправить заявку</button>
-				</div>
+				</form>
 			</div>
 			<div class="modal__body-image-wrap">
 				<img class="modal__body-image" src="/public/images/modal-callback-vacancy/1.jpg" alt="" aria-hidden="true">
@@ -97,6 +97,8 @@
 }
 
 .modal__button-close {
+	position: relative;
+	right: -10px;
 	width: 32px;
 	height: 32px;
 	border: none;
@@ -239,5 +241,289 @@
 	display: block;
 	width: 100%;
 	height: 100%;
+	object-fit: cover;
+}
+
+@media (max-width: 1499.98px) {
+	:global(#modal-callback-vacancy .modal-dialog) {
+		max-width: 1100px;
+	}
+
+	:global(#modal-callback-vacancy .modal-content) {
+		--padding-left: 60px;
+		--padding-right: 60px;
+		padding: 50px 0 60px 0;
+	}
+
+	.modal__header-title {
+		font-size: 28px;
+	}
+
+	.modal__body {
+		grid-template-columns: 430px 1fr;
+	}
+
+	.modal__body-content {
+		padding-right: 60px;
+	}
+
+	.modal__title {
+		font-size: 42px;
+	}
+
+	.modal__desc {
+		font-size: 20px;
+	}
+
+	.modal__body-image-wrap {
+		margin-left: 0;
+	}
+
+	.form__button {
+		height: 65px;
+		font-size: 20px;
+		border-radius: 22px;
+	}
+}
+
+@media (max-width: 1199.98px) {
+	:global(#modal-callback-vacancy .modal-dialog) {
+		max-width: 600px;
+	}
+
+	.modal__header {
+		display: grid;
+		grid-template-areas:
+			"logo button"
+			"title title";
+		grid-template-columns: 1fr auto;
+		padding-bottom: 20px;
+	}
+
+	.modal__logo {
+		grid-area: logo;
+		width: 150px;
+	}
+
+	.modal__header-title {
+		grid-area: title;
+		margin-top: 30px;
+		font-size: 22px;
+	}
+
+	.modal__header-button-close {
+		grid-area: button;
+	}
+
+	.modal__body {
+		grid-template-columns: 100%;
+	}
+
+	.modal__body-image-wrap {
+		display: none;
+	}
+
+	.modal__body-content {
+		padding-right: 0;
+	}
+
+	.form__input {
+		font-size: 22px;
+	}
+
+	.form__button {
+		height: 80px;
+		font-size: 24px;
+		border-radius: 30px;
+	}
+}
+
+@media (max-width: 991.98px) {
+	:global(#modal-callback-vacancy .modal-dialog) {
+		max-width: 500px;
+	}
+
+	:global(#modal-callback-vacancy .modal-content) {
+		--padding: 50px;
+		padding-block: var(--padding);
+	}
+
+	.modal__header {
+		padding-bottom: 20px;
+		padding-inline: var(--padding);
+	}
+
+	.modal__logo {
+		width: 120px;
+	}
+
+	.modal__header-title {
+		margin-top: 20px;
+		font-size: 18px;
+	}
+
+	.modal__body {
+		padding-inline: var(--padding);
+		padding-top: 30px;
+	}
+
+	.modal__title {
+		font-size: var(--section-title-fz);
+	}
+
+	.modal__desc {
+		margin-bottom: 30px;
+		font-size: 18px;
+	}
+
+	.form__input {
+		font-size: 20px;
+	}
+
+	.form__personal-data {
+		margin-bottom: 50px;
+	}
+
+	.form__button {
+		height: 70px;
+		font-size: 22px;
+	}
+}
+
+@media (max-width: 767.98px) {
+	:global(#modal-callback-vacancy .modal-dialog) {
+		max-width: 450px;
+	}
+
+	:global(#modal-callback-vacancy .modal-content) {
+		--padding: 40px;
+	}
+
+	.modal__header-title {
+		margin-top: 15px;
+		font-size: 16px;
+	}
+
+	.modal__desc {
+		font-size: 16px;
+	}
+
+	.form__input-group {
+		gap: 25px;
+		margin-bottom: 20px;
+	}
+
+	.form__label-title {
+		font-size: 14px;
+	}
+
+	.form__input {
+		padding: 6px 0;
+		font-size: 18px;
+	}
+
+	.form__personal-data {
+		margin-bottom: 40px;
+	}
+
+	.form__button {
+		height: 65px;
+		font-size: 20px;
+		border-radius: 22px;
+	}
+}
+
+@media (max-width: 575.98px) {
+	:global(#modal-callback-vacancy .modal-content) {
+		--padding: 35px;
+	}
+
+	.modal__header {
+		padding-bottom: 15px;
+	}
+
+	.modal__logo {
+		width: 100px;
+	}
+
+	.modal__header-title {
+		margin-top: 10px;
+		font-size: 14px;
+	}
+
+	:global(#modal-callback-vacancy .checkbox__label-title) {
+		font-size: 14px;
+	}
+
+	:global(#modal-callback-vacancy .checkbox__style-wrap) {
+		top: 1px;
+		margin-right: 1px;
+	}
+}
+
+@media (max-width: 479.98px) {
+	.form__button {
+		height: 60px;
+		font-size: 18px;
+	}
+}
+
+@media (max-width: 379.98px) {
+	:global(#modal-callback-vacancy .modal-content) {
+		--padding: 30px;
+	}
+
+	.modal__body {
+		padding-top: 25px;
+	}
+
+	.modal__header {
+		padding-bottom: 12px;
+	}
+
+	.modal__logo {
+		width: 90px;
+	}
+
+	.modal__header-title {
+		font-size: 12px;
+	}
+
+	.modal__button-close {
+		width: 28px;
+		height: 28px;
+		background-size: 16px 16px;
+	}
+
+	.modal__desc {
+		margin-bottom: 20px;
+		font-size: 14px;
+	}
+
+	.form__input-group {
+		gap: 20px;
+	}
+
+	.form__input {
+		padding: 4px 0;
+		font-size: 16px;
+	}
+
+	.form__personal-data {
+		margin-bottom: 30px;
+	}
+
+	:global(#modal-callback-vacancy .checkbox__label-title) {
+		font-size: 12px;
+	}
+
+	:global(#modal-callback-vacancy .checkbox__label) {
+		line-height: 1;
+	}
+
+	.form__button {
+		height: 50px;
+		font-size: 16px;
+	}
 }
 </style>

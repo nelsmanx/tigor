@@ -213,6 +213,10 @@
 }
 
 @media (max-width: 991.98px) {
+	.steps {
+		padding: var(--section-space) calc(1.3 * var(--section-space));
+	}
+
 	.steps__title {
 		margin-bottom: 50px;
 	}

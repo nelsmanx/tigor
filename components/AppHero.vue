@@ -66,7 +66,7 @@ import '@splidejs/vue-splide/css';
 									<h1 class="splide__slide-title">ТВОЯ КАРЬЕРА НАЧИНАЕТСЯ ЗДЕСЬ!</h1>
 									<p class="splide__slide-desc">Компания оказывает услуги по аутсорсингу курьеров в Москве и Московской области. Наши курьеры оперативно доставят негабаритные грузы, продукцию или документы.</p>
 									<div class="splide__slide-block-1-group">
-										<button class="splide__slide-button button-basic">Оставить заявку</button>
+										<button class="splide__slide-button button-basic" data-bs-toggle="modal" data-bs-target="#modal-callback-vacancy">Оставить заявку</button>
 										<p class="splide__slide-block-1-group-desc">Все виды услуг по&nbsp;аутсорсу в&nbsp;любом регионе&nbsp;России</p>
 									</div>
 								</div>
@@ -98,7 +98,7 @@ import '@splidejs/vue-splide/css';
 									<h1 class="splide__slide-title">ТВОЯ КАРЬЕРА НАЧИНАЕТСЯ ЗДЕСЬ!</h1>
 									<p class="splide__slide-desc">Компания оказывает услуги по аутсорсингу курьеров в Москве и Московской области. Наши курьеры оперативно доставят негабаритные грузы, продукцию или документы.</p>
 									<div class="splide__slide-block-1-group">
-										<button class="splide__slide-button button-basic">Оставить заявку</button>
+										<button class="splide__slide-button button-basic" data-bs-toggle="modal" data-bs-target="#modal-callback-vacancy">Оставить заявку</button>
 										<p class="splide__slide-block-1-group-desc">Все виды услуг по&nbsp;аутсорсу в&nbsp;любом регионе&nbsp;России</p>
 									</div>
 								</div>
@@ -130,7 +130,7 @@ import '@splidejs/vue-splide/css';
 									<h1 class="splide__slide-title">ТВОЯ КАРЬЕРА НАЧИНАЕТСЯ ЗДЕСЬ!</h1>
 									<p class="splide__slide-desc">Компания оказывает услуги по аутсорсингу курьеров в Москве и Московской области. Наши курьеры оперативно доставят негабаритные грузы, продукцию или документы.</p>
 									<div class="splide__slide-block-1-group">
-										<button class="splide__slide-button button-basic">Оставить заявку</button>
+										<button class="splide__slide-button button-basic" data-bs-toggle="modal" data-bs-target="#modal-callback-vacancy">Оставить заявку</button>
 										<p class="splide__slide-block-1-group-desc">Все виды услуг по&nbsp;аутсорсу в&nbsp;любом регионе&nbsp;России</p>
 									</div>
 								</div>
@@ -162,7 +162,7 @@ import '@splidejs/vue-splide/css';
 									<h1 class="splide__slide-title">ТВОЯ КАРЬЕРА НАЧИНАЕТСЯ ЗДЕСЬ!</h1>
 									<p class="splide__slide-desc">Компания оказывает услуги по аутсорсингу курьеров в Москве и Московской области. Наши курьеры оперативно доставят негабаритные грузы, продукцию или документы.</p>
 									<div class="splide__slide-block-1-group">
-										<button class="splide__slide-button button-basic">Оставить заявку</button>
+										<button class="splide__slide-button button-basic" data-bs-toggle="modal" data-bs-target="#modal-callback-vacancy">Оставить заявку</button>
 										<p class="splide__slide-block-1-group-desc">Все виды услуг по&nbsp;аутсорсу в&nbsp;любом регионе&nbsp;России</p>
 									</div>
 								</div>
@@ -221,6 +221,7 @@ import '@splidejs/vue-splide/css';
 .hero__inner {
 	position: relative;
 	min-height: 700px;
+	height: 1px;
 }
 
 .hero__inner::before,
@@ -251,6 +252,10 @@ import '@splidejs/vue-splide/css';
 	height: 100%;
 	border-radius: var(--section-border-radius);
 	overflow: hidden;
+}
+
+.splide__track {
+	height: 100%;
 }
 
 .splide__slide {
@@ -317,6 +322,7 @@ import '@splidejs/vue-splide/css';
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: 30px;
+	height: 100%;
 	background-color: #f5f7fa;
 }
 
@@ -526,6 +532,10 @@ import '@splidejs/vue-splide/css';
 }
 
 @media (max-width: 991.98px) {
+	.hero__inner {
+		height: auto;
+	}
+
 	.splide__slide-inner {
 		grid-template-columns: 100%;
 		gap: 50px;

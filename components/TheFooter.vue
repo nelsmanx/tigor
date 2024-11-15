@@ -78,14 +78,6 @@ const tags = [
 					<p class="footer__bottom-item">© 2024, ООО ТИГОР. Все&nbsp;права&nbsp;защищены.</p>
 					<p class="footer__bottom-item">ИНН:&nbsp;6165231522, ОГРН&nbsp;1226100001511</p>
 					<a class="footer__bottom-item" href="#">Политика конфиденциальности</a>
-
-					<!-- <div class="footer__bottom-group">
-						<p class="footer__bottom-item">© 2024, ООО ТИГОР. Все&nbsp;права&nbsp;защищены.</p>
-					</div>
-					<div class="footer__bottom-group">
-						<p class="footer__bottom-item">ИНН:&nbsp;6165231522, ОГРН&nbsp;1226100001511</p>
-						<a class="footer__bottom-item" href="#">Политика конфиденциальности</a>
-					</div> -->
 				</div>
 			</div>
 		</div>
@@ -246,16 +238,6 @@ const tags = [
 	justify-content: start;
 }
 
-/*.footer__bottom-layout {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	gap: 30px;
-	align-items: center;
-}
-
- .footer__bottom-group {
-	display: flex;
-} */
 .footer__bottom-item {
 	font-size: 12px;
 	font-weight: 300;
@@ -310,6 +292,10 @@ const tags = [
 }
 
 @media (max-width: 991.98px) {
+	.footer {
+		padding: calc(1.3 * var(--section-space)) 0 calc(0.4 * var(--section-space));
+	}
+
 	.footer__top {
 		margin-bottom: 80px;
 	}

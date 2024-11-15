@@ -117,6 +117,10 @@ html[data-color-scheme="dark"] .info__link {
 }
 
 @media (max-width: 991.98px) {
+	.info {
+		padding: var(--section-space) 0;
+	}
+
 	.info__image {
 		width: 200px;
 		margin-bottom: 40px;

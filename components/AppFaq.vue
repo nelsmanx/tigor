@@ -126,6 +126,10 @@
 }
 
 @media (max-width: 991.98px) {
+	.faq {
+		margin-bottom: var(--section-space);
+	}
+
 	.faq__layout {
 		--gap: 15px;
 	}

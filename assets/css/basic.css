@@ -49,7 +49,8 @@ picture {
 	--global-padding-inline: 15px;
 	--secondary-font-family: "Museo Cyrl";
 	--section-title-fz: 52px;
-	--section-border-radius: 50px
+	--section-border-radius: 50px;
+	--section-space: 90px;
 }
 
 :root[data-color-scheme="dark"] {
@@ -74,6 +75,7 @@ picture {
 @media (max-width: 991.98px) {
 	:root {
 		--section-title-fz: 38px;
+		--section-space: 70px;
 	}
 }
 
@@ -88,6 +90,7 @@ picture {
 	:root {
 		--section-border-radius: 20px;
 		--section-title-fz: 28px;
+		--section-space: 50px;
 	}
 }
 
@@ -95,6 +98,12 @@ picture {
 	:root {
 		--section-border-radius: 20px;
 		--section-title-fz: 26px;
+	}
+}
+
+@media (max-width: 379.98px) {
+	:root {
+		--section-space: 40px;
 	}
 }
 

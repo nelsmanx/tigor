@@ -65,7 +65,7 @@ import '@splidejs/vue-splide/css';
 
 						<BasicTags class="splide__slide-tags"
 							:tags="['Найдем сотрудников', 'Подготовим кадров', 'Минимизаируем риски', 'Проведем обучение', 'Найдем персонал за сутки', 'Что-то еще']" />
-						<button class="splide__slide-button">Оставить заявку</button>
+						<button class="splide__slide-button" data-bs-toggle="modal" data-bs-target="#modal-callback">Оставить заявку</button>
 					</SplideSlide>
 				</SplideTrack>
 
@@ -247,6 +247,10 @@ import '@splidejs/vue-splide/css';
 }
 
 @media (max-width: 991.98px) {
+	.projects {
+		padding: var(--section-space) 0;
+	}
+
 	.splide__slide {
 		min-height: 500px;
 	}

@@ -27,4 +27,15 @@ defineProps({
 	border: unset;
 	border-radius: unset;
 }
+
+@media (max-width: 575.98px) {
+	.modal {
+		padding: 15px !important;
+	}
+
+	.modal-dialog {
+		margin-top: 10px;
+		margin-inline: auto;
+	}
+}
 </style>

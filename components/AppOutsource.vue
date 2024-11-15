@@ -40,7 +40,7 @@
 						</div>
 					</div>
 					<div class="outsource__item-footer">
-						<button class="outsource__item-button button-basic">Оставить заявку</button>
+						<button class="outsource__item-button button-basic" data-bs-toggle="modal" data-bs-target="#modal-callback">Оставить заявку</button>
 					</div>
 				</li>
 				<!-- Для торговых сетей -->
@@ -80,7 +80,7 @@
 						</div>
 					</div>
 					<div class="outsource__item-footer">
-						<button class="outsource__item-button button-basic">Оставить заявку</button>
+						<button class="outsource__item-button button-basic" data-bs-toggle="modal" data-bs-target="#modal-callback">Оставить заявку</button>
 					</div>
 				</li>
 				<!-- Для складов -->
@@ -112,7 +112,7 @@
 						</div>
 					</div>
 					<div class="outsource__item-footer">
-						<button class="outsource__item-button button-basic">Оставить заявку</button>
+						<button class="outsource__item-button button-basic" data-bs-toggle="modal" data-bs-target="#modal-callback">Оставить заявку</button>
 					</div>
 				</li>
 				<!-- Для производств -->
@@ -144,7 +144,7 @@
 						</div>
 					</div>
 					<div class="outsource__item-footer">
-						<button class="outsource__item-button button-basic">Оставить заявку</button>
+						<button class="outsource__item-button button-basic" data-bs-toggle="modal" data-bs-target="#modal-callback">Оставить заявку</button>
 					</div>
 				</li>
 			</ul>
@@ -426,6 +426,10 @@
 }
 
 @media (max-width: 991.98px) {
+	.outsource {
+		padding: var(--section-space) 0;
+	}
+
 	.outsource__headline {
 		margin-bottom: 30px;
 	}

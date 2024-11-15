@@ -9,7 +9,7 @@
 			</div>
 			<ul class="vacancies__list">
 				<li class="vacancies__item vacancies__item--button">
-					<button class="vacancies__item-button button-basic">Оставить заявку</button>
+					<button class="vacancies__item-button button-basic" data-bs-toggle="modal" data-bs-target="#modal-callback">Оставить заявку</button>
 				</li>
 				<li class="vacancies__item">
 					<div class="vacancies__item-inner">
@@ -213,6 +213,10 @@
 }
 
 @media (max-width: 991.98px) {
+	.vacancies {
+		padding: var(--section-space) 0;
+	}
+
 	.vacancies__desc {
 		font-size: 20px;
 	}

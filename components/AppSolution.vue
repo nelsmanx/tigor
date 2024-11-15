@@ -17,7 +17,7 @@
 						<span class="hl">>10&nbsp;000</span>
 						Действующих сотрудников
 					</p>
-					<button class="solution__button">Индивидуальный подбор</button>
+					<button class="solution__button" data-bs-toggle="modal" data-bs-target="#modal-callback-alt">Индивидуальный подбор</button>
 
 				</div>
 			</div>
@@ -174,6 +174,10 @@
 }
 
 @media (max-width: 991.98px) {
+	.solution {
+		margin-bottom: var(--section-space);
+	}
+
 	.solution__inner {
 		padding-block: 40px;
 	}

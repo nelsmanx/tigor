@@ -15,21 +15,21 @@ const modalId = props.altColorScheme ? 'modal-callback-alt' : 'modal-callback';
 				<BasicLogoSvg v-if="!altColorScheme" class="modal__logo-svg" />
 				<img v-else class="modal__logo-svg" src="/images/logo-alt.svg" alt="Логотип компании">
 			</div>
-			<p class="modal__company-desc">Аутсорс и&nbsp;аутстафф линейного персонала</p>
+			<p class="modal__company-desc">Аутсорс и&nbsp;аутстафф<br />линейного персонала</p>
 			<button class="modal__button-close" data-bs-dismiss="modal" aria-label="Close"></button>
 		</div>
 		<div class="modal__body">
 			<p class="modal__title">Ищешь работу?</p>
-			<p class="modal__desc">Заполняй анкету и жми «Отправить» и&nbsp;наши менеджеры свяжутся с Вами в течение 15 минут</p>
-			<div class="form modal__form">
+			<p class="modal__desc">Заполняй анкету и жми «Отправить» и&nbsp;наши менеджеры свяжутся с Вами в течение 15&nbsp;минут</p>
+			<form class="form modal__form">
 				<div class="form__input-group">
 					<label class="form__label">
 						<span class="form__label-title">Имя и Фамилия</span>
-						<input class="form__input" type="text" name="name">
+						<input class="form__input" type="text" name="name" required>
 					</label>
 					<label class="form__label">
 						<span class="form__label-title">Номер телефона</span>
-						<input v-inputmask-tel class="form__input" type="tel" name="tel" placeholder="+7 (917) --- -- -- ">
+						<input v-inputmask-tel class="form__input" type="tel" name="tel" placeholder="+7 (917) --- -- -- " required>
 					</label>
 				</div>
 				<div class="form__personal-data">
@@ -38,7 +38,7 @@ const modalId = props.altColorScheme ? 'modal-callback-alt' : 'modal-callback';
 					</BasicCheckboxWithLabel>
 				</div>
 				<button class="form__button">Отправить заявку</button>
-			</div>
+			</form>
 		</div>
 	</BasicModal>
 </template>
@@ -108,7 +108,6 @@ const modalId = props.altColorScheme ? 'modal-callback-alt' : 'modal-callback';
 }
 
 .modal__company-desc {
-	max-width: 140px;
 	font-size: 13px;
 	font-weight: 400;
 	line-height: 1.2;
@@ -121,6 +120,8 @@ const modalId = props.altColorScheme ? 'modal-callback-alt' : 'modal-callback';
 }
 
 .modal__button-close {
+	position: relative;
+	right: -10px;
 	width: 32px;
 	height: 32px;
 	margin-left: auto;
@@ -143,7 +144,7 @@ const modalId = props.altColorScheme ? 'modal-callback-alt' : 'modal-callback';
 .modal__title {
 	margin-bottom: 17px;
 	font-family: var(--secondary-font-family);
-	font-size: 52px;
+	font-size: var(--section-title-fz);
 	font-weight: 400;
 	line-height: 1;
 	color: var(--font-basic);
@@ -276,5 +277,218 @@ const modalId = props.altColorScheme ? 'modal-callback-alt' : 'modal-callback';
 
 #modal-callback-alt .form__button {
 	background-color: #fff;
+}
+
+@media (max-width: 1399.98px) {
+
+	:global(#modal-callback .modal-dialog),
+	:global(#modal-callback-alt .modal-dialog) {
+		max-width: 600px;
+	}
+
+	.modal__desc {
+		font-size: 20px;
+	}
+
+	.form__input {
+		font-size: 22px;
+	}
+
+	.form__button {
+		height: 80px;
+		font-size: 24px;
+		border-radius: 30px;
+	}
+}
+
+@media (max-width: 991.98px) {
+
+	:global(#modal-callback .modal-dialog),
+	:global(#modal-callback-alt .modal-dialog) {
+		max-width: 500px;
+	}
+
+	:global(#modal-callback .modal-content),
+	:global(#modal-callback-alt .modal-content) {
+		padding: 50px;
+	}
+
+	.modal__header {
+		justify-content: space-between;
+		padding-bottom: 30px;
+	}
+
+	.modal__logo {
+		width: 120px;
+		margin-right: 0;
+	}
+
+	.modal__button-close {
+		margin-left: 0;
+	}
+
+	.modal__body {
+		padding-top: 30px;
+	}
+
+	.modal__company-desc {
+		font-size: 12px;
+	}
+
+	.modal__desc {
+		margin-bottom: 30px;
+		font-size: 18px;
+	}
+
+	.form__input {
+		font-size: 20px;
+	}
+
+	.form__personal-data {
+		margin-bottom: 50px;
+	}
+
+	.form__button {
+		height: 70px;
+		font-size: 22px;
+	}
+}
+
+@media (max-width: 767.98px) {
+
+	:global(#modal-callback .modal-dialog),
+	:global(#modal-callback-alt .modal-dialog) {
+		max-width: 450px;
+	}
+
+	:global(#modal-callback .modal-content),
+	:global(#modal-callback-alt .modal-content) {
+		padding: 40px;
+	}
+
+	.modal__desc {
+		font-size: 16px;
+	}
+
+	.form__input-group {
+		gap: 25px;
+		margin-bottom: 20px;
+	}
+
+	.form__label-title {
+		font-size: 14px;
+	}
+
+	.form__input {
+		padding: 6px 0;
+		font-size: 18px;
+	}
+
+	.form__personal-data {
+		margin-bottom: 40px;
+	}
+
+	.form__button {
+		height: 65px;
+		font-size: 20px;
+		border-radius: 22px;
+	}
+}
+
+@media (max-width: 575.98px) {
+
+	:global(#modal-callback .modal-content),
+	:global(#modal-callback-alt .modal-content) {
+		padding: 35px;
+	}
+
+	.modal__header {
+		padding-bottom: 20px;
+	}
+
+	.modal__logo {
+		width: 100px;
+	}
+
+	:global(#modal-callback-alt .checkbox__label-title),
+	:global(#modal-callback .checkbox__label-title) {
+		font-size: 14px;
+	}
+
+	:global(#modal-callback-alt .checkbox__style-wrap),
+	:global(#modal-callback .checkbox__style-wrap) {
+		top: 1px;
+		margin-right: 1px;
+	}
+}
+
+@media (max-width: 479.98px) {
+	.form__button {
+		height: 60px;
+		font-size: 18px;
+	}
+}
+
+@media (max-width: 379.98px) {
+
+	:global(#modal-callback .modal-content),
+	:global(#modal-callback-alt .modal-content) {
+		padding: 30px;
+	}
+
+	.modal__body[data-v-0594bcb9] {
+		padding-top: 25px;
+	}
+
+	.modal__header {
+		padding-bottom: 12px;
+	}
+
+	.modal__logo {
+		width: 90px;
+	}
+
+	.modal__company-desc {
+		display: none;
+	}
+
+	.modal__button-close {
+		width: 28px;
+		height: 28px;
+		background-size: 16px 16px;
+	}
+
+	.modal__desc {
+		margin-bottom: 20px;
+		font-size: 14px;
+	}
+
+	.form__input-group {
+		gap: 20px;
+	}
+
+	.form__input {
+		padding: 4px 0;
+		font-size: 16px;
+	}
+
+	.form__personal-data {
+		margin-bottom: 30px;
+	}
+
+	:global(#modal-callback-alt .checkbox__label-title),
+	:global(#modal-callback .checkbox__label-title) {
+		font-size: 12px;
+	}
+
+	:global(#modal-callback-alt .checkbox__label),
+	:global(#modal-callback .checkbox__label) {
+		line-height: 1;
+	}
+
+	.form__button {
+		height: 50px;
+		font-size: 16px;
+	}
 }
 </style>

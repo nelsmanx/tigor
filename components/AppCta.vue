@@ -29,11 +29,11 @@ defineProps({
 							</div>
 						</div>
 					</div>
-					<div class="form cta__form">
+					<form class="form cta__form">
 						<div class="form__input-group">
 							<label class="form__label form__label--name">
 								<span class="form__label-title">Ваше имя</span>
-								<input class="form__input" type="text" name="name">
+								<input class="form__input" type="text" name="name" required>
 							</label>
 							<label class="form__label form__label--city">
 								<span class="form__label-title">Ваш город</span>
@@ -41,7 +41,7 @@ defineProps({
 							</label>
 							<label class="form__label form__label--tel">
 								<span class="form__label-title">Номер телефона</span>
-								<input v-inputmask-tel class="form__input" type="tel" name="tel">
+								<input v-inputmask-tel class="form__input" type="tel" name="tel" required>
 							</label>
 							<label class="form__label form__label--mail">
 								<span class="form__label-title">Ваш E-mail:</span>
@@ -54,7 +54,7 @@ defineProps({
 							</BasicCheckboxWithLabel>
 						</div>
 						<button class="form__button">Отправить анкету</button>
-					</div>
+					</form>
 				</div>
 			</div>
 		</div>
@@ -301,6 +301,10 @@ defineProps({
 }
 
 .cta--dark:deep(.checkbox__default-input:checked + .checkbox__style::before) {
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11.01 8.22'%3E%3Cpath fill='%231c1c1c' d='M3.86,8.22A1,1,0,0,1,3.12,8L.3,5.13a1,1,0,0,1,0-1.41,1,1,0,0,1,1.41,0L3.79,5.81,9.3.3a1,1,0,0,1,1.4,0,1,1,0,0,1,0,1.41L4.46,8a1,1,0,0,1-.74.27Z' /%3E%3C/svg%3E")
+}
+
+html[data-color-scheme="dark"] .cta--dark:deep(.checkbox__default-input:checked + .checkbox__style::before) {
 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11.01 8.22'%3E%3Cpath fill='%23ffffff' d='M3.86,8.22A1,1,0,0,1,3.12,8L.3,5.13a1,1,0,0,1,0-1.41,1,1,0,0,1,1.41,0L3.79,5.81,9.3.3a1,1,0,0,1,1.4,0,1,1,0,0,1,0,1.41L4.46,8a1,1,0,0,1-.74.27Z' /%3E%3C/svg%3E");
 }
 
@@ -360,6 +364,10 @@ defineProps({
 }
 
 @media (max-width: 991.98px) {
+	.cta--dark {
+		margin-bottom: var(--section-space);
+	}
+
 	.cta__layout {
 		grid-template-columns: 100%;
 		gap: 45px;
