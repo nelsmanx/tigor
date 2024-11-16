@@ -1,8 +1,4 @@
-<script setup>
-useHead({
-	script: [{ src: '/initColorScheme.js' }],
-});
-</script>
+<script setup></script>
 
 <template>
 	<NuxtLayout>

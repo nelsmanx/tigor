@@ -1,25 +1,13 @@
 <script setup>
-import { useDark, useToggle } from "@vueuse/core";
-const isDark = useDark({
-	selector: "html",
-	attribute: "data-color-scheme",
-	valueDark: "dark",
-	valueLight: "light",
-});
-
-const toggleDark = useToggle(isDark);
-
-const colorSchemeTitle = computed(() => isDark.value ? 'Темная тема' : 'Светлая тема');
+const { colorScheme, toggleColorScheme } = useColorScheme();
+const colorSchemeTitle = computed(() => colorScheme.value === 'dark' ? 'Темная тема' : 'Светлая тема');
 </script>
 
 <template>
 	<div class="color-scheme">
-		<ClientOnly>
-			<p class="color-scheme__title">{{ colorSchemeTitle }}</p>
-		</ClientOnly>
-		<div class="color-scheme__toggler" @click="toggleDark()"></div>
+		<p class="color-scheme__title">{{ colorSchemeTitle }}</p>
+		<div class="color-scheme__toggler" @click="toggleColorScheme()"></div>
 	</div>
-
 </template>
 
 <style scoped>
@@ -34,6 +22,8 @@ const colorSchemeTitle = computed(() => isDark.value ? 'Темная тема' :
 .color-scheme {}
 
 .color-scheme__title {
+	/* disable jumping in nav */
+	width: 88px;
 	margin-bottom: 12px;
 	font-weight: 400;
 	font-size: 13px;
@@ -75,7 +65,7 @@ html[data-color-scheme="dark"] .color-scheme__toggler::before {
 
 @media (max-width: 1599.98px) {
 	.color-scheme__title {
-		width: min-content;
+		width: 53px;
 		margin-bottom: 0;
 		margin-right: 25px;
 	}
@@ -83,6 +73,7 @@ html[data-color-scheme="dark"] .color-scheme__toggler::before {
 
 @media (max-width: 479.98px) {
 	.color-scheme__title {
+		width: auto;
 		margin-right: 20px;
 		font-size: 7px;
 	}
