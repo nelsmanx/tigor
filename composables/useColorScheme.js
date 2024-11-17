@@ -1,5 +1,8 @@
 export const useColorScheme = () => {
-	const colorScheme = useCookie('color-scheme');
+	const colorScheme = useCookie('color-scheme', {
+		path: '/',
+		expires: new Date(Date.now() + 365 * 86400e3),
+	});
 
 	if (process.server && colorScheme.value) {
 		useHead({
