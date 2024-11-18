@@ -4,34 +4,29 @@ export const useColorScheme = () => {
 		expires: new Date(Date.now() + 365 * 86400e3),
 	});
 
-	if (process.server && colorScheme.value) {
-		useHead({
-			htmlAttrs: {
-				'data-color-scheme': colorScheme.value
-			}
-		});
+	if (import.meta.server && colorScheme.value) {
+		setColorScheme(colorScheme.value);
 	}
 
-	if (!colorScheme.value && process.client) {
+	if (!colorScheme.value && import.meta.client) {
 		const isPrefersColorSchemeDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 		colorScheme.value = isPrefersColorSchemeDark ? 'dark' : 'light';
-
-		useHead({
-			htmlAttrs: {
-				'data-color-scheme': colorScheme.value
-			}
-		});
+		setColorScheme(colorScheme.value);
 	}
 
 	watch(colorScheme, (newValue) => {
-		useHead({
-			htmlAttrs: {
-				'data-color-scheme': newValue
-			}
-		});
+		setColorScheme(newValue);
 	}, { immediate: true });
 
-	const toggleColorScheme = () => {
+	function setColorScheme(newColorScheme) {
+		useHead({
+			htmlAttrs: {
+				'data-color-scheme': newColorScheme
+			}
+		});
+	};
+
+	function toggleColorScheme() {
 		colorScheme.value = colorScheme.value === 'dark' ? 'light' : 'dark';
 	};
 
