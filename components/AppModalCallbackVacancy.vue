@@ -1,7 +1,43 @@
-<script setup></script>
+<script setup>
+const { $emitter } = useNuxtApp();
+
+const types = {
+	1: {
+		title: 'Ищешь работу автокурьером?',
+		image: '/images/hero/1.jpg'
+	},
+	2: {
+		title: 'Ищешь работу пешим курьером?',
+		image: '/images/hero/2.jpg'
+	},
+	3: {
+		title: 'Ищешь работу курьером на своём автомобиле?',
+		image: '/images/hero/3.jpg'
+	},
+	4: {
+		title: 'Ищешь работу кладовщиком?',
+		image: '/images/hero/4.jpg'
+	},
+	5: {
+		title: 'Ищешь работу водителем?',
+		image: '/images/hero/5.jpg'
+	},
+};
+
+const activeType = ref(1);
+const activeTypeTitle = computed(() => types[activeType.value].title);
+const activeTypeImage = computed(() => types[activeType.value].image);
+
+const showModal = ref(false);
+
+$emitter.on('showModalCallbackVacancy', (type) => {
+	activeType.value = type;
+	showModal.value = true;
+});
+</script>
 
 <template>
-	<BasicModal id="modal-callback-vacancy">
+	<BasicModal id="modal-callback-vacancy" v-model="showModal">
 		<div class="modal__header">
 			<div class="modal__logo">
 				<img class="modal__logo-svg" src="/images/logo.svg" alt="Логотип компании">
@@ -11,7 +47,7 @@
 		</div>
 		<div class="modal__body">
 			<div class="modal__body-content">
-				<p class="modal__title">Ищешь работу автокурьером?</p>
+				<p class="modal__title">{{ activeTypeTitle }}</p>
 				<p class="modal__desc">Заполняй анкету и жми «Отправить» и&nbsp;наши менеджеры свяжутся с&nbsp;Вами в&nbsp;течение 15&nbsp;минут</p>
 				<form class="form modal__form">
 					<div class="form__input-group">
@@ -41,7 +77,7 @@
 				</form>
 			</div>
 			<div class="modal__body-image-wrap">
-				<img class="modal__body-image" src="/public/images/modal-callback-vacancy/1.jpg" alt="" aria-hidden="true">
+				<img class="modal__body-image" :src="activeTypeImage" alt="" aria-hidden="true">
 			</div>
 		</div>
 	</BasicModal>

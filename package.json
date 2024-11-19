@@ -13,6 +13,7 @@
 		"@splidejs/vue-splide": "^0.6.12",
 		"bootstrap": "5.3.3",
 		"inputmask": "^5.0.9",
+		"mitt": "^3.0.1",
 		"nuxt": "^3.14.159",
 		"vue": "latest",
 		"vue-router": "latest",

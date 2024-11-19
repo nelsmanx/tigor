@@ -5,11 +5,25 @@ defineProps({
 		required: true
 	}
 });
+
+const showModal = defineModel(false);
+const { $bootstrap } = useNuxtApp();
+const modalRef = ref(null);
+
+onMounted(() => {
+	const modal = new $bootstrap.Modal(modalRef.value, {});
+	modalRef.value.addEventListener("hide.bs.modal", () => showModal.value = false);
+
+	watch(showModal, newState => {
+		if (newState) modal.show();
+		if (!newState) modal.hide();
+	});
+});
 </script>
 
 <template>
 	<Teleport to="body">
-		<div class="modal fade" :id="id" tabindex="-1" aria-hidden="true">
+		<div ref="modalRef" class="modal fade" :id tabindex="-1" aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<slot />

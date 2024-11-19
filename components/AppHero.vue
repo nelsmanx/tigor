@@ -1,6 +1,8 @@
 <script setup>
 import { Splide, SplideTrack, SplideSlide } from '@splidejs/vue-splide';
 import '@splidejs/vue-splide/css';
+const { $emitter } = useNuxtApp();
+
 </script>
 
 <template>
@@ -33,7 +35,9 @@ import '@splidejs/vue-splide/css';
 									<h1 class="splide__slide-title">ТВОЯ КАРЬЕРА НАЧИНАЕТСЯ ЗДЕСЬ!</h1>
 									<p class="splide__slide-desc">Компания оказывает услуги по аутсорсингу курьеров в Москве и Московской области. Наши курьеры оперативно доставят негабаритные грузы, продукцию или документы.</p>
 									<div class="splide__slide-block-1-group">
-										<button class="splide__slide-button button-basic" data-bs-toggle="modal" data-bs-target="#modal-callback-vacancy">Оставить заявку</button>
+										<button class="splide__slide-button button-basic" @click="$emitter.emit('showModalCallbackVacancy', 1)">
+											Оставить заявку
+										</button>
 										<p class="splide__slide-block-1-group-desc">Все виды услуг по&nbsp;аутсорсу в&nbsp;любом регионе&nbsp;России</p>
 									</div>
 								</div>
@@ -66,7 +70,9 @@ import '@splidejs/vue-splide/css';
 									<h1 class="splide__slide-title">ТВОЯ КАРЬЕРА НАЧИНАЕТСЯ ЗДЕСЬ!</h1>
 									<p class="splide__slide-desc">Компания оказывает услуги по аутсорсингу курьеров в Москве и Московской области. Наши курьеры оперативно доставят негабаритные грузы, продукцию или документы.</p>
 									<div class="splide__slide-block-1-group">
-										<button class="splide__slide-button button-basic" data-bs-toggle="modal" data-bs-target="#modal-callback-vacancy">Оставить заявку</button>
+										<button class="splide__slide-button button-basic" @click="$emitter.emit('showModalCallbackVacancy', 2)">
+											Оставить заявку
+										</button>
 										<p class="splide__slide-block-1-group-desc">Все виды услуг по&nbsp;аутсорсу в&nbsp;любом регионе&nbsp;России</p>
 									</div>
 								</div>
@@ -98,7 +104,9 @@ import '@splidejs/vue-splide/css';
 									<h1 class="splide__slide-title">ТВОЯ КАРЬЕРА НАЧИНАЕТСЯ ЗДЕСЬ!</h1>
 									<p class="splide__slide-desc">Компания оказывает услуги по аутсорсингу курьеров в Москве и Московской области. Наши курьеры оперативно доставят негабаритные грузы, продукцию или документы.</p>
 									<div class="splide__slide-block-1-group">
-										<button class="splide__slide-button button-basic" data-bs-toggle="modal" data-bs-target="#modal-callback-vacancy">Оставить заявку</button>
+										<button class="splide__slide-button button-basic" @click="$emitter.emit('showModalCallbackVacancy', 3)">
+											Оставить заявку
+										</button>
 										<p class="splide__slide-block-1-group-desc">Все виды услуг по&nbsp;аутсорсу в&nbsp;любом регионе&nbsp;России</p>
 									</div>
 								</div>
@@ -130,7 +138,9 @@ import '@splidejs/vue-splide/css';
 									<h1 class="splide__slide-title">ТВОЯ КАРЬЕРА НАЧИНАЕТСЯ ЗДЕСЬ!</h1>
 									<p class="splide__slide-desc">Компания оказывает услуги по аутсорсингу курьеров в Москве и Московской области. Наши курьеры оперативно доставят негабаритные грузы, продукцию или документы.</p>
 									<div class="splide__slide-block-1-group">
-										<button class="splide__slide-button button-basic" data-bs-toggle="modal" data-bs-target="#modal-callback-vacancy">Оставить заявку</button>
+										<button class="splide__slide-button button-basic" @click="$emitter.emit('showModalCallbackVacancy', 4)">
+											Оставить заявку
+										</button>
 										<p class="splide__slide-block-1-group-desc">Все виды услуг по&nbsp;аутсорсу в&nbsp;любом регионе&nbsp;России</p>
 									</div>
 								</div>
@@ -162,7 +172,9 @@ import '@splidejs/vue-splide/css';
 									<h1 class="splide__slide-title">ТВОЯ КАРЬЕРА НАЧИНАЕТСЯ ЗДЕСЬ!</h1>
 									<p class="splide__slide-desc">Компания оказывает услуги по аутсорсингу курьеров в Москве и Московской области. Наши курьеры оперативно доставят негабаритные грузы, продукцию или документы.</p>
 									<div class="splide__slide-block-1-group">
-										<button class="splide__slide-button button-basic" data-bs-toggle="modal" data-bs-target="#modal-callback-vacancy">Оставить заявку</button>
+										<button class="splide__slide-button button-basic" @click="$emitter.emit('showModalCallbackVacancy', 5)">
+											Оставить заявку
+										</button>
 										<p class="splide__slide-block-1-group-desc">Все виды услуг по&nbsp;аутсорсу в&nbsp;любом регионе&nbsp;России</p>
 									</div>
 								</div>

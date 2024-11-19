@@ -4,7 +4,7 @@ const id = useId();
 
 <template>
 	<li class="faq__item">
-		<div class="faq__item-question" data-bs-toggle="collapse" :data-bs-target="`#faq-answer-${id}`">
+		<div class="faq__item-question collapsed" data-bs-toggle="collapse" :data-bs-target="`#faq-answer-${id}`">
 			<div class="faq__item-question-content">
 				<p>
 					<slot name="question"></slot>
