@@ -4,8 +4,11 @@
 	<section class="vacancies">
 		<div class="container">
 			<div class="vacancies__headline">
-				<h2 class="vacancies__title">Приглашаем Вас на&nbsp;вакансии</h2>
-				<p class="vacancies__desc">Мы не набираем квалифицированнй персонал. и .т.д. Включает в себя поиск, найм, обучение, оплату и управление работниками, которые выполняют Ведение делопроизводства, оформление договоров.</p>
+				<h2 class="vacancies__title">Приглашаем Вас к&nbsp;сотрудничеству</h2>
+				<p class="vacancies__desc">
+					Мы набираем активных сотрудников для работы на позициях линейного персонала: курьеров, сборщиков, кладовщиков и грузчиков. Работа с нами – это стабильный доход, новый опыт и возможность развиваться в выбранной сфере.<br />
+					<b>Заполните анкету соискателя или отправьте резюме и начните работать с нами!</b>
+				</p>
 			</div>
 			<ul class="vacancies__list">
 				<li class="vacancies__item vacancies__item--button">
@@ -17,7 +20,7 @@
 							<img class="vacancies__item-icon-img vacancies__item-icon-img--1" src="/images/vacancies/1.svg" alt="" aria-hidden="true">
 						</div>
 						<p class="vacancies__item-title">Водители-курьеры</p>
-						<p class="vacancies__item-desc">На авто компании</p>
+						<p class="vacancies__item-desc">На авто компании, своём, пеший и вело</p>
 					</div>
 				</li>
 				<li class="vacancies__item">
@@ -26,7 +29,7 @@
 							<img class="vacancies__item-icon-img vacancies__item-icon-img--2" src="/images/vacancies/2.svg" alt="" aria-hidden="true">
 						</div>
 						<p class="vacancies__item-title">Сборщики/пикеры</p>
-						<p class="vacancies__item-desc">На склады компании</p>
+						<p class="vacancies__item-desc">Торговые сети</p>
 					</div>
 				</li>
 				<li class="vacancies__item">

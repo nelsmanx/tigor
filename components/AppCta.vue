@@ -1,4 +1,6 @@
 <script setup>
+const companyInfo = useCompanyInfo();
+
 defineProps({
 	hasDarkColorScheme: {
 		type: Boolean,
@@ -13,19 +15,19 @@ defineProps({
 				<div class="cta__layout">
 					<div class="cta__content">
 						<template v-if="!hasDarkColorScheme">
-							<h2 class="cta__title">Ищешь работу?<br /> Тогда тебе к нам!</h2>
+							<h2 class="cta__title">Нужны услуги по предоставлению персонала?”</h2>
 							<p class="cta__desc">Заполняй анкету и жми «Отправить».<br /> Наши заботливые менеджеры свяжутся с&nbsp;Вами в&nbsp;течение&nbsp;15&nbsp;минут</p>
 						</template>
 						<template v-else>
 							<h2 class="cta__title cta__title--dark">Нужны услуги&nbsp;по предоставлению персонала?</h2>
-							<p class="cta__desc cta__desc--dark">Заполните форму ниже. Мы свяжемся с вами, чтобы уточнить все детали и сформировать лучшее предложение.</p>
+							<p class="cta__desc cta__desc--dark">Заполните форму ниже. Мы свяжемся с вами, чтобы уточнить все детали, сформировать лучшее предложение, а&nbsp;также договоримся при необходимости о встречи в живую.</p>
 						</template>
 
 						<div v-if="hasDarkColorScheme" class="cta__group">
 							<img class="cta__group-image" src="/images/deliverymen.png" alt="" aria-hidden="true">
 							<div class="cta__group-contacts">
-								<a class="cta__group-contacts-tel cta__group-contacts-tel--dark" href="tel:+79000000000">+7 (900) 000 00 00</a>
-								<a class="cta__group-contacts-mail cta__group-contacts-mail--dark" href="mailto:info@tigor.pro">info@tigor.pro</a>
+								<a class="cta__group-contacts-tel cta__group-contacts-tel--dark" :href="`tel:${companyInfo.formatTel(companyInfo.tel)}`">{{ companyInfo.tel }}</a>
+								<a class="cta__group-contacts-mail cta__group-contacts-mail--dark" :href="`mailto:${companyInfo.mail}`">{{ companyInfo.mail }}</a>
 							</div>
 						</div>
 					</div>
@@ -35,7 +37,7 @@ defineProps({
 								<span class="form__label-title">Ваше имя</span>
 								<input class="form__input" type="text" name="name" required>
 							</label>
-							<label class="form__label form__label--city">
+							<label v-if="false" class="form__label form__label--city">
 								<span class="form__label-title">Ваш город</span>
 								<input class="form__input" type="text" name="city">
 							</label>
@@ -196,7 +198,7 @@ defineProps({
 	display: grid;
 	grid-template-areas:
 		"name tel"
-		"city mail";
+		"mail .";
 	grid-template-columns: repeat(2, 1fr);
 	column-gap: 76px;
 	row-gap: 52px;
@@ -503,7 +505,6 @@ html[data-color-scheme="dark"] .cta--dark:deep(.checkbox__default-input:checked 
 		grid-template-areas:
 			"name"
 			"tel"
-			"city"
 			"mail";
 		padding-right: 20px;
 	}

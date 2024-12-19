@@ -1,3 +1,7 @@
+<script setup>
+const companyInfo = useCompanyInfo();
+</script>
+
 <template>
 	<header class="header ">
 		<div class="container container--full-width">
@@ -16,8 +20,9 @@
 					</ul>
 				</nav>
 				<div class="header__contacts">
-					<a class="header__contacts-tel" href="tel:+79000000000">+7 (900) 000 00 00</a>
-					<a class="header__contacts-mail" href="mailto:info@tigor.pro">info@tigor.pro</a>
+					<a class="header__contacts-tel" :href="`tel:${companyInfo.formatTel(companyInfo.tel)}`">{{ companyInfo.tel }}</a>
+					<a class="header__contacts-tel" :href="`tel:${companyInfo.formatTel(companyInfo.tel2)}`">{{ companyInfo.tel2 }}</a>
+					<a v-if="false" class="header__contacts-mail" :href="`mailto:${companyInfo.mail}`">{{ companyInfo.mail }}</a>
 				</div>
 
 				<div class="header__actions">
@@ -27,7 +32,7 @@
 
 				<BasicColorSchemeElement class="header__color-scheme" />
 
-				<a class="header__tel" href="tel:+79000000000"></a>
+				<a class="header__tel" :href="`tel:${companyInfo.formatTel(companyInfo.tel)}`"></a>
 				<button class="header__hamb" data-bs-toggle="offcanvas" data-bs-target="#mobile-menu"></button>
 			</div>
 		</div>
@@ -109,12 +114,15 @@
 
 .header__contacts-tel {
 	display: block;
-	margin-bottom: 6px;
 	font-size: 24px;
 	font-weight: 600;
 	letter-spacing: 0.02em;
 	white-space: nowrap;
 	color: var(--font-basic);
+}
+
+.header__contacts-tel:not(:last-child) {
+	margin-bottom: 6px;
 }
 
 .header__contacts-mail {

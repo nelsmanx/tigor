@@ -30,11 +30,7 @@
 						</li>
 						<li class="companies__item">
 							<div class="companies__item-logo companies__item-logo--5"></div>
-							<p class="companies__item-title">Яндекс еда</p>
-						</li>
-						<li class="companies__item">
-							<div class="companies__item-logo companies__item-logo--6"></div>
-							<p class="companies__item-title">Самокат</p>
+							<p class="companies__item-title">Drivee</p>
 						</li>
 					</ul>
 				</div>
@@ -61,7 +57,7 @@
 
 .companies__list {
 	display: grid;
-	grid-template-columns: repeat(6, 1fr);
+	grid-template-columns: repeat(5, 1fr);
 	gap: 30px;
 }
 
@@ -71,35 +67,31 @@
 	width: 100%;
 	height: 0;
 	margin-bottom: 24px;
-	padding: calc(100% / (1 / 1)) 0 0;
+	padding: calc(100% / (318 / 204)) 0 0;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	border-radius: 33px;
+	border-radius: 34px;
 }
 
 .companies__item-logo--1 {
-	background-image: url("/images/companies/1.png");
+	background-image: url("/images/companies/1.jpg");
 }
 
 .companies__item-logo--2 {
-	background-image: url("/images/companies/2.png");
+	background-image: url("/images/companies/2.jpg");
 }
 
 .companies__item-logo--3 {
-	background-image: url("/images/companies/3.png");
+	background-image: url("/images/companies/3.jpg");
 }
 
 .companies__item-logo--4 {
-	background-image: url("/images/companies/4.png");
+	background-image: url("/images/companies/4.jpg");
 }
 
 .companies__item-logo--5 {
-	background-image: url("/images/companies/5.png");
-}
-
-.companies__item-logo--6 {
-	background-image: url("/images/companies/6.png");
+	background-image: url("/images/companies/5.jpg");
 }
 
 .companies__item-title {
@@ -116,6 +108,30 @@
 
 	.companies__item-title {
 		font-size: 20px;
+	}
+
+	.companies__item-logo {
+		padding: calc(100% / (1 / 1)) 0 0;
+	}
+
+	.companies__item-logo--1 {
+		background-image: url("/images/companies/1-2.jpg");
+	}
+
+	.companies__item-logo--2 {
+		background-image: url("/images/companies/2-2.jpg");
+	}
+
+	.companies__item-logo--3 {
+		background-image: url("/images/companies/3-2.jpg");
+	}
+
+	.companies__item-logo--4 {
+		background-image: url("/images/companies/4-2.jpg");
+	}
+
+	.companies__item-logo--5 {
+		background-image: url("/images/companies/5-2.jpg");
 	}
 }
 

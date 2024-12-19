@@ -9,6 +9,26 @@ const { $emitter } = useNuxtApp();
 	<section class="hero">
 		<div class="container container--full-width">
 			<div class="hero__inner">
+				<div class="hero__content">
+					<BasicTags :tags="['Аутсорсинг курьеров', 'Поиск работы']" class="hero__tags" />
+					<h1 class="hero__title">АУТСОРСИНГ<br /> ЛИНЕЙНОГО ПЕРСОНАЛА</h1>
+					<div class="hero__desc">
+						<p>Мы подбираем линейный персонал для магазинов, складов, производств и служб доставки в Москве и Московской области. Надежно, быстро и&nbsp;с&nbsp;учетом ваших потребностей.</p>
+						<ul>
+							<li>Квалифицированный персонал под задачи вашего бизнеса.</li>
+							<li>Опыт работы с лидерами отрасли.</li>
+							<li>Надежный партнер для долгосрочного сотрудничества.</li>
+						</ul>
+					</div>
+					<div class="hero__group">
+						<button class="hero__button button-basic" @click="$emitter.emit('showModalCallbackVacancy', 1)">
+							Оставить заявку
+						</button>
+						<p class="hero__group-desc">Все виды услуг по&nbsp;аутсорсу в&nbsp;любом регионе&nbsp;России</p>
+					</div>
+				</div>
+
+
 				<Splide class="hero__splide"
 					:has-track="false"
 					:options="{
@@ -29,171 +49,100 @@ const { $emitter } = useNuxtApp();
 					}">
 					<SplideTrack>
 						<SplideSlide>
-							<div class="splide__slide-inner">
-								<div class="splide__slide-block-1">
-									<BasicTags :tags="['Аутсорсинг курьеров', 'Поиск работы']" class="splide__slide-tags" />
-									<h1 class="splide__slide-title">ТВОЯ КАРЬЕРА НАЧИНАЕТСЯ ЗДЕСЬ!</h1>
-									<p class="splide__slide-desc">Компания оказывает услуги по аутсорсингу курьеров в Москве и Московской области. Наши курьеры оперативно доставят негабаритные грузы, продукцию или документы.</p>
-									<div class="splide__slide-block-1-group">
-										<button class="splide__slide-button button-basic" @click="$emitter.emit('showModalCallbackVacancy', 1)">
-											Оставить заявку
-										</button>
-										<p class="splide__slide-block-1-group-desc">Все виды услуг по&nbsp;аутсорсу в&nbsp;любом регионе&nbsp;России</p>
-									</div>
-								</div>
-								<div class="splide__slide-block-2 splide__slide-block-2--slide-1 ">
-									<div class="splide__slide-info">
-										<p class="splide__slide-info-title">Предоставляем автокурьеров</p>
+							<div class="splide__slide-inner splide__slide-inner--1">
+								<div class="splide__slide-info">
+									<p class="splide__slide-info-title">Предоставляем автокурьеров</p>
 
-										<BasicBadges>
-											<BasicBadgesItem>
-												<template #title>>10 лет</template>
-												<template #desc>Минимальный стаж вождения</template>
-											</BasicBadgesItem>
-											<BasicBadgesItem>
-												<template #title>от 25 лет</template>
-												<template #desc>Возраст всех наших водителей</template>
-											</BasicBadgesItem>
-										</BasicBadges>
+									<BasicBadges v-if="false">
+										<BasicBadgesItem>
+											<template #title>>10 лет</template>
+											<template #desc>Минимальный стаж вождения</template>
+										</BasicBadgesItem>
+										<BasicBadgesItem>
+											<template #title>от 25 лет</template>
+											<template #desc>Возраст всех наших водителей</template>
+										</BasicBadgesItem>
+									</BasicBadges>
 
-									</div>
 								</div>
 							</div>
 						</SplideSlide>
 
 						<SplideSlide>
-							<div class="splide__slide-inner">
-								<div class="splide__slide-block-1">
+							<div class="splide__slide-inner splide__slide-inner--2">
+								<div class="splide__slide-info">
+									<p class="splide__slide-info-title">Аутсорсинг пеших&nbsp;курьеров</p>
 
-									<BasicTags :tags="['Аутсорсинг курьеров', 'Поиск работы']" class="splide__slide-tags" />
+									<BasicBadges v-if="false">
+										<BasicBadgesItem>
+											<template #title>>10 лет</template>
+											<template #desc>Минимальный стаж вождения</template>
+										</BasicBadgesItem>
+										<BasicBadgesItem>
+											<template #title>от 25 лет</template>
+											<template #desc>Возраст всех наших водителей</template>
+										</BasicBadgesItem>
+									</BasicBadges>
 
-									<h1 class="splide__slide-title">ТВОЯ КАРЬЕРА НАЧИНАЕТСЯ ЗДЕСЬ!</h1>
-									<p class="splide__slide-desc">Компания оказывает услуги по аутсорсингу курьеров в Москве и Московской области. Наши курьеры оперативно доставят негабаритные грузы, продукцию или документы.</p>
-									<div class="splide__slide-block-1-group">
-										<button class="splide__slide-button button-basic" @click="$emitter.emit('showModalCallbackVacancy', 2)">
-											Оставить заявку
-										</button>
-										<p class="splide__slide-block-1-group-desc">Все виды услуг по&nbsp;аутсорсу в&nbsp;любом регионе&nbsp;России</p>
-									</div>
 								</div>
-								<div class="splide__slide-block-2 splide__slide-block-2--slide-2 ">
-									<div class="splide__slide-info">
-										<p class="splide__slide-info-title">Аутсорсинг пеших&nbsp;курьеров</p>
+							</div>
+						</SplideSlide>
 
-										<BasicBadges>
-											<BasicBadgesItem>
-												<template #title>>10 лет</template>
-												<template #desc>Минимальный стаж вождения</template>
-											</BasicBadgesItem>
-											<BasicBadgesItem>
-												<template #title>от 25 лет</template>
-												<template #desc>Возраст всех наших водителей</template>
-											</BasicBadgesItem>
-										</BasicBadges>
+						<SplideSlide>
+							<div class="splide__slide-inner splide__slide-inner--3">
+								<div class="splide__slide-info">
+									<p class="splide__slide-info-title">Курьер на&nbsp;своём автомобиле</p>
 
-									</div>
+									<BasicBadges v-if="false">
+										<BasicBadgesItem>
+											<template #title>>10 лет</template>
+											<template #desc>Минимальный стаж вождения</template>
+										</BasicBadgesItem>
+										<BasicBadgesItem>
+											<template #title>от 25 лет</template>
+											<template #desc>Возраст всех наших водителей</template>
+										</BasicBadgesItem>
+									</BasicBadges>
+
 								</div>
 							</div>
 						</SplideSlide>
 						<SplideSlide>
-							<div class="splide__slide-inner">
-								<div class="splide__slide-block-1">
+							<div class="splide__slide-inner splide__slide-inner--4">
+								<div class="splide__slide-info">
+									<p class="splide__slide-info-title">Аутсорсинг кладовщиков</p>
 
-									<BasicTags :tags="['Аутсорсинг курьеров', 'Поиск работы']" class="splide__slide-tags" />
+									<BasicBadges v-if="false">
+										<BasicBadgesItem>
+											<template #title>>10 лет</template>
+											<template #desc>Минимальный стаж вождения</template>
+										</BasicBadgesItem>
+										<BasicBadgesItem>
+											<template #title>от 25 лет</template>
+											<template #desc>Возраст всех наших водителей</template>
+										</BasicBadgesItem>
+									</BasicBadges>
 
-									<h1 class="splide__slide-title">ТВОЯ КАРЬЕРА НАЧИНАЕТСЯ ЗДЕСЬ!</h1>
-									<p class="splide__slide-desc">Компания оказывает услуги по аутсорсингу курьеров в Москве и Московской области. Наши курьеры оперативно доставят негабаритные грузы, продукцию или документы.</p>
-									<div class="splide__slide-block-1-group">
-										<button class="splide__slide-button button-basic" @click="$emitter.emit('showModalCallbackVacancy', 3)">
-											Оставить заявку
-										</button>
-										<p class="splide__slide-block-1-group-desc">Все виды услуг по&nbsp;аутсорсу в&nbsp;любом регионе&nbsp;России</p>
-									</div>
-								</div>
-								<div class="splide__slide-block-2 splide__slide-block-2--slide-3 ">
-									<div class="splide__slide-info">
-										<p class="splide__slide-info-title">Курьер на&nbsp;своём автомобиле</p>
-
-										<BasicBadges>
-											<BasicBadgesItem>
-												<template #title>>10 лет</template>
-												<template #desc>Минимальный стаж вождения</template>
-											</BasicBadgesItem>
-											<BasicBadgesItem>
-												<template #title>от 25 лет</template>
-												<template #desc>Возраст всех наших водителей</template>
-											</BasicBadgesItem>
-										</BasicBadges>
-
-									</div>
 								</div>
 							</div>
 						</SplideSlide>
+
 						<SplideSlide>
-							<div class="splide__slide-inner">
-								<div class="splide__slide-block-1">
+							<div class="splide__slide-inner splide__slide-inner--5">
+								<div class="splide__slide-info">
+									<p class="splide__slide-info-title">Аутсорсинг водителей</p>
 
-									<BasicTags :tags="['Аутсорсинг курьеров', 'Поиск работы']" class="splide__slide-tags" />
+									<BasicBadges v-if="false">
+										<BasicBadgesItem>
+											<template #title>>10 лет</template>
+											<template #desc>Минимальный стаж вождения</template>
+										</BasicBadgesItem>
+										<BasicBadgesItem>
+											<template #title>от 25 лет</template>
+											<template #desc>Возраст всех наших водителей</template>
+										</BasicBadgesItem>
+									</BasicBadges>
 
-									<h1 class="splide__slide-title">ТВОЯ КАРЬЕРА НАЧИНАЕТСЯ ЗДЕСЬ!</h1>
-									<p class="splide__slide-desc">Компания оказывает услуги по аутсорсингу курьеров в Москве и Московской области. Наши курьеры оперативно доставят негабаритные грузы, продукцию или документы.</p>
-									<div class="splide__slide-block-1-group">
-										<button class="splide__slide-button button-basic" @click="$emitter.emit('showModalCallbackVacancy', 4)">
-											Оставить заявку
-										</button>
-										<p class="splide__slide-block-1-group-desc">Все виды услуг по&nbsp;аутсорсу в&nbsp;любом регионе&nbsp;России</p>
-									</div>
-								</div>
-								<div class="splide__slide-block-2 splide__slide-block-2--slide-4 ">
-									<div class="splide__slide-info">
-										<p class="splide__slide-info-title">Аутсорсинг кладовщиков</p>
-
-										<BasicBadges>
-											<BasicBadgesItem>
-												<template #title>>10 лет</template>
-												<template #desc>Минимальный стаж вождения</template>
-											</BasicBadgesItem>
-											<BasicBadgesItem>
-												<template #title>от 25 лет</template>
-												<template #desc>Возраст всех наших водителей</template>
-											</BasicBadgesItem>
-										</BasicBadges>
-
-									</div>
-								</div>
-							</div>
-						</SplideSlide>
-						<SplideSlide>
-							<div class="splide__slide-inner">
-								<div class="splide__slide-block-1">
-
-									<BasicTags :tags="['Аутсорсинг курьеров', 'Поиск работы']" class="splide__slide-tags" />
-
-									<h1 class="splide__slide-title">ТВОЯ КАРЬЕРА НАЧИНАЕТСЯ ЗДЕСЬ!</h1>
-									<p class="splide__slide-desc">Компания оказывает услуги по аутсорсингу курьеров в Москве и Московской области. Наши курьеры оперативно доставят негабаритные грузы, продукцию или документы.</p>
-									<div class="splide__slide-block-1-group">
-										<button class="splide__slide-button button-basic" @click="$emitter.emit('showModalCallbackVacancy', 5)">
-											Оставить заявку
-										</button>
-										<p class="splide__slide-block-1-group-desc">Все виды услуг по&nbsp;аутсорсу в&nbsp;любом регионе&nbsp;России</p>
-									</div>
-								</div>
-								<div class="splide__slide-block-2 splide__slide-block-2--slide-5 ">
-									<div class="splide__slide-info">
-										<p class="splide__slide-info-title">Аутсорсинг водителей</p>
-
-										<BasicBadges>
-											<BasicBadgesItem>
-												<template #title>>10 лет</template>
-												<template #desc>Минимальный стаж вождения</template>
-											</BasicBadgesItem>
-											<BasicBadgesItem>
-												<template #title>от 25 лет</template>
-												<template #desc>Возраст всех наших водителей</template>
-											</BasicBadgesItem>
-										</BasicBadges>
-
-									</div>
 								</div>
 							</div>
 						</SplideSlide>
@@ -232,8 +181,13 @@ const { $emitter } = useNuxtApp();
 
 .hero__inner {
 	position: relative;
-	min-height: 700px;
-	height: 1px;
+	/* display: flex; */
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 30px;
+	/* min-height: 700px; */
+	background-color: #f5f7fa;
+	border-radius: var(--section-border-radius);
 }
 
 .hero__inner::before,
@@ -259,9 +213,97 @@ const { $emitter } = useNuxtApp();
 	background-color: var(--hero-inner-shadow-2);
 }
 
+.hero__content {
+	padding: 50px 0 46px 57px;
+}
+
+.hero__tags {
+	margin-bottom: 70px;
+	/* margin-bottom: 87px; */
+}
+
+.hero__title {
+	margin-bottom: 23px;
+	font-family: var(--secondary-font-family);
+	font-size: 54px;
+	/* font-size: 70px; */
+	font-weight: 400;
+	line-height: 1.16622;
+	letter-spacing: -0.01em;
+	color: #2b2a29;
+}
+
+.hero__desc {
+	max-width: 670px;
+	margin-bottom: 80px;
+	/* margin-bottom: 108px; */
+}
+
+.hero__desc ul {
+	padding-left: 20px;
+}
+
+.hero__desc li {
+	position: relative;
+	padding-left: 18px;
+}
+
+.hero__desc li::before {
+	content: "";
+	position: absolute;
+	top: 12px;
+	left: 0;
+	width: 6px;
+	height: 6px;
+	background-color: #fee02e;
+	border-radius: 2px;
+}
+
+.hero__desc p,
+.hero__desc li {
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 1.67;
+	color: rgba(12 53 44 / 0.8);
+}
+
+.hero__desc p:not(:last-child) {
+	margin-bottom: 0.5em;
+}
+
+.hero__group {
+	display: grid;
+	grid-auto-flow: column;
+	align-items: center;
+	gap: 55px;
+}
+
+.hero__button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: fit-content;
+	padding: 1.2em 3.3em;
+	font-family: var(--secondary-font-family);
+	font-size: 28px;
+	font-weight: 400;
+	color: #1c1c1c;
+	border: none;
+	border-radius: 30px;
+	box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+}
+
+.hero__group-desc {
+	font-size: 22px;
+	font-weight: 400;
+	line-height: 1.36;
+	color: #080a05;
+}
+
 /* carousel */
 .hero__splide {
-	height: 100%;
+	/* height: 100%; */
+	height: inherit;
 	border-radius: var(--section-border-radius);
 	overflow: hidden;
 }
@@ -327,72 +369,9 @@ const { $emitter } = useNuxtApp();
 }
 
 .splide__slide-inner {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	gap: 30px;
-	height: 100%;
-	background-color: #f5f7fa;
-}
-
-.splide__slide-block-1 {
-	padding: 50px 0 46px 57px;
-}
-
-.splide__slide-tags {
-	margin-bottom: 87px;
-}
-
-.splide__slide-title {
-	margin-bottom: 23px;
-	font-family: var(--secondary-font-family);
-	font-size: 70px;
-	font-weight: 400;
-	line-height: 1.16622;
-	letter-spacing: -0.01em;
-	color: #2b2a29;
-}
-
-.splide__slide-desc {
-	max-width: 650px;
-	margin-bottom: 108px;
-	font-weight: 400;
-	font-size: 18px;
-	line-height: 1.66667;
-	color: rgba(12 53 44 / 0.8);
-}
-
-.splide__slide-block-1-group {
-	display: grid;
-	grid-auto-flow: column;
-	align-items: center;
-	gap: 55px;
-}
-
-.splide__slide-button {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: fit-content;
-	padding: 1.2em 3.3em;
-	font-family: var(--secondary-font-family);
-	font-size: 28px;
-	font-weight: 400;
-	color: #1c1c1c;
-	border: none;
-	border-radius: 30px;
-	box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
-}
-
-.splide__slide-block-1-group-desc {
-	font-size: 22px;
-	font-weight: 400;
-	line-height: 1.36;
-	color: #080a05;
-}
-
-.splide__slide-block-2 {
 	display: flex;
 	align-items: end;
+	height: 100%;
 	border-radius: var(--section-border-radius);
 	background-size: cover;
 	background-position: center;
@@ -400,29 +379,30 @@ const { $emitter } = useNuxtApp();
 	overflow: hidden;
 }
 
-.splide__slide-block-2--slide-1 {
+.splide__slide-inner--1 {
 	background-image: url("/images/hero/1.jpg");
 }
 
-.splide__slide-block-2--slide-2 {
+.splide__slide-inner--2 {
 	background-image: url("/images/hero/2.jpg");
 }
 
-.splide__slide-block-2--slide-3 {
+.splide__slide-inner--3 {
 	background-image: url("/images/hero/3.jpg");
 }
 
-.splide__slide-block-2--slide-4 {
+.splide__slide-inner--4 {
 	background-image: url("/images/hero/4.jpg");
 }
 
-.splide__slide-block-2--slide-5 {
+.splide__slide-inner--5 {
 	background-image: url("/images/hero/5.jpg");
 }
 
 .splide__slide-info {
 	display: grid;
-	grid-template-columns: 1fr auto;
+	grid-template-columns: 1fr 380px;
+	/* grid-template-columns: 1fr auto; */
 	align-items: center;
 	gap: 35px;
 	width: 100%;
@@ -444,7 +424,7 @@ const { $emitter } = useNuxtApp();
 .splide__slide-info-badges {}
 
 @media (max-width: 1799.98px) {
-	.splide__slide-block-1-group {
+	.hero__group {
 		gap: 45px;
 	}
 
@@ -454,15 +434,16 @@ const { $emitter } = useNuxtApp();
 }
 
 @media (max-width: 1699.98px) {
-	.splide__slide-title {
-		font-size: 60px;
+	.hero__title {
+		font-size: 48px;
+		/* font-size: 60px; */
 	}
 
-	.splide__slide-block-1-group-desc {
+	.hero__group-desc {
 		font-size: 20px;
 	}
 
-	.splide__slide-button {
+	.hero__button {
 		font-size: 24px;
 	}
 }
@@ -483,27 +464,28 @@ const { $emitter } = useNuxtApp();
 }
 
 @media (max-width: 1499.98px) {
-	.splide__slide-tags {
-		margin-bottom: 70px;
+	.hero__tags {
+		margin-bottom: 50px;
 	}
 
-	.splide__slide-title {
-		font-size: 50px;
+	.hero__title {
+		font-size: 42px;
+		/* font-size: 50px; */
 	}
 
-	.splide__slide-desc {
-		margin-bottom: 80px;
+	.hero__desc {
+		margin-bottom: 60px;
 	}
 
-	.splide__slide-block-1-group {
+	.hero__group {
 		gap: 35px;
 	}
 
-	.splide__slide-button {
+	.hero__button {
 		font-size: 22px;
 	}
 
-	.splide__slide-block-1-group-desc {
+	.hero__group-desc {
 		font-size: 18px;
 	}
 
@@ -513,24 +495,24 @@ const { $emitter } = useNuxtApp();
 }
 
 @media (max-width: 1399.98px) {
-	.splide__slide-title {
-		font-size: 40px;
+	.hero__title {
+		font-size: 36px;
 	}
 
-	.splide__slide-block-1-group {
+	.hero__group {
 		grid-auto-flow: row;
 		gap: 25px;
 	}
 
-	.splide__slide-button {
+	.hero__button {
 		font-size: 22px;
 		order: 2;
 	}
 }
 
 @media (max-width: 1199.98px) {
-	.splide__slide-title {
-		font-size: 34px;
+	.hero__title {
+		font-size: 30px;
 	}
 
 	.splide__slide-info {
@@ -541,62 +523,66 @@ const { $emitter } = useNuxtApp();
 
 @media (max-width: 991.98px) {
 	.hero__inner {
-		height: auto;
-	}
-
-	.splide__slide-inner {
 		grid-template-columns: 100%;
 		gap: 50px;
 	}
 
-	.splide__slide-tags {
+	/* .hero__tags {
 		margin-bottom: 50px;
 	}
 
-	.splide__slide-desc {
+	.hero__desc {
 		margin-bottom: 60px;
-	}
-
-	.splide__slide-block-1 {
+	} */
+	.hero__content {
 		padding: 50px 40px 0 40px;
 	}
 
-	.splide__slide-block-1-group {
+	.hero__group {
 		grid-auto-flow: column;
 	}
 
-	.splide__slide-button {
+	.hero__button {
 		order: 0;
 	}
 
-	.splide__slide-block-2 {
+	.splide__slide-inner {
 		height: 500px;
 	}
 }
 
 @media (max-width: 767.98px) {
-	.splide__slide-block-1 {
+	.hero__content {
 		padding: 40px 30px 0 30px;
 	}
 
-	.splide__slide-inner {
+	.hero__inner {
 		gap: 40px;
 	}
 
-	.splide__slide-tags {
+	.hero__tags {
 		margin-bottom: 40px;
 	}
 
-	.splide__slide-desc {
+	.hero__desc {
 		margin-bottom: 40px;
 		font-size: 16px;
 	}
 
-	.splide__slide-block-1-group-desc {
+	.hero__desc ul {
+		padding-left: 10px;
+	}
+
+	.hero__desc p,
+	.hero__desc li {
+		font-size: 16px;
+	}
+
+	.hero__group-desc {
 		display: none;
 	}
 
-	.splide__slide-button {
+	.hero__button {
 		font-size: 20px;
 	}
 
@@ -614,31 +600,60 @@ const { $emitter } = useNuxtApp();
 }
 
 @media (max-width: 575.98px) {
+	.hero__inner {
+		gap: 30px;
+	}
 
 	.hero__inner::before,
 	.hero__inner::after {
 		display: none;
 	}
 
+	.hero__content {
+		padding: 30px 30px 0 30px;
+	}
+
+	.hero__tags {
+		margin-bottom: 30px;
+	}
+
+	.hero__title {
+		margin-bottom: 10px;
+		font-size: 26px;
+	}
+
+	.hero__desc {
+		margin-bottom: 30px;
+	}
+
+	.hero__desc p,
+	.hero__desc li {
+		font-size: 14px;
+	}
+
+	.hero__desc li {
+		padding-left: 12px;
+	}
+
+	.hero__desc li::before {
+		top: 10px;
+		width: 4px;
+		height: 4px;
+	}
+
+	.hero__button {
+		width: 100%;
+		font-size: 18px;
+	}
+
 	.splide {
 		padding-bottom: 25px;
+		margin-bottom: -25px;
 	}
 
 	.splide__slide {
 		border-radius: var(--section-border-radius);
 		overflow: hidden;
-	}
-
-	.splide__slide-inner {
-		gap: 30px;
-	}
-
-	.splide__slide-block-1 {
-		padding: 30px 30px 0 30px;
-	}
-
-	.splide__slide-tags {
-		margin-bottom: 30px;
 	}
 
 	.splide__slide :deep(.tags__list) {
@@ -649,22 +664,7 @@ const { $emitter } = useNuxtApp();
 		font-size: 10px;
 	}
 
-	.splide__slide-title {
-		margin-bottom: 10px;
-		font-size: 30px;
-	}
-
-	.splide__slide-desc {
-		margin-bottom: 30px;
-		font-size: 14px;
-	}
-
-	.splide__slide-button {
-		width: 100%;
-		font-size: 18px;
-	}
-
-	.splide__slide-block-2 {
+	.splide__slide-inner {
 		height: 400px;
 	}
 
@@ -720,25 +720,29 @@ const { $emitter } = useNuxtApp();
 }
 
 @media (max-width: 479.98px) {
-	.splide__slide-desc {
-		font-size: 12px;
-		line-height: 1.5;
+	.hero__content {
+		padding: 25px 20px 0 20px;
 	}
 
-	.splide__slide-button {
+	.hero__title {
+		font-size: 24px;
+	}
+
+	.hero__desc p,
+	.hero__desc li {
+		line-height: 1.55;
+	}
+
+	.hero__button {
 		border-radius: 16px;
 		font-size: 16px;
 	}
 
-	.splide__slide-block-2 {
+	.splide__slide-inner {
 		height: 340px;
 	}
 
-	.splide__slide-block-1[data-v-370f40d5] {
-		padding: 25px 20px 0 20px;
-	}
-
-	.splide__slide-info[data-v-370f40d5] {
+	.splide__slide-info {
 		padding: 15px 20px;
 	}
 }

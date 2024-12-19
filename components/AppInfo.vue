@@ -1,19 +1,30 @@
+<script setup>
+const companyInfo = useCompanyInfo();
+</script>
+
 <template>
 	<section class="info">
 		<div class="container">
 			<div class="info__inner">
 				<div class="info__block-1">
-					<h2 class="info__title">Аутсорсинг персонала в&nbsp;Москве и&nbsp;Московской области</h2>
-					<div class="info__group">
+					<h2 class="info__title">Аренда линейного персонала</h2>
+					<div v-if="false" class="info__group">
 						<img class="info__image" src="/images/deliverymen.png" alt="" aria-hidden="true">
 						<a class="info__link" href="#">Узнать подробнее</a>
-						<a class="info__mail" href="mailto:info@tigor.pro">info@tigor.pro</a>
+						<a class="info__mail" :href="`mailto:${companyInfo.mail}`">{{ companyInfo.mail }}</a>
 					</div>
 				</div>
 				<div class="info__block-2">
 					<div class="info__desc">
-						<p class="info__desc-par">Аутсорсинг позволяет освободить больше времени для основной деятельности компании нанимателя, передав заботы по доставке товаров на арендованных курьеров. Арендованные сотрудники будут выполнять свои обязанности, но бухгалтерский и кадровый отделы будут освобождены от лишней работы, это позволит сотрудникам этих отделов сосредоточится на более важных вопросах.</p>
-						<p class="info__desc-par">Аутсорсинг курьеров набирает всё большую популярность как среди крупных, так и среди небольших компаний. Если рассматривать специфику предприятий Москвы наиболее часто прибегающих к найму курьеров, то большей популярностью такой аутсорсинг пользуется у компаний, предоставляющих услугу общественного питания и магазины продающие товары в розницу.</p>
+						<p>Наша компания предлагает полный спектр услуг по подбору и управлению линейным персоналом для вашего бизнеса. Мы предоставляем сотрудников для выполнения различных задач, чтобы вы могли сосредоточиться на развитии и управлении основными процессами, не отвлекая ресурсы на поиск и оформление персонала.</p>
+						<p><b>Мы берем на себя всю кадровую работу:</b></p>
+						<ul>
+							<li>Оформление и увольнение сотрудников – без вашего участия, достаточно изменить договор.</li>
+							<li>Оплата труда, налоги и страховые взносы – забота нашей бухгалтерии.</li>
+							<li>Качество работы и проверки контролирующих органов – наша ответственность.</li>
+							<li>Вы платите только за услуги по договору и акту приёмки, получая простой и прозрачный расчет.</li>
+						</ul>
+						<p>Оставьте заявку сейчас, и мы подберем персонал, идеально подходящий под ваши задачи!</p>
 					</div>
 				</div>
 			</div>
@@ -104,21 +115,41 @@ html[data-color-scheme="dark"] .info__link {
 
 .info__desc {}
 
-.info__desc-par {
+.info__desc li {
+	position: relative;
+	padding-left: 22px;
+}
+
+.info__desc li::before {
+	content: "";
+	position: absolute;
+	top: 14px;
+	left: 0;
+	width: 8px;
+	height: 8px;
+	background-color: var(--font-basic);
+	border-radius: 2px;
+}
+
+.info__desc li,
+.info__desc p {
 	font-size: 22px;
 	font-weight: 400;
 	line-height: 1.68;
 	color: var(--font-basic);
 }
 
-.info__desc-par:not(:last-child) {
-	margin-bottom: 38px;
+.info__desc ul:not(:last-child),
+.info__desc p:not(:last-child) {
+	margin-bottom: 30px;
+	/* margin-bottom: 38px; */
 }
 
 @media (max-width: 1399.98px) {
 	.info__inner {
 		grid-template-columns: 100%;
-		gap: 80px;
+		gap: 0;
+		/* gap: 80px; */
 	}
 
 	.info__title {
@@ -143,7 +174,8 @@ html[data-color-scheme="dark"] .info__link {
 		align-self: end;
 	}
 
-	.info__desc-par:not(:last-child) {
+	.info__desc ul:not(:last-child),
+	.info__desc p:not(:last-child) {
 		margin-bottom: 30px;
 	}
 }
@@ -154,18 +186,20 @@ html[data-color-scheme="dark"] .info__link {
 	}
 
 	.info__inner {
-		gap: 60px;
+		/* gap: 60px; */
 	}
 
 	.info__image {
 		width: 200px;
 	}
 
-	.info__desc-par {
+	.info__desc li,
+	.info__desc p {
 		font-size: 20px;
 	}
 
-	.info__desc-par:not(:last-child) {
+	.info__desc ul:not(:last-child),
+	.info__desc p:not(:last-child) {
 		margin-bottom: 20px;
 	}
 
@@ -178,7 +212,7 @@ html[data-color-scheme="dark"] .info__link {
 
 @media (max-width: 767.98px) {
 	.info__inner {
-		gap: 50px;
+		/* gap: 50px; */
 	}
 
 	.info__title {
@@ -193,11 +227,23 @@ html[data-color-scheme="dark"] .info__link {
 		width: 180px;
 	}
 
-	.info__desc-par {
+	.info__desc li,
+	.info__desc p {
 		font-size: 18px;
 	}
 
-	.info__desc-par:not(:last-child) {
+	.info__desc li {
+		padding-left: 18px;
+	}
+
+	.info__desc li::before {
+		top: 12px;
+		width: 6px;
+		height: 6px;
+	}
+
+	.info__desc ul:not(:last-child),
+	.info__desc p:not(:last-child) {
 		margin-bottom: 16px;
 	}
 
@@ -211,7 +257,7 @@ html[data-color-scheme="dark"] .info__link {
 
 @media (max-width: 575.98px) {
 	.info__inner {
-		gap: 40px;
+		/* gap: 40px; */
 	}
 
 	.info__image {
@@ -229,28 +275,42 @@ html[data-color-scheme="dark"] .info__link {
 		background-size: 12px 7px;
 	}
 
-	.info__desc-par {
+	.info__desc li,
+	.info__desc p {
 		font-size: 16px;
 	}
 
-	.info__desc-par:not(:last-child) {
+	.info__desc ul:not(:last-child),
+	.info__desc p:not(:last-child) {
 		margin-bottom: 12px;
 	}
 }
 
 @media (max-width: 479.98px) {
-	.info__desc-par {
+	.info__desc li {
+		padding-left: 10px;
+	}
+
+	.info__desc li::before {
+		top: 10px;
+		width: 4px;
+		height: 4px;
+	}
+
+	.info__desc li,
+	.info__desc p {
 		font-size: 14px;
 	}
 
-	.info__desc-par:not(:last-child) {
+	.info__desc ul:not(:last-child),
+	.info__desc p:not(:last-child) {
 		margin-bottom: 10px;
 	}
 }
 
 @media (max-width: 379.98px) {
 	.info__inner {
-		gap: 30px;
+		/* gap: 30px; */
 	}
 
 	.info__group {

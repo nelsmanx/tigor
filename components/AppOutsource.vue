@@ -4,15 +4,15 @@
 	<section class="outsource">
 		<div class="container">
 			<div class="outsource__headline">
-				<h2 class="outsource__title">Аутсорс линейного персонала</h2>
-				<p class="outsource__desc">Включает в себя поиск, найм, обучение, оплату и управление работниками, которые выполняют определенные задачи для вашей компании. Ведение делопроизводства, оформление договоров, учет рабочего времени.</p>
+				<h2 class="outsource__title">Предоставляем персонал:</h2>
+				<p v-if="false" class="outsource__desc">Включает в себя поиск, найм, обучение, оплату и управление работниками, которые выполняют определенные задачи для вашей компании. Ведение делопроизводства, оформление договоров, учет рабочего времени.</p>
 			</div>
 
 			<ul class="outsource__list">
 				<!-- Для доставки -->
 				<li class="outsource__item">
 					<div class="outsource__item-header outsource__item-header--1">
-						<BasicBadges class="outsource__item-badges outsource__item-badges--1">
+						<BasicBadges v-if="false" class="outsource__item-badges outsource__item-badges--1">
 							<BasicBadgesItem>
 								<template #title>>10 лет</template>
 								<template #desc>Минимальный стаж вождения</template>
@@ -34,7 +34,7 @@
 								<li class="outsource__item-position">Курьеры на вашем автомобиле</li>
 								<li class="outsource__item-position">Курьеры пешие</li>
 								<li class="outsource__item-position">Курьеры на велосипедах</li>
-								<li class="outsource__item-position">Курьеры на электровелосипедах</li>
+								<li class="outsource__item-position">Курьеры на нашем авто</li>
 								<li class="outsource__item-position">Курьеры на грузовых автомобилях</li>
 							</ul>
 						</div>
@@ -51,7 +51,7 @@
 								<template #title>>10 000</template>
 								<template #desc>Действующих сотрудников</template>
 							</BasicBadgesItem>
-							<BasicBadgesItem>
+							<BasicBadgesItem v-if="false">
 								<template #title>от 18 лет</template>
 								<template #desc>Какое-то описание небольшое</template>
 							</BasicBadgesItem>
@@ -60,12 +60,12 @@
 					<div class="outsource__item-body">
 						<div class="outsource__item-block-1">
 							<p class="outsource__item-title">Для торговых сетей</p>
-							<p class="outsource__item-desc">Нашим курьерам можно поручить доставку заказов интернет-магазинов, корреспонденции, посылок, цветов, подарков, продуктов питания</p>
+							<p class="outsource__item-desc">Наши сотрудники готовы взять на себя задачи по сборке заказов, выкладке товаров, приемке и обработке грузов, а также по поддержанию порядка в торговых залах и на складах.</p>
 						</div>
 						<div class="outsource__item-block-2">
 							<ul class="outsource__item-positions outsource__item-positions--2-col">
 								<li class="outsource__item-position">Сборщики заказов</li>
-								<li class="outsource__item-position">Мойщики</li>
+								<li class="outsource__item-position">Кондитеры</li>
 								<li class="outsource__item-position">Повара</li>
 								<li class="outsource__item-position">Грузчики</li>
 								<li class="outsource__item-position">Продавцы</li>
@@ -86,7 +86,7 @@
 				<!-- Для складов -->
 				<li class="outsource__item">
 					<div class="outsource__item-header outsource__item-header--3">
-						<BasicBadges class="outsource__item-badges outsource__item-badges--2">
+						<BasicBadges v-if="false" class="outsource__item-badges outsource__item-badges--2">
 							<BasicBadgesItem>
 								<template #title>>10 лет</template>
 								<template #desc>Какое-то описание небольшое</template>
@@ -100,13 +100,12 @@
 					<div class="outsource__item-body">
 						<div class="outsource__item-block-1">
 							<p class="outsource__item-title">Для складов</p>
-							<p class="outsource__item-desc">Нашим курьерам можно поручить доставку заказов интернет-магазинов, корреспонденции, посылок, цветов, подарков, продуктов питания</p>
+							<p class="outsource__item-desc">Наши специалисты выполняют задачи по приемке и размещению товаров, сборке заказов, погрузке и разгрузке, инвентаризации и обеспечению порядка на складе.</p>
 						</div>
 						<div class="outsource__item-block-2">
 							<ul class="outsource__item-positions">
 								<li class="outsource__item-position">Комплектовщики</li>
 								<li class="outsource__item-position">Упаковщики</li>
-								<li class="outsource__item-position">Водители ПРТ</li>
 								<li class="outsource__item-position">Кладовщики</li>
 							</ul>
 						</div>
@@ -118,7 +117,7 @@
 				<!-- Для производств -->
 				<li class="outsource__item">
 					<div class="outsource__item-header outsource__item-header--4">
-						<BasicBadges class="outsource__item-badges outsource__item-badges--2">
+						<BasicBadges v-if="false" class="outsource__item-badges outsource__item-badges--2">
 							<BasicBadgesItem>
 								<template #title>>10 лет</template>
 								<template #desc>Какое-то описание небольшое</template>
@@ -132,7 +131,7 @@
 					<div class="outsource__item-body">
 						<div class="outsource__item-block-1">
 							<p class="outsource__item-title">Для производств</p>
-							<p class="outsource__item-desc">Нашим курьерам можно поручить доставку заказов интернет-магазинов, корреспонденции, посылок, цветов, подарков, продуктов питания</p>
+							<p class="outsource__item-desc">Наши сотрудники обеспечивают выполнение задач на всех этапах производства: от подготовки и упаковки продукции до погрузочно-разгрузочных работ, сортировки материалов и поддержки чистоты на рабочих участках.</p>
 						</div>
 						<div class="outsource__item-block-2">
 							<ul class="outsource__item-positions">
@@ -166,7 +165,7 @@
 }
 
 .outsource__title {
-	max-width: 500px;
+	/* max-width: 500px; */
 	font-family: var(--secondary-font-family);
 	font-size: var(--section-title-fz);
 	font-weight: 400;
@@ -204,7 +203,7 @@
 	position: relative;
 	height: 360px;
 	background-size: cover;
-	background-position: center;
+	background-position: top center;
 	background-repeat: no-repeat;
 	border-bottom-left-radius: var(--border-radius);
 	border-bottom-right-radius: var(--border-radius);

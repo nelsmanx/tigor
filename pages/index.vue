@@ -10,9 +10,9 @@
 	<AppVacancies />
 	<AppCta />
 	<AppProjects />
-	<AppFaq />
 	<AppCta :has-dark-color-scheme="true" />
 	<AppContacts />
+	<AppFaq />
 
 	<AppModalCallback />
 	<AppModalCallback :alt-color-scheme="true" />

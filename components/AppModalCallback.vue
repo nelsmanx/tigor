@@ -19,7 +19,7 @@ const modalId = props.altColorScheme ? 'modal-callback-alt' : 'modal-callback';
 			<button class="modal__button-close" data-bs-dismiss="modal" aria-label="Close"></button>
 		</div>
 		<div class="modal__body">
-			<p class="modal__title">Ищешь работу?</p>
+			<p class="modal__title">Нужны услуги по&nbsp;предоставлению персонала?</p>
 			<p class="modal__desc">Заполняй анкету и жми «Отправить» и&nbsp;наши менеджеры свяжутся с Вами в течение 15&nbsp;минут</p>
 			<form class="form modal__form">
 				<div class="form__input-group">

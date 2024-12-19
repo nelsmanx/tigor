@@ -6,7 +6,7 @@
 
 			<BasicSectionHeader>
 				<template #title>Наши преимущества</template>
-				<template #desc>Работаем в 150+ городах России.<br /> Быстрые сроки открытия нового города.</template>
+				<template #desc>Работаем по всей России и за рубежом.<br /> Быстрые сроки открытия нового города.</template>
 			</BasicSectionHeader>
 
 			<div class="benefits__body">
@@ -16,29 +16,27 @@
 							<div class="benefits__icon">
 								<img class="benefits__icon-img benefits__icon-img--1" src="/images/benefits/1.svg" alt="" aria-hidden="true">
 							</div>
-							<p class="benefits__item-title">Выполнение<br /> заявки до 97%</p>
-							<p class="benefits__item-desc">В заявленный срок</p>
+							<p class="benefits__item-title">Индивидуальный подход</p>
+							<p class="benefits__item-desc">Кадры исходя из вашего бизнеса</p>
 						</li>
 						<li class="benefits__item">
 							<div class="benefits__icon">
 								<img class="benefits__icon-img benefits__icon-img--2" src="/images/benefits/2.svg" alt="" aria-hidden="true">
 							</div>
-							<p class="benefits__item-title">Минимальная<br /> текучка кадров</p>
-							<p class="benefits__item-desc">Показатель КТК ниже&nbsp;3%</p>
+							<p class="benefits__item-title">Опыт работы<br /> с крупными<br /> проектами</p>
 						</li>
 						<li class="benefits__item">
 							<div class="benefits__icon">
 								<img class="benefits__icon-img benefits__icon-img--3" src="/images/benefits/3.svg" alt="" aria-hidden="true">
 							</div>
-							<p class="benefits__item-title">Полная налоговая<br /> прозрачность</p>
-							<p class="benefits__item-desc">С предоставлением отчетности</p>
+							<p class="benefits__item-title">Оперативное<br /> закрытие заявок<br /> любого объёма</p>
 						</li>
 						<li class="benefits__item">
 							<div class="benefits__icon">
 								<img class="benefits__icon-img benefits__icon-img--4" src="/images/benefits/4.svg" alt="" aria-hidden="true">
 							</div>
-							<p class="benefits__item-title">Оплата после<br /> оказания услуг</p>
-							<p class="benefits__item-desc">Гарантируем результат!</p>
+							<p class="benefits__item-title">Широкое ГЕО</p>
+							<p class="benefits__item-desc">Работаем по всей России<br /> и за рубежом</p>
 						</li>
 					</ul>
 				</div>

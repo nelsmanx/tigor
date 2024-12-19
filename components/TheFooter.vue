@@ -1,4 +1,6 @@
 <script setup>
+const companyInfo = useCompanyInfo();
+
 const tags = [
 	"Найдем сотрудников",
 	"Подготовим кадров",
@@ -27,8 +29,11 @@ const tags = [
 					<BasicTags :tags="tags" class="footer__tags" />
 
 					<div class="footer__contacts">
-						<a class="footer__contacts-tel" href="tel:+79000000000">+7 (900) 000 00 00</a>
-						<a class="footer__contacts-mail" href="mailto:info@tigor.pro">info@tigor.pro</a>
+						<div class="footer__contacts-tels">
+							<a class="footer__contacts-tel" :href="`tel:${companyInfo.formatTel(companyInfo.tel)}`">{{ companyInfo.tel }}</a>
+							<a class="footer__contacts-tel" :href="`tel:${companyInfo.formatTel(companyInfo.tel2)}`">{{ companyInfo.tel2 }}</a>
+						</div>
+						<a class="footer__contacts-mail" :href="`mailto:${companyInfo.mail}`">{{ companyInfo.mail }}</a>
 						<BasicSocials class="footer__socials" />
 					</div>
 					<div class="footer__top-links">
@@ -183,6 +188,11 @@ const tags = [
 	align-items: center;
 	gap: 40px;
 	margin-top: 45px;
+}
+
+.footer__contacts-tels {
+	display: grid;
+	gap: 5px;
 }
 
 .footer__contacts-tel {
@@ -438,8 +448,14 @@ const tags = [
 		gap: 0;
 	}
 
-	.footer__contacts-tel {
+	.footer__contacts-tels {
+		justify-items: center;
+		gap: 10px;
 		margin-bottom: 10px;
+	}
+
+	.footer__contacts-tel {
+		/* margin-bottom: 10px; */
 	}
 
 	.footer__contacts-mail {

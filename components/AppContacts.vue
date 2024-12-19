@@ -1,4 +1,6 @@
 <script setup>
+const companyInfo = useCompanyInfo();
+
 const cityTabs = ["Москва", "Волгоград", "Еще город"];
 const mapTabs = [{ coordinates: [55.776406, 37.690884] }, { coordinates: [48.714417, 44.524459] }, { coordinates: [59.939864, 30.314566] }];
 const activeTab = ref(1);
@@ -26,17 +28,20 @@ const activeTab = ref(1);
 						<p class="contacts__address">г. Москва, Фридриха Энгельса 46с7 подъезд&nbsp;1, этаж&nbsp;3</p>
 						<ul class="contacts__list">
 							<li class="contacts__item">
-								<span class="hl">Телефон:</span> +7 495 120-05-29
+								<span class="hl">Телефон мобильный:</span> {{ companyInfo.tel }}
 							</li>
 							<li class="contacts__item">
-								<span class="hl">Заказ услуг:</span> info@tigor.pro
+								<span class="hl">Телефон городской:</span> {{ companyInfo.tel2 }}
 							</li>
 							<li class="contacts__item">
-								<span class="hl">Для соискателей:</span> info@tigor.pro
+								<span class="hl">Заказ услуг:</span> {{ companyInfo.mail }}
+							</li>
+							<li class="contacts__item">
+								<span class="hl">Для соискателей:</span> {{ companyInfo.mail }}
 							</li>
 						</ul>
 
-						<a class="contacts__button button-basic" href="tel:+79000000000">Позвонить в компанию</a>
+						<a class="contacts__button button-basic" :href="`tel:${companyInfo.formatTel(companyInfo.tel)}`">Позвонить в компанию</a>
 					</div>
 					<div class="contacts__map">
 						<div class="contacts__map-tabs">

@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+const companyInfo = useCompanyInfo();
+</script>
 
 <template>
 	<section class="solution section-island">
@@ -8,8 +10,8 @@
 					<div class="solution__group">
 						<h2 class="solution__title">Подобрать решение?</h2>
 						<div class="solution__contacts">
-							<a class="solution__contacts-tel" href="tel:+79000000000">+7 (900) 000 00 00</a>
-							<a class="solution__contacts-mail" href="mailto:info@tigor.pro">info@tigor.pro</a>
+							<a class="solution__contacts-tel" :href="`tel:${companyInfo.formatTel(companyInfo.tel)}`">{{ companyInfo.tel }}</a>
+							<a class="solution__contacts-mail" :href="`mailto:${companyInfo.mail}`">{{ companyInfo.mail }}</a>
 						</div>
 					</div>
 					<img class="solution__image" src="/images/deliverymen.png" alt="" aria-hidden="true">

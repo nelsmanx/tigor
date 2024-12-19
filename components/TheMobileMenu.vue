@@ -1,5 +1,6 @@
 <script setup>
 const { $bootstrap } = useNuxtApp();
+const companyInfo = useCompanyInfo();
 const mobileMenu = ref(null);
 
 const closeMobileMenu = (link) => {
@@ -18,6 +19,7 @@ const openModal = (modal) => {
 
 	$bootstrap.Offcanvas.getOrCreateInstance(mobileMenu.value).hide();
 };
+
 </script>
 
 <template>
@@ -49,8 +51,9 @@ const openModal = (modal) => {
 			</div>
 
 			<div class="mobile-menu__contacts">
-				<a class="mobile-menu__contacts-tel" href="tel:+79000000000">+7 (900) 000 00 00</a>
-				<a class="mobile-menu__contacts-mail" href="mailto:info@tigor.pro">info@tigor.pro</a>
+				<a class="mobile-menu__contacts-tel" :href="`tel:${companyInfo.formatTel(companyInfo.tel)}`">{{ companyInfo.tel }}</a>
+				<a class="mobile-menu__contacts-tel" :href="`tel:${companyInfo.formatTel(companyInfo.tel2)}`">{{ companyInfo.tel2 }}</a>
+				<a class="mobile-menu__contacts-mail" :href="`mailto:${companyInfo.mail}`">{{ companyInfo.mail }}</a>
 			</div>
 
 			<BasicSocials class="mobile-menu__socials" />

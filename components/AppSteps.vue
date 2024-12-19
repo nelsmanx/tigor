@@ -114,8 +114,14 @@
 	width: calc(25px * var(--scale));
 	height: calc(25px * var(--scale));
 	margin-bottom: 31px;
-	background-color: var(--steps-item-marker);
+	background-color: transparent;
 	border-radius: 50%;
+	transition: background-color 300ms ease-in-out;
+}
+
+.steps__item:hover .steps__item-marker {
+	background-color: var(--steps-item-marker);
+	transition: background-color 300ms ease-in-out;
 }
 
 .steps__item-marker::before {
