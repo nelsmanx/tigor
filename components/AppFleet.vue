@@ -51,10 +51,14 @@ const currentCity = useCurrentCity();
 						}">
 							<SplideTrack>
 								<SplideSlide>
-									<img class="splide__image" src="/images/fleet/1.jpg" alt="Легковой автомобиль">
+									<div class="splide__slide-inner">
+										<img class="splide__slide-image" src="/images/fleet/1.jpg" alt="Легковой автомобиль">
+									</div>
 								</SplideSlide>
 								<SplideSlide>
-									<img class="splide__image" src="/images/fleet/2.jpg" alt="Легковой автомобиль">
+									<div class="splide__slide-inner">
+										<img class="splide__slide-image" src="/images/fleet/2.jpg" alt="Легковой автомобиль">
+									</div>
 								</SplideSlide>
 							</SplideTrack>
 
@@ -205,7 +209,14 @@ const currentCity = useCurrentCity();
 	outline: none;
 }
 
-.splide__image {
+.splide__slide-inner {
+	position: relative;
+	height: 100%;
+}
+
+.splide__slide-image {
+	position: absolute;
+	inset: 0;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
@@ -243,6 +254,11 @@ const currentCity = useCurrentCity();
 
 	.fleet__body-block {
 		padding-right: 0;
+	}
+
+	.splide__slide-inner {
+		height: 0;
+		padding: calc(100% / (16 / 9)) 0 0;
 	}
 }
 
@@ -370,6 +386,11 @@ const currentCity = useCurrentCity();
 	.fleet__item-title {
 		margin-bottom: 2px;
 		font-size: 16px;
+	}
+
+	.splide__slide-inner {
+		height: 200px;
+		padding: 0;
 	}
 }
 </style>

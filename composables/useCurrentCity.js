@@ -30,13 +30,11 @@ export const useCurrentCity = () => {
 			}
 
 			const data = await response.json();
-			с;
+			// console.log(data);
+
 			currentCity.value = data.address?.city ||
 				data.address?.state ||
 				defaultCity;
-
-			console.log(data);
-
 		} catch (error) {
 			console.error('Error reverse geocoding:', error);
 			currentCity.value = defaultCity;
