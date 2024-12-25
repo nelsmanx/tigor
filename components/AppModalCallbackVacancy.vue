@@ -1,8 +1,19 @@
 <script setup>
+import ApiService from '~/services/ApiService';
 const { $emitter } = useNuxtApp();
 
 const showModal = ref(false);
 $emitter.on('showModalCallbackVacancy', () => showModal.value = true);
+
+async function sendEmail(event) {
+	const api = new ApiService();
+	const formData = new FormData(event.target);
+	const response = await api.sendForm(formData);
+	if(response) {
+		showModal.value = false;
+		alert('Заявка успешно отправлена!');
+	}
+}
 </script>
 
 <template>
@@ -18,7 +29,7 @@ $emitter.on('showModalCallbackVacancy', () => showModal.value = true);
 			<div class="modal__body-content">
 				<p class="modal__title">Ищете персонал?</p>
 				<p class="modal__desc">Заполняйте анкету и жмите «Отправить» и&nbsp;наши менеджеры свяжутся с&nbsp;Вами в&nbsp;течение 15&nbsp;минут</p>
-				<form class="form modal__form">
+				<form class="form modal__form" @submit.prevent="sendEmail($event)">
 					<div class="form__input-group">
 						<label class="form__label">
 							<span class="form__label-title">Имя и Фамилия</span>
@@ -26,7 +37,7 @@ $emitter.on('showModalCallbackVacancy', () => showModal.value = true);
 						</label>
 						<label class="form__label">
 							<span class="form__label-title">Номер телефона</span>
-							<input v-inputmask-tel class="form__input" type="tel" name="tel" placeholder="+7 (917) --- -- -- " required>
+							<input v-inputmask-tel class="form__input" type="tel" name="phone" placeholder="+7 (917) --- -- -- " required>
 						</label>
 						<label class="form__label">
 							<span class="form__label-title">Ваш город</span>
@@ -34,7 +45,7 @@ $emitter.on('showModalCallbackVacancy', () => showModal.value = true);
 						</label>
 						<label class="form__label">
 							<span class="form__label-title">Ваш E-mail:</span>
-							<input class="form__input" type="email" name="mail">
+							<input class="form__input" type="email" name="email">
 						</label>
 					</div>
 					<div class="form__personal-data">

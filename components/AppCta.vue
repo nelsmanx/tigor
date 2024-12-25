@@ -1,4 +1,5 @@
 <script setup>
+import ApiService from '~/services/ApiService';
 const companyInfo = useCompanyInfo();
 
 defineProps({
@@ -6,6 +7,15 @@ defineProps({
 		type: Boolean,
 	}
 });
+
+async function sendEmail(event) {
+	const api = new ApiService();
+	const formData = new FormData(event.target);
+	const response = await api.sendForm(formData);
+	if(response) {
+		alert('Заявка успешно отправлена!');
+	}
+}
 </script>
 
 <template>
@@ -31,7 +41,7 @@ defineProps({
 							</div>
 						</div>
 					</div>
-					<form class="form cta__form">
+					<form class="form cta__form" @submit.prevent="sendEmail($event)">
 						<div class="form__input-group">
 							<label class="form__label form__label--name">
 								<span class="form__label-title">Ваше имя</span>
@@ -43,11 +53,11 @@ defineProps({
 							</label>
 							<label class="form__label form__label--tel">
 								<span class="form__label-title">Номер телефона</span>
-								<input v-inputmask-tel class="form__input" type="tel" name="tel" required>
+								<input v-inputmask-tel class="form__input" type="tel" name="phone" required>
 							</label>
 							<label class="form__label form__label--mail">
 								<span class="form__label-title">Ваш E-mail:</span>
-								<input class="form__input" type="email" name="mail">
+								<input class="form__input" type="email" name="email">
 							</label>
 						</div>
 						<div class="form__personal-data">

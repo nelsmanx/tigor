@@ -1,4 +1,4 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import { defineNuxtConfig } from "nuxt/config";
 export default defineNuxtConfig({
 	devtools: { enabled: true },
 	app: {
@@ -8,5 +8,17 @@ export default defineNuxtConfig({
 			],
 		}
 	},
-	compatibilityDate: '2024-04-03',
+	builder: 'vite',
+	vite: {
+		build: {
+		  modulePreload: false
+		}
+	},
+	modules: [
+		'@pinia/nuxt',
+	],
+	pinia: {
+		storesDirs: ['./stores/**'],
+	},
+	compatibilityDate: '2024-04-03'
 })
