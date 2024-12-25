@@ -1,5 +1,5 @@
 import plugin from "vue-yandex-maps";
-import { defineNuxtPlugin, useCookie } from "nuxt/app";
+import { defineNuxtPlugin } from "nuxt/app";
 
 export default defineNuxtPlugin((nuxtApp) => {
 	const settings = {

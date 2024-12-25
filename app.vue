@@ -1,12 +1,3 @@
-<script setup>
-	import { useAppStore } from '~/stores/appStore';
-	import { emitter } from './services/MittService';
-
-	const appStore = useAppStore();
-
-	appStore.init();
-</script>
-
 <template>
 	<NuxtLayout>
 		<NuxtPage />
