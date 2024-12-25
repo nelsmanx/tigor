@@ -4,7 +4,7 @@ export const useCompanyInfo = () => {
   const mail = 'info@tigor.pro';
 
   const formatTel = (tel) => {
-    return tel.replace(/(?!^\+)[^0-9]/g, "");
+    return tel.replace(/[^0-9]/g, "");
   };
 
   return {

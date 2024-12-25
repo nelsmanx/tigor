@@ -1,13 +1,15 @@
-<script setup></script>
+<script setup>
+const companyInfo = useCompanyInfo();
+</script>
 
 <template>
 	<div class="socials">
 		<ul class="socials__list">
 			<li class="socials__item">
-				<a class="socials__item-link socials__item-link--wa" href=""></a>
+				<a class="socials__item-link socials__item-link--wa" :href="`https://wa.me/${companyInfo.formatTel(companyInfo.tel)}`"></a>
 			</li>
 			<li class="socials__item">
-				<a class="socials__item-link socials__item-link--tg" href=""></a>
+				<a class="socials__item-link socials__item-link--tg" :href="`https://t.me/+${companyInfo.formatTel(companyInfo.tel)}`"></a>
 			</li>
 		</ul>
 	</div>

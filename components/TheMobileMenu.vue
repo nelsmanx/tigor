@@ -51,8 +51,8 @@ const openModal = (modal) => {
 			</div>
 
 			<div class="mobile-menu__contacts">
-				<a class="mobile-menu__contacts-tel" :href="`tel:${companyInfo.formatTel(companyInfo.tel)}`">{{ companyInfo.tel }}</a>
-				<a class="mobile-menu__contacts-tel" :href="`tel:${companyInfo.formatTel(companyInfo.tel2)}`">{{ companyInfo.tel2 }}</a>
+				<a class="mobile-menu__contacts-tel" :href="`tel:+${companyInfo.formatTel(companyInfo.tel)}`">{{ companyInfo.tel }}</a>
+				<a class="mobile-menu__contacts-tel" :href="`tel:+${companyInfo.formatTel(companyInfo.tel2)}`">{{ companyInfo.tel2 }}</a>
 				<a class="mobile-menu__contacts-mail" :href="`mailto:${companyInfo.mail}`">{{ companyInfo.mail }}</a>
 			</div>
 

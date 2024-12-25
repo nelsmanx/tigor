@@ -7,78 +7,39 @@
 			<div class="faq__layout">
 				<ul class="faq__list">
 					<AppFaqItem>
-						<template #question>Почему с нами работают крупные федеральные клиенты?</template>
-						<template #answer>
-							<ol>
-								<li>
-									<p><b>Минимизация рисков.</b></p>
-									<p>Работаем в полном соответствии с законом. Несем 100% юридическую и финансовую ответственность за привлеченный персонал.</p>
-								</li>
-								<li>
-									<p><b>Гарантия качества персонала.</b></p>
-									<p>Проводим систематическое обучение и оценку квалификации сотрудников из РФ и СНГ, гарантируя высокий стандарт профессионального уровня.</p>
-								</li>
-								<li>
-									<p><b>Масштабируемость и гибкость.</b></p>
-									<p>Корректируем численность персонала в соответствии с сезонным спросом и ростом бизнеса, исключая риски, связанные с нехваткой персонала.</p>
-								</li>
-								<li>
-									<p><b>Широкая география присутствия.</b></p>
-									<p>Работаем по всей России и за рубежом. Быстрые сроки открытия нового города.</p>
-								</li>
-								<li>
-									<p><b>Оперативное решение вопросов.</b></p>
-									<p>Мы привыкли к сжатым срокам реализации проектов, по запросу быстро выводим подходящий персонал</p>
-								</li>
-								<li>
-									<p><b>Уникальные решения под ключ.</b></p>
-									<p>Можем предложить как апробированное решение, составленное из работающих схем, так и создать абсолютно новое, не имеющее аналогов на рынке.</p>
-								</li>
-							</ol>
-
-						</template>
-					</AppFaqItem>
-
-					<AppFaqItem>
 						<template #question>Почему нам доверяют исполнители?</template>
 						<template #answer>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia impedit, magnam minima distinctio magni quo alias modi earum tenetur vitae iure voluptates, suscipit blanditiis corrupti reprehenderit illum, aliquid beatae possimus.</p>
+							<p>Мы предоставляем четкие и прозрачные условия сотрудничества, оперативно решаем возникающие вопросы и создаем комфортные условия для работы. Наш подход ориентирован на долгосрочное партнерство и взаимовыгодное сотрудничество.</p>
 						</template>
 					</AppFaqItem>
 
 					<AppFaqItem>
 						<template #question>Как мы обеспечиваем качество своих услуг?</template>
 						<template #answer>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia impedit, magnam minima distinctio magni quo alias modi earum tenetur vitae iure voluptates, suscipit blanditiis corrupti reprehenderit illum, aliquid beatae possimus.</p>
+							<p>Мы применяем строгие стандарты контроля на каждом этапе работы, используем современные технологии и регулярно обучаем наш персонал. Весь процесс тщательно координируется, чтобы соответствовать ожиданиям клиентов и требованиям рынка.</p>
 						</template>
 					</AppFaqItem>
 
-					<AppFaqItem>
-						<template #question>Как мы обеспечиваем качество своих услуг?</template>
-						<template #answer>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia impedit, magnam minima distinctio magni quo alias modi earum tenetur vitae iure voluptates, suscipit blanditiis corrupti reprehenderit illum, aliquid beatae possimus.</p>
-						</template>
-					</AppFaqItem>
-				</ul>
-				<ul class="faq__list">
 					<AppFaqItem>
 						<template #question>Можете ли вы настроить услуги в соответствии с нашими потребностями?</template>
 						<template #answer>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia impedit, magnam minima distinctio magni quo alias modi earum tenetur vitae iure voluptates, suscipit blanditiis corrupti reprehenderit illum, aliquid beatae possimus.</p>
+							<p>Да, мы предоставляем индивидуальные решения, адаптированные под ваши запросы. Наша гибкость позволяет разрабатывать уникальные предложения, которые учитывают специфику вашего бизнеса и помогают достигать поставленных целей.</p>
 						</template>
 					</AppFaqItem>
+				</ul>
 
+				<ul class="faq__list">
 					<AppFaqItem>
-						<template #question>Какой экономии затрат мы можем ожидать от&nbsp;аутсорсинга?</template>
+						<template #question>Какой экономии затрат мы можем ожидать от аутсорсинга?</template>
 						<template #answer>
-							<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae alias nisi, facilis ad incidunt minima eos nam ratione repudiandae. Voluptatum, veniam iste. Culpa ad facilis blanditiis non itaque nam. Beatae.</p>
+							<p>Экономия может составлять до 30–50% по сравнению с внутренним выполнением аналогичных задач. Мы берем на себя управление процессами, что снижает расходы на найм, обучение и содержание сотрудников, а также оптимизирует операционные издержки.</p>
 						</template>
 					</AppFaqItem>
 
 					<AppFaqItem>
 						<template #question>Насколько гибкими являются ваши аутсорсинговые и аутстаффинговые решения?</template>
 						<template #answer>
-							<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae alias nisi, facilis ad incidunt minima eos nam ratione repudiandae. Voluptatum, veniam iste. Culpa ad facilis blanditiis non itaque nam. Beatae.</p>
+							<p>Наши решения максимально адаптивны. Мы предлагаем как краткосрочные, так и долгосрочные форматы сотрудничества, быстро реагируем на изменения потребностей и объемов работ, что обеспечивает гибкость и удобство для наших клиентов.</p>
 						</template>
 					</AppFaqItem>
 				</ul>
