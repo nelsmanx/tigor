@@ -13,15 +13,15 @@ const companyInfo = useCompanyInfo();
 				<p class="header__company-desc">Аутсорс и&nbsp;аутстафф линейного персонала</p>
 				<nav class="header__nav">
 					<ul class="header__nav-list">
-						<li class="header__nav-item"><a class="header__nav-link" href="#about">О&nbsp;нас</a></li>
+						<li class="header__nav-item"><a class="header__nav-link" href="#info">О&nbsp;нас</a></li>
 						<li class="header__nav-item"><a class="header__nav-link" href="#outsource">Услуги</a></li>
 						<li class="header__nav-item"><a class="header__nav-link" href="#companies">Отзывы</a></li>
 						<li class="header__nav-item"><a class="header__nav-link" href="#contacts">Контакты</a></li>
 					</ul>
 				</nav>
 				<div class="header__contacts">
-					<a class="header__contacts-tel" :href="`tel:${companyInfo.formatTel(companyInfo.tel)}`">{{ companyInfo.tel }}</a>
-					<a class="header__contacts-tel" :href="`tel:${companyInfo.formatTel(companyInfo.tel2)}`">{{ companyInfo.tel2 }}</a>
+					<a class="header__contacts-tel" :href="`tel:+${companyInfo.formatTel(companyInfo.tel)}`">{{ companyInfo.tel }}</a>
+					<a class="header__contacts-tel" :href="`tel:+${companyInfo.formatTel(companyInfo.tel2)}`">{{ companyInfo.tel2 }}</a>
 					<a v-if="false" class="header__contacts-mail" :href="`mailto:${companyInfo.mail}`">{{ companyInfo.mail }}</a>
 				</div>
 
@@ -32,7 +32,7 @@ const companyInfo = useCompanyInfo();
 
 				<BasicColorSchemeElement class="header__color-scheme" />
 
-				<a class="header__tel" :href="`tel:${companyInfo.formatTel(companyInfo.tel)}`"></a>
+				<a class="header__tel" :href="`tel:+${companyInfo.formatTel(companyInfo.tel)}`"></a>
 				<button class="header__hamb" data-bs-toggle="offcanvas" data-bs-target="#mobile-menu"></button>
 			</div>
 		</div>

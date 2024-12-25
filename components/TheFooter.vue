@@ -26,8 +26,8 @@ const tags = [
 
 					<div class="footer__contacts">
 						<div class="footer__contacts-tels">
-							<a class="footer__contacts-tel" :href="`tel:${companyInfo.formatTel(companyInfo.tel)}`">{{ companyInfo.tel }}</a>
-							<a class="footer__contacts-tel" :href="`tel:${companyInfo.formatTel(companyInfo.tel2)}`">{{ companyInfo.tel2 }}</a>
+							<a class="footer__contacts-tel" :href="`tel:+${companyInfo.formatTel(companyInfo.tel)}`">{{ companyInfo.tel }}</a>
+							<a class="footer__contacts-tel" :href="`tel:+${companyInfo.formatTel(companyInfo.tel2)}`">{{ companyInfo.tel2 }}</a>
 						</div>
 						<a class="footer__contacts-mail" :href="`mailto:${companyInfo.mail}`">{{ companyInfo.mail }}</a>
 						<BasicSocials class="footer__socials" />
@@ -35,41 +35,56 @@ const tags = [
 					<div class="footer__top-links">
 						<ul class="footer__link-list">
 							<li class="footer__link-item">
-								<a class="footer__link" href="#">О компании</a>
+								<a class="footer__link" href="#info">О&nbsp;нас</a>
 							</li>
 							<li class="footer__link-item">
-								<a class="footer__link" href="#">Клиенты и партнеры</a>
+								<a class="footer__link" href="#outsource">Услуги</a>
 							</li>
 							<li class="footer__link-item">
-								<a class="footer__link" href="#">Наши преимущества</a>
+								<a class="footer__link" href="#companies">Отзывы</a>
 							</li>
 							<li class="footer__link-item">
-								<a class="footer__link" href="#">Вакансии</a>
+								<a class="footer__link" href="#contacts">Контакты</a>
 							</li>
-							<li class="footer__link-item">
-								<a class="footer__link" href="#">Аутсорс персонала</a>
-							</li>
-							<li class="footer__link-item">
-								<a class="footer__link" href="#">Реализованные проекты</a>
-							</li>
-							<li class="footer__link-item">
-								<a class="footer__link" href="#">Индивидуальный подбор</a>
-							</li>
-							<li class="footer__link-item">
-								<a class="footer__link" href="#">FAQ (Вопрос-ответ)</a>
-							</li>
-							<li class="footer__link-item">
-								<a class="footer__link" href="#">Свой автопарк</a>
-							</li>
-							<li class="footer__link-item">
-								<a class="footer__link" href="#">Кейсы</a>
-							</li>
-							<li class="footer__link-item">
-								<a class="footer__link" href="#">Как мы работаем</a>
-							</li>
-							<li class="footer__link-item">
-								<a class="footer__link" href="#">Контакты</a>
-							</li>
+
+							<template v-if="false">
+								<li class="footer__link-item">
+									<a class="footer__link" href="#">О компании</a>
+								</li>
+								<li class="footer__link-item">
+									<a class="footer__link" href="#">Клиенты и партнеры</a>
+								</li>
+								<li class="footer__link-item">
+									<a class="footer__link" href="#">Наши преимущества</a>
+								</li>
+								<li class="footer__link-item">
+									<a class="footer__link" href="#">Вакансии</a>
+								</li>
+								<li class="footer__link-item">
+									<a class="footer__link" href="#">Аутсорс персонала</a>
+								</li>
+								<li class="footer__link-item">
+									<a class="footer__link" href="#">Реализованные проекты</a>
+								</li>
+								<li class="footer__link-item">
+									<a class="footer__link" href="#">Индивидуальный подбор</a>
+								</li>
+								<li class="footer__link-item">
+									<a class="footer__link" href="#">FAQ (Вопрос-ответ)</a>
+								</li>
+								<li class="footer__link-item">
+									<a class="footer__link" href="#">Свой автопарк</a>
+								</li>
+								<li class="footer__link-item">
+									<a class="footer__link" href="#">Кейсы</a>
+								</li>
+								<li class="footer__link-item">
+									<a class="footer__link" href="#">Как мы работаем</a>
+								</li>
+								<li class="footer__link-item">
+									<a class="footer__link" href="#">Контакты</a>
+								</li>
+							</template>
 						</ul>
 					</div>
 				</div>

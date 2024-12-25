@@ -10,7 +10,7 @@ const companyInfo = useCompanyInfo();
 					<div class="solution__group">
 						<h2 class="solution__title">Подобрать решение?</h2>
 						<div class="solution__contacts">
-							<a class="solution__contacts-tel" :href="`tel:${companyInfo.formatTel(companyInfo.tel)}`">{{ companyInfo.tel }}</a>
+							<a class="solution__contacts-tel" :href="`tel:+${companyInfo.formatTel(companyInfo.tel)}`">{{ companyInfo.tel }}</a>
 							<a class="solution__contacts-mail" :href="`mailto:${companyInfo.mail}`">{{ companyInfo.mail }}</a>
 						</div>
 					</div>

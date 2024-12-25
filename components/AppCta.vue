@@ -36,7 +36,7 @@ async function sendEmail(event) {
 						<div v-if="hasDarkColorScheme" class="cta__group">
 							<img class="cta__group-image" src="/images/deliverymen.png" alt="" aria-hidden="true">
 							<div class="cta__group-contacts">
-								<a class="cta__group-contacts-tel cta__group-contacts-tel--dark" :href="`tel:${companyInfo.formatTel(companyInfo.tel)}`">{{ companyInfo.tel }}</a>
+								<a class="cta__group-contacts-tel cta__group-contacts-tel--dark" :href="`tel:+${companyInfo.formatTel(companyInfo.tel)}`">{{ companyInfo.tel }}</a>
 								<a class="cta__group-contacts-mail cta__group-contacts-mail--dark" :href="`mailto:${companyInfo.mail}`">{{ companyInfo.mail }}</a>
 							</div>
 						</div>

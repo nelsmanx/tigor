@@ -41,7 +41,7 @@ const activeTab = ref(1);
 							</li>
 						</ul>
 
-						<a class="contacts__button button-basic" :href="`tel:${companyInfo.formatTel(companyInfo.tel)}`">Позвонить в компанию</a>
+						<a class="contacts__button button-basic" :href="`tel:+${companyInfo.formatTel(companyInfo.tel)}`">Позвонить в компанию</a>
 					</div>
 					<div class="contacts__map">
 						<div class="contacts__map-tabs">
