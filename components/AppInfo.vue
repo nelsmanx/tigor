@@ -3,7 +3,7 @@ const companyInfo = useCompanyInfo();
 </script>
 
 <template>
-	<section class="info">
+	<section id="info" class="info">
 		<div class="container">
 			<div class="info__inner">
 				<div class="info__block-1">

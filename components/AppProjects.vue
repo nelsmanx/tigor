@@ -64,7 +64,7 @@ import '@splidejs/vue-splide/css';
 						</div>
 
 						<BasicTags class="splide__slide-tags"
-							:tags="['Найдем сотрудников', 'Подготовим кадров', 'Минимизаируем риски', 'Проведем обучение', 'Найдем персонал за сутки', 'Что-то еще']" />
+							:tags="['Найдем сотрудников', 'Подготовим кадры', 'Минимизируем риски', 'Проведем обучение', 'Найдем персонал за сутки', 'Что-то еще']" />
 						<button class="splide__slide-button" data-bs-toggle="modal" data-bs-target="#modal-callback">Оставить заявку</button>
 					</SplideSlide>
 				</SplideTrack>

@@ -13,10 +13,10 @@ const companyInfo = useCompanyInfo();
 				<p class="header__company-desc">Аутсорс и&nbsp;аутстафф линейного персонала</p>
 				<nav class="header__nav">
 					<ul class="header__nav-list">
-						<li class="header__nav-item"><a class="header__nav-link" href="#">О&nbsp;нас</a></li>
-						<li class="header__nav-item"><a class="header__nav-link" href="#">Услуги</a></li>
-						<li class="header__nav-item"><a class="header__nav-link" href="#">Отзывы</a></li>
-						<li class="header__nav-item"><a class="header__nav-link" href="#">Контакты</a></li>
+						<li class="header__nav-item"><a class="header__nav-link" href="#about">О&nbsp;нас</a></li>
+						<li class="header__nav-item"><a class="header__nav-link" href="#outsource">Услуги</a></li>
+						<li class="header__nav-item"><a class="header__nav-link" href="#companies">Отзывы</a></li>
+						<li class="header__nav-item"><a class="header__nav-link" href="#contacts">Контакты</a></li>
 					</ul>
 				</nav>
 				<div class="header__contacts">

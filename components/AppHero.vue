@@ -21,7 +21,7 @@ const { $emitter } = useNuxtApp();
 						</ul>
 					</div>
 					<div class="hero__group">
-						<button class="hero__button button-basic" @click="$emitter.emit('showModalCallbackVacancy', 1)">
+						<button class="hero__button button-basic" @click="$emitter.emit('showModalCallbackVacancy')">
 							Оставить заявку
 						</button>
 						<p class="hero__group-desc">Все виды услуг по&nbsp;аутсорсу в&nbsp;любом регионе&nbsp;России</p>

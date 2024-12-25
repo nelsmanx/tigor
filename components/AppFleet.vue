@@ -2,7 +2,7 @@
 import { Splide, SplideTrack, SplideSlide } from '@splidejs/vue-splide';
 import '@splidejs/vue-splide/css';
 
-const currentCity = useCurrentCity();
+// const currentCity = useCurrentCity();
 </script>
 
 <template>
@@ -11,7 +11,7 @@ const currentCity = useCurrentCity();
 
 			<BasicSectionHeader>
 				<template #title>Есть свой автопарк:</template>
-				<template #desc>Более 1000 автомобилей<br /> Предоставление техники и еще что-то.</template>
+				<template #desc>Более 1000 автомобилей по Москве и МО<br /> Предоставление техники и еще что-то.</template>
 			</BasicSectionHeader>
 
 			<div class="fleet__body">
@@ -21,15 +21,15 @@ const currentCity = useCurrentCity();
 							<ul class="fleet__list">
 								<li class="fleet__item">
 									<p class="fleet__item-title">Легковые автомобили</p>
-									<p class="fleet__item-desc">Лада Гранта и Москвич 3 (более 300 авто), новые 23-24 года<br /> ГЕО: {{ currentCity }}</p>
+									<p class="fleet__item-desc">Лада Гранта и Москвич 3 (более 300 авто), новые 23-24 года<br /> Местоположение: Москва и МО</p>
 								</li>
 								<li class="fleet__item">
 									<p class="fleet__item-title">Газели NEXT</p>
-									<p class="fleet__item-desc">Новые 23-24 года, все с рефрижераторами<br /> ГЕО: {{ currentCity }} (более 50 авто)</p>
+									<p class="fleet__item-desc">Новые 23-24 года, все с рефрижераторами<br /> Местоположение: Москва и МО (более 50 авто)</p>
 								</li>
 								<li class="fleet__item">
 									<p class="fleet__item-title">Бетономешалки</p>
-									<p class="fleet__item-desc">ГЕО: {{ currentCity }} (можем перевезти в другой город по согласованию)<br />
+									<p class="fleet__item-desc">Местоположение: Москва и МО (можем перевезти в другой город по согласованию)<br />
 										Более 10 бетономешалок (собственных).<br /> Готовы предоставить их заводам + предоставим экипаж.</p>
 								</li>
 							</ul>

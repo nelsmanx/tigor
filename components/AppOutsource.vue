@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-	<section class="outsource">
+	<section id="outsource" class="outsource">
 		<div class="container">
 			<div class="outsource__headline">
 				<h2 class="outsource__title">Предоставляем персонал:</h2>

@@ -3,7 +3,7 @@
 <template>
 	<section class="faq">
 		<div class="container">
-			<h2 class="faq__title">Частые задаваемые вопросы</h2>
+			<h2 class="faq__title">Часто задаваемые вопросы</h2>
 			<div class="faq__layout">
 				<ul class="faq__list">
 					<AppFaqItem>

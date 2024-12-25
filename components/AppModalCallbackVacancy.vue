@@ -1,39 +1,8 @@
 <script setup>
 const { $emitter } = useNuxtApp();
 
-const types = {
-	1: {
-		title: 'Ищешь работу автокурьером?',
-		image: '/images/hero/1.jpg'
-	},
-	2: {
-		title: 'Ищешь работу пешим курьером?',
-		image: '/images/hero/2.jpg'
-	},
-	3: {
-		title: 'Ищешь работу курьером на своём автомобиле?',
-		image: '/images/hero/3.jpg'
-	},
-	4: {
-		title: 'Ищешь работу кладовщиком?',
-		image: '/images/hero/4.jpg'
-	},
-	5: {
-		title: 'Ищешь работу водителем?',
-		image: '/images/hero/5.jpg'
-	},
-};
-
-const activeType = ref(1);
-const activeTypeTitle = computed(() => types[activeType.value].title);
-const activeTypeImage = computed(() => types[activeType.value].image);
-
 const showModal = ref(false);
-
-$emitter.on('showModalCallbackVacancy', (type) => {
-	activeType.value = type;
-	showModal.value = true;
-});
+$emitter.on('showModalCallbackVacancy', () => showModal.value = true);
 </script>
 
 <template>
@@ -42,13 +11,13 @@ $emitter.on('showModalCallbackVacancy', (type) => {
 			<div class="modal__logo">
 				<img class="modal__logo-svg" src="/images/logo.svg" alt="Логотип компании">
 			</div>
-			<p class="modal__header-title">ТВОЯ КАРЬЕРА НАЧИНАЕТСЯ ЗДЕСЬ!</p>
+			<p v-if="false" class="modal__header-title">ТВОЯ КАРЬЕРА НАЧИНАЕТСЯ ЗДЕСЬ!</p>
 			<button class="modal__button-close" data-bs-dismiss="modal" aria-label="Close"></button>
 		</div>
 		<div class="modal__body">
 			<div class="modal__body-content">
-				<p class="modal__title">{{ activeTypeTitle }}</p>
-				<p class="modal__desc">Заполняй анкету и жми «Отправить» и&nbsp;наши менеджеры свяжутся с&nbsp;Вами в&nbsp;течение 15&nbsp;минут</p>
+				<p class="modal__title">Ищете персонал?</p>
+				<p class="modal__desc">Заполняйте анкету и жмите «Отправить» и&nbsp;наши менеджеры свяжутся с&nbsp;Вами в&nbsp;течение 15&nbsp;минут</p>
 				<form class="form modal__form">
 					<div class="form__input-group">
 						<label class="form__label">
@@ -77,7 +46,7 @@ $emitter.on('showModalCallbackVacancy', (type) => {
 				</form>
 			</div>
 			<div class="modal__body-image-wrap">
-				<img class="modal__body-image" :src="activeTypeImage" alt="" aria-hidden="true">
+				<img class="modal__body-image" src="/images/hero/1.jpg" alt="" aria-hidden="true">
 			</div>
 		</div>
 	</BasicModal>
@@ -330,8 +299,8 @@ $emitter.on('showModalCallbackVacancy', (type) => {
 	.modal__header {
 		display: grid;
 		grid-template-areas:
-			"logo button"
-			"title title";
+			"logo button";
+		/* "title title"; */
 		grid-template-columns: 1fr auto;
 		padding-bottom: 20px;
 	}

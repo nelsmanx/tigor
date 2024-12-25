@@ -7,12 +7,12 @@
 	<AppFleet />
 	<AppSteps />
 	<AppCompanies />
-	<AppVacancies />
 	<AppCta />
 	<AppProjects />
 	<AppCta :has-dark-color-scheme="true" />
 	<AppContacts />
 	<AppFaq />
+	<AppVacancies />
 
 	<AppModalCallback />
 	<AppModalCallback :alt-color-scheme="true" />

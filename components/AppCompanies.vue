@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-	<section class="companies section-island">
+	<section id="companies" class="companies section-island">
 		<div class="companies__inner">
 
 			<BasicSectionHeader>
@@ -40,7 +40,9 @@
 </template>
 
 <style scoped>
-.companies {}
+.companies {
+	margin-bottom: 80px;
+}
 
 .companies__inner {
 	background-color: #f5f7fa;
@@ -152,6 +154,10 @@
 }
 
 @media (max-width: 991.98px) {
+	.companies {
+		margin-bottom: var(--section-space);
+	}
+
 	.companies__body {
 		padding: 30px 0 40px;
 	}

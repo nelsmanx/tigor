@@ -20,7 +20,7 @@ defineProps({
 						</template>
 						<template v-else>
 							<h2 class="cta__title cta__title--dark">Нужны услуги&nbsp;по предоставлению персонала?</h2>
-							<p class="cta__desc cta__desc--dark">Заполните форму ниже. Мы свяжемся с вами, чтобы уточнить все детали, сформировать лучшее предложение, а&nbsp;также договоримся при необходимости о встречи в живую.</p>
+							<p class="cta__desc cta__desc--dark">Заполните форму ниже. Мы свяжемся с вами, чтобы уточнить все детали, сформировать лучшее предложение, а&nbsp;также договоримся при необходимости о встрече в живую.</p>
 						</template>
 
 						<div v-if="hasDarkColorScheme" class="cta__group">
@@ -55,7 +55,7 @@ defineProps({
 								Отправляя заявку, вы соглашаетесь с условиями обработки данных
 							</BasicCheckboxWithLabel>
 						</div>
-						<button class="form__button">Отправить анкету</button>
+						<button class="form__button">Оставить заявку</button>
 					</form>
 				</div>
 			</div>
