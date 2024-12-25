@@ -1,4 +1,5 @@
 <script setup>
+import ApiService from '~/services/ApiService';
 const props = defineProps({
 	altColorScheme: {
 		type: Boolean,
@@ -6,6 +7,15 @@ const props = defineProps({
 });
 
 const modalId = props.altColorScheme ? 'modal-callback-alt' : 'modal-callback';
+
+async function sendEmail(event) {
+	const api = new ApiService();
+	const formData = new FormData(event.target);
+	const response = await api.sendForm(formData);
+	if(response) {
+		alert('Заявка успешно отправлена!');
+	}
+}
 </script>
 
 <template>
@@ -21,7 +31,7 @@ const modalId = props.altColorScheme ? 'modal-callback-alt' : 'modal-callback';
 		<div class="modal__body">
 			<p class="modal__title">Нужны услуги по&nbsp;предоставлению персонала?</p>
 			<p class="modal__desc">Заполняй анкету и жми «Отправить» и&nbsp;наши менеджеры свяжутся с Вами в течение 15&nbsp;минут</p>
-			<form class="form modal__form">
+			<form class="form modal__form" @submit.prevent="sendEmail($event)">
 				<div class="form__input-group">
 					<label class="form__label">
 						<span class="form__label-title">Имя и Фамилия</span>
@@ -29,7 +39,7 @@ const modalId = props.altColorScheme ? 'modal-callback-alt' : 'modal-callback';
 					</label>
 					<label class="form__label">
 						<span class="form__label-title">Номер телефона</span>
-						<input v-inputmask-tel class="form__input" type="tel" name="tel" placeholder="+7 (917) --- -- -- " required>
+						<input v-inputmask-tel class="form__input" type="tel" name="phone" placeholder="+7 (917) --- -- -- " required>
 					</label>
 				</div>
 				<div class="form__personal-data">
