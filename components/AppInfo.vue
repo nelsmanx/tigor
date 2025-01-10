@@ -8,6 +8,7 @@ const companyInfo = useCompanyInfo();
 			<div class="info__inner">
 				<div class="info__block-1">
 					<h2 class="info__title">Аренда линейного персонала</h2>
+					<img class="info__image-2" src="/images/info/1.jpg" alt="Аренда линейного персонала">
 					<div v-if="false" class="info__group">
 						<img class="info__image" src="/images/deliverymen.png" alt="" aria-hidden="true">
 						<a class="info__link" href="#">Узнать подробнее</a>
@@ -60,6 +61,11 @@ const companyInfo = useCompanyInfo();
 	font-size: var(--section-title-fz);
 	font-weight: 400;
 	color: var(--font-basic);
+}
+
+.info__image-2 {
+	max-width: 100%;
+	height: 470px;
 }
 
 .info__group {
@@ -154,6 +160,10 @@ html[data-color-scheme="dark"] .info__link {
 
 	.info__title {
 		max-width: none;
+	}
+
+	.info__image-2 {
+		display: none;
 	}
 
 	.info__group {
