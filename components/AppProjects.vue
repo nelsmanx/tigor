@@ -35,36 +35,58 @@ import '@splidejs/vue-splide/css';
 					}
 				}">
 				<SplideTrack>
-					<SplideSlide>
+					<SplideSlide v-if="false">
 						<p class="splide__slide-title">Более 10-ти лет плодотворного сотрудничества с Delivery club</p>
 						<BasicTags class="splide__slide-tags" :tags="['Аутсорсинг курьеров', 'Что-то еще']" />
 						<div class="splide__slide-desc">
-							<p class="splide__slide-desc-p">Более 10-ти лет плодотворного сотрудничества.</p>
-							<p class="splide__slide-desc-p">В 2012 году запустили службу доставки для компании.</p>
-							<p class="splide__slide-desc-p">В 2018-2020 годах совместно с компанией произвели расширение рынка сбыта продукции на регионы России.</p>
+							<p>Более 10-ти лет плодотворного сотрудничества.</p>
+							<p>В 2012 году запустили службу доставки для компании.</p>
+							<p>В 2018-2020 годах совместно с компанией произвели расширение рынка сбыта продукции на регионы России.</p>
 						</div>
 						<img class="splide__slide-image" src="/images/projects/1.png" alt="" aria-hidden="true">
 					</SplideSlide>
 
 					<SplideSlide>
-						<p class="splide__slide-title">Более 10-ти лет плодотворного сотрудничества с Delivery club</p>
-						<BasicTags class="splide__slide-tags" :tags="['Аутсорсинг курьеров', 'Что-то еще']" />
+						<p class="splide__slide-title">Более 10 лет плодотворного сотрудничаем с Яндекс и&nbsp;лидерами ритейла.</p>
 						<div class="splide__slide-desc">
-							<p class="splide__slide-desc-p">Более 10-ти лет плодотворного сотрудничества.</p>
-							<p class="splide__slide-desc-p">В 2012 году запустили службу доставки для компании.</p>
-							<p class="splide__slide-desc-p">В 2018-2020 годах совместно с компанией произвели расширение рынка сбыта продукции на регионы России.</p>
+							<p>Ключевые проекты:</p>
+							<ul>
+								<li><b>Яндекс Go:</b> Управление логистикой, оптимизация доставки для миллионов клиентов.</li>
+								<li><b>Яндекс Смена:</b> Организация и поддержка системы, которая повышает эффективности бизнеса.</li>
+							</ul>
+
+							<p>Проекты для лидеров ритейла:</p>
+							<ul>
+								<li><b>Drivee:</b> Внедрение эффективных решений для поставок и распределения.</li>
+								<li><b>Пятерочка:</b> Оптимизация складских и логистических процессов.</li>
+								<li><b>Чижик:</b> Построение надежных бизнес процессов</li>
+								<li><b>Магнит:</b> Ускорение и улучшение логистических операций.</li>
+								<li><b>Лента:</b> Разработка индивидуальных решений для крупных объемов операций.</li>
+							</ul>
 						</div>
-						<img class="splide__slide-image" src="/images/projects/2.png" alt="" aria-hidden="true">
+					</SplideSlide>
+
+					<SplideSlide>
+						<p class="splide__slide-title">Наши Преимущества</p>
+						<div class="splide__slide-desc">
+							<ul>
+								<li><b>Доказанный опыт:</b> Мы реализуем сложные задачи для крупнейших компаний России.</li>
+								<li><b>Проверенная эффективность:</b> Наши решения улучшают бизнес-процессы и сокращают затраты.</li>
+								<li><b>Опыт:</b> более 10 лет на рынке.</li>
+								<li><b>Надежность:</b> проверенные решения, которым доверяют лидеры отрасли.</li>
+								<li><b>Эффективность:</b> внедряем системы, которые приносят изменения</li>
+							</ul>
+						</div>
 					</SplideSlide>
 
 					<SplideSlide class="splide__slide--cta">
 						<p class="splide__slide-title splide__slide-title--cta">Место для вашего проекта!</p>
 						<div class="splide__slide-desc splide__slide-desc--cta">
-							<p class="splide__slide-desc-p">Разработаем индивидуальное решение под ваш бизнес</p>
+							<p>Разработаем индивидуальное решение под ваш бизнес</p>
 						</div>
 
-						<BasicTags class="splide__slide-tags"
-							:tags="['Найдем сотрудников', 'Подготовим кадры', 'Минимизируем риски', 'Проведем обучение', 'Найдем персонал за сутки', 'Что-то еще']" />
+						<BasicTags class="splide__slide-tags splide__slide-tags--cta"
+							:tags="['Найдем сотрудников', 'Подготовим кадры', 'Минимизируем риски', 'Проведем обучение', 'Оперативно выведем персонал', 'Что-то еще']" />
 						<button class="splide__slide-button" data-bs-toggle="modal" data-bs-target="#modal-callback">Оставить заявку</button>
 					</SplideSlide>
 				</SplideTrack>
@@ -165,8 +187,10 @@ import '@splidejs/vue-splide/css';
 }
 
 .splide__slide {
-	display: grid;
-	grid-template-rows: auto auto 1fr auto;
+	/* display: grid;
+	grid-template-rows: auto auto 1fr auto; */
+	display: flex;
+	flex-direction: column;
 	min-height: 546px;
 	padding: 45px 45px 40px;
 	background-color: #f5f7fa;
@@ -195,27 +219,52 @@ import '@splidejs/vue-splide/css';
 	margin-bottom: 35px;
 }
 
+.splide__slide-tags--cta {
+	flex: 1 1 auto;
+	margin-bottom: 0;
+}
+
 .splide__slide-desc {
-	margin-bottom: 30px;
+	flex: 1 1 auto;
 }
 
 .splide__slide-desc--cta {
+	flex: 0 0 auto;
 	max-width: 270px;
 }
 
-.splide__slide-desc-p {
+.splide__slide-desc:deep(p),
+.splide__slide-desc:deep(li) {
 	font-size: 18px;
 	font-weight: 400;
 	line-height: 1.55;
 	color: #0c352c;
 }
 
-.splide__slide-desc-p:not(:last-child) {
+.splide__slide-desc:deep(li) {
+	position: relative;
+	padding-left: 18px;
+}
+
+.splide__slide-desc:deep(li::before) {
+	content: "";
+	position: absolute;
+	top: 12px;
+	left: 0;
+	width: 6px;
+	height: 6px;
+	background-color: #fee02e;
+	border-radius: 2px;
+}
+
+.splide__slide-desc:deep(p:not(:last-child)),
+.splide__slide-desc:deep(ul) {
 	margin-bottom: 14px;
 }
 
 .splide__slide-image {
 	width: 121px;
+	margin-top: 30px;
 }
 
 .splide__slide-button {
@@ -223,6 +272,7 @@ import '@splidejs/vue-splide/css';
 	justify-content: center;
 	align-items: center;
 	width: fit-content;
+	margin-top: 30px;
 	padding: 0.85em 2.2em;
 	font-family: var(--secondary-font-family);
 	font-size: 22px;
@@ -334,10 +384,10 @@ import '@splidejs/vue-splide/css';
 	}
 
 	.splide__slide-desc {
-		height: 200px;
+		height: 195px;
 		padding-right: 16px;
 		overflow-y: auto;
-		margin-bottom: 40px;
+		/* margin-bottom: 40px; */
 	}
 
 	.splide__slide-desc--cta {
@@ -346,11 +396,13 @@ import '@splidejs/vue-splide/css';
 		padding: 0;
 	}
 
-	.splide__slide-desc-p {
+	.splide__slide-desc:deep(p),
+	.splide__slide-desc:deep(li) {
 		font-size: 16px;
 	}
 
-	.splide__slide-desc-p:not(:last-child) {
+	.splide__slide-desc:deep(p:not(:last-child)),
+	.splide__slide-desc:deep(ul) {
 		margin-bottom: 10px;
 	}
 
@@ -371,23 +423,34 @@ import '@splidejs/vue-splide/css';
 
 	.splide__slide-desc {
 		height: 180px;
-		margin-bottom: 30px;
 	}
 
 	.splide__slide-desc--cta {
 		height: auto;
-		margin-bottom: 20px;
 	}
 
-	.splide__slide-desc-p {
+	.splide__slide-desc:deep(p),
+	.splide__slide-desc:deep(li) {
 		font-size: 14px;
+	}
+
+	.splide__slide-desc:deep(li) {
+		padding-left: 12px;
+	}
+
+	.splide__slide-desc:deep(li::before) {
+		top: 10px;
+		width: 4px;
+		height: 4px;
 	}
 
 	.splide__slide-image {
 		width: 100px;
+		margin-top: 20px;
 	}
 
 	.splide__slide-button {
+		margin-top: 20px;
 		font-size: 16px;
 	}
 }

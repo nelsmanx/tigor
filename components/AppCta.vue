@@ -12,7 +12,7 @@ async function sendEmail(event) {
 	const api = new ApiService();
 	const formData = new FormData(event.target);
 	const response = await api.sendForm(formData);
-	if(response) {
+	if (response) {
 		alert('Заявка успешно отправлена!');
 	}
 }
@@ -63,6 +63,9 @@ async function sendEmail(event) {
 						<div class="form__personal-data">
 							<BasicCheckboxWithLabel>
 								Отправляя заявку, вы соглашаетесь с условиями обработки данных
+							</BasicCheckboxWithLabel>
+							<BasicCheckboxWithLabel>
+								Отправляя заявку, вы даёте согласие на получение рассылки рекламно-информационных материалов
 							</BasicCheckboxWithLabel>
 						</div>
 						<button class="form__button">Оставить заявку</button>
@@ -279,6 +282,10 @@ async function sendEmail(event) {
 
 .form__personal-data {
 	margin-bottom: 32px;
+}
+
+.form__personal-data:deep(.checkbox__label:not(:last-child)) {
+	margin-bottom: 4px;
 }
 
 .form__button {
