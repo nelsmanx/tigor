@@ -186,6 +186,7 @@
 
   .vacancies__item--button {
     order: 3;
+    grid-column: 2/3;
   }
 }
 
@@ -206,6 +207,7 @@
 
   .vacancies__item--button {
     order: 0;
+    grid-column: auto;
   }
 }
 
