@@ -1,9 +1,25 @@
 <script setup>
 const companyInfo = useCompanyInfo();
 
-const cityTabs = ["Москва", "Волгоград", "Еще город"];
-const mapTabs = [{ coordinates: [55.776406, 37.690884] }, { coordinates: [48.714417, 44.524459] }, { coordinates: [59.939864, 30.314566] }];
-const activeTab = ref(1);
+const cityList = [
+  {
+    name: 'Москва',
+    address:'Внуковское шоссе, 1',
+    coordinates: [55.649850, 37.265433]
+  },
+  // {
+  //   name: 'Москва',
+  //   address:'Минское шоссе 26 километр, 1',
+  //   coordinates: [55.654005, 37.281225]
+  // },
+  // {
+  //   name: 'Еще город',
+  //   address:'Одинцовский городской округ, Московская область',
+  //   coordinates: [59.939864, 30.314566]
+  // },
+]
+
+const activeCity = ref(1);
 </script>
 
 <template>
@@ -16,22 +32,22 @@ const activeTab = ref(1);
 
 						<div class="contacts__city-tabs">
 							<ul class="contacts__city-tabs-list">
-								<li v-for="(tab, index) in cityTabs" :key="tab"
-									@click="activeTab = index + 1"
-									:class="{ 'is-active': index + 1 === activeTab }"
+								<li v-for="(city, index) in cityList" :key="city.name"
+									@click="activeCity = index + 1"
+									:class="{ 'is-active': index + 1 === activeCity }"
 									class="contacts__city-tabs-item">
-									{{ tab }}
+									{{ city.name }}
 								</li>
 							</ul>
 						</div>
 
-						<p class="contacts__address">г. Москва, Фридриха Энгельса 46с7 подъезд&nbsp;1, этаж&nbsp;3</p>
+						<p class="contacts__address">{{cityList[activeCity - 1].address}}</p>
 						<ul class="contacts__list">
 							<li class="contacts__item">
-								<span class="hl">Телефон мобильный:</span> {{ companyInfo.tel }}
+								<span class="hl">Телефон мобильный:</span> {{ companyInfo.tel2 }}
 							</li>
 							<li class="contacts__item">
-								<span class="hl">Телефон городской:</span> {{ companyInfo.tel2 }}
+								<span class="hl">Телефон городской:</span> {{ companyInfo.tel }}
 							</li>
 							<li class="contacts__item">
 								<span class="hl">Заказ услуг:</span> {{ companyInfo.mail }}
@@ -46,11 +62,11 @@ const activeTab = ref(1);
 					<div class="contacts__map">
 						<div class="contacts__map-tabs">
 							<ul class="contacts__map-tabs-list">
-								<li v-for="(tab, index) in mapTabs" :key="tab.coordinates"
-									:class="{ 'is-active': index + 1 === activeTab }"
+								<li v-for="(city, index) in cityList" :key="city.coordinates"
+									:class="{ 'is-active': index + 1 === activeCity }"
 									class="contacts__map-tabs-item">
 									<ClientOnly>
-										<YandexMap :coordinates="tab.coordinates" :zoom="14" :controls="[]" :behaviors="['drag', 'dblClickZoom', 'multiTouch']" />
+										<YandexMap :coordinates="city.coordinates" :zoom="14" :controls="[]" :behaviors="['drag', 'dblClickZoom', 'multiTouch']" />
 									</ClientOnly>
 								</li>
 							</ul>

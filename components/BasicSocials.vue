@@ -6,10 +6,10 @@ const companyInfo = useCompanyInfo();
 	<div class="socials">
 		<ul class="socials__list">
 			<li class="socials__item">
-				<a class="socials__item-link socials__item-link--wa" :href="`https://wa.me/${companyInfo.formatTel(companyInfo.tel)}`"></a>
+				<a class="socials__item-link socials__item-link--wa" :href="`https://wa.me/${companyInfo.formatTel(companyInfo.tel)}`" target="_blank"></a>
 			</li>
 			<li class="socials__item">
-				<a class="socials__item-link socials__item-link--tg" :href="`https://t.me/+${companyInfo.formatTel(companyInfo.tel)}`"></a>
+				<a class="socials__item-link socials__item-link--tg" :href="companyInfo.telegram" target="_blank"></a>
 			</li>
 		</ul>
 	</div>

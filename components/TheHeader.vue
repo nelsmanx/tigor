@@ -32,7 +32,7 @@ const companyInfo = useCompanyInfo();
 
 				<BasicColorSchemeElement class="header__color-scheme" />
 
-				<a class="header__tel" :href="`tel:+${companyInfo.formatTel(companyInfo.tel)}`"></a>
+				<a class="header__tel" :href="`tel:+${companyInfo.formatTel(companyInfo.tel)}`" :title="companyInfo.tel"></a>
 				<button class="header__hamb" data-bs-toggle="offcanvas" data-bs-target="#mobile-menu"></button>
 			</div>
 		</div>

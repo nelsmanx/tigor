@@ -17,7 +17,7 @@
 								<img class="benefits__icon-img benefits__icon-img--1" src="/images/benefits/1.svg" alt="" aria-hidden="true">
 							</div>
 							<p class="benefits__item-title">Индивидуальный подход</p>
-							<p class="benefits__item-desc">Кадры исходя из вашего бизнеса</p>
+							<p class="benefits__item-desc">Подбираем кадры исходя из&nbsp;ваших потребностей</p>
 						</li>
 						<li class="benefits__item">
 							<div class="benefits__icon">
