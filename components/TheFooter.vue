@@ -91,7 +91,7 @@ const tags = [
       </div>
       <div class="footer__bottom">
         <div class="footer__bottom-layout">
-          <p class="footer__bottom-item">© 2024, ООО ТИГОР. Все&nbsp;права&nbsp;защищены.</p>
+          <p class="footer__bottom-item">© 2025, ООО ТИГОР. Все&nbsp;права&nbsp;защищены.</p>
           <p class="footer__bottom-item">ИНН:&nbsp;6165231522, ОГРН&nbsp;1226100001511</p>
           <a class="footer__bottom-item" href="#">Политика конфиденциальности</a>
         </div>

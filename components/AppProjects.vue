@@ -86,7 +86,7 @@ import '@splidejs/vue-splide/css';
 						</div>
 
 						<BasicTags class="splide__slide-tags splide__slide-tags--cta"
-							:tags="['Найдем сотрудников', 'Подготовим кадры', 'Минимизируем риски', 'Проведем обучение', 'Оперативно выведем персонал', 'Что-то еще']" />
+							:tags="['Найдем сотрудников', 'Подготовим кадры', 'Минимизируем риски', 'Проведем обучение', 'Оперативно выведем персонал']" />
 						<button class="splide__slide-button" data-bs-toggle="modal" data-bs-target="#modal-callback">Оставить заявку</button>
 					</SplideSlide>
 				</SplideTrack>
@@ -231,6 +231,7 @@ import '@splidejs/vue-splide/css';
 .splide__slide-desc--cta {
 	flex: 0 0 auto;
 	max-width: 270px;
+  margin-bottom: 30px;
 }
 
 .splide__slide-desc:deep(p),

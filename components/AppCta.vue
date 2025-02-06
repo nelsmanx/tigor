@@ -25,7 +25,7 @@ async function sendEmail(event) {
 				<div class="cta__layout">
 					<div class="cta__content">
 						<template v-if="!hasDarkColorScheme">
-							<h2 class="cta__title">Нужны услуги по предоставлению персонала?”</h2>
+							<h2 class="cta__title">Нужны услуги по предоставлению персонала?</h2>
 							<p class="cta__desc">Заполняй анкету и жми «Отправить».<br /> Наши заботливые менеджеры свяжутся с&nbsp;Вами в&nbsp;течение&nbsp;15&nbsp;минут</p>
 						</template>
 						<template v-else>
